@@ -1,4 +1,46 @@
-body * {
+@import './styles/fonts.scss';
+@import './styles/variables.scss';
+@import './styles/mixins.scss';
+@import './styles/typography.scss';
+@import './partials/header/header.scss';
+
+* {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+}
+
+.wrapper {
+  display: flex;
+  max-width: 1920px;
+  background-color: $white;
+
+  .container__left {
+    flex: 0 1 320px;
+
+    @include mobile() {
+      display: none;
+    }
+  }
+  .container__central {
+    flex: 1 1 1170px;
+    background-color: $central-background;
+  }
+  .container__right {
+    flex: 0 1 430px;
+
+    @include mobile() {
+      display: none;
+    }
+  }
 }

@@ -1,0 +1,13 @@
+@import './variables.scss';
+
+@mixin mobile() {
+  @media only all and (max-width: $mobile-size) {
+    @content;
+  }
+}
+
+@mixin middle() {
+  @media only all and (max-width: $middle-size) {
+    @content;
+  }
+}
