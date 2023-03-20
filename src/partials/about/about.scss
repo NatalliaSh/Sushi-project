@@ -1,0 +1,48 @@
+.about {
+  max-width: 82%;
+  margin: 40px auto;
+
+  &__description {
+    height: 200px;
+    overflow: hidden;
+
+    &--active {
+      height: auto;
+    }
+  }
+
+  &__button {
+    margin: 20px auto;
+    text-align: center;
+
+    button {
+      background: none;
+      border: none;
+
+      cursor: pointer;
+
+      &:hover {
+        color: $orange;
+      }
+
+      i {
+        position: relative;
+        top: 0.15em;
+      }
+    }
+
+    .read--less {
+      display: none;
+    }
+
+    &--active {
+      .read--less {
+        display: inline-block;
+      }
+
+      .read--more {
+        display: none;
+      }
+    }
+  }
+}
