@@ -3,6 +3,7 @@
 @import './styles/mixins.scss';
 @import './styles/typography.scss';
 @import './partials/header/header.scss';
+@import './partials/header/header__logo.scss';
 @import './partials/footer/footer.scss';
 
 body {
@@ -32,7 +33,9 @@ a {
   background-color: $white;
 
   .container__left {
-    flex: 0 1 320px;
+    flex: 0 1 200px;
+    margin-left: 30px;
+    margin-right: 20px;
 
     @include mobile() {
       display: none;
@@ -43,7 +46,7 @@ a {
     background-color: $central-background;
   }
   .container__right {
-    flex: 0 1 430px;
+    flex: 0 1 330px;
 
     @include mobile() {
       display: none;

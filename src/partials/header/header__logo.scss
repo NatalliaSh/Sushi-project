@@ -1,0 +1,13 @@
+.header__logo {
+  border-bottom: 0.5px solid grey;
+  padding: 20px 20px 30px 20px;
+  text-align: center;
+  max-width: 180px;
+  &__img {
+    margin: 0 auto;
+    img {
+      width: 90px;
+      height: auto;
+    }
+  }
+}
