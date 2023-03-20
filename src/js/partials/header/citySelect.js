@@ -1,4 +1,4 @@
-import { contactsDataBase } from './contactsDataBase.js';
+import { contactsDataBase } from '../../modules/DataBase/contactsDataBase.js';
 
 const location = document.querySelector('.location');
 

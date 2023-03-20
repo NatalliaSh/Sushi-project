@@ -7,6 +7,10 @@
     padding-left: 10px;
     margin-top: 10px;
 
+    @include large() {
+      padding-left: 0px;
+    }
+
     i {
       font-size: 30px;
       color: $grey;
@@ -46,7 +50,6 @@
       top: 0px;
       left: -5px;
       cursor: pointer;
-      appearance: none;
       background: transparent;
       z-index: 2;
       display: none;
@@ -61,12 +64,12 @@
         z-index: 1;
         width: 300px;
 
-        @include middle() {
+        @include large() {
           width: 250px;
         }
 
         @include mobile() {
-          width: 98vw;
+          width: 85vw;
         }
       }
 

@@ -42,9 +42,18 @@
 
       .contacts {
         padding: 10px;
+        min-width: 150px;
+
+        @include mobile() {
+          min-width: 100px;
+        }
 
         ul li {
           padding-bottom: 5px;
+
+          &:not(:first-child) {
+            color: $orange;
+          }
         }
       }
 
@@ -56,7 +65,7 @@
 
         @include mobile() {
           flex: 0 1 100px;
-          padding-top: 10px;
+          padding: 10px 0px 0px 0px;
 
           span {
             display: block;
@@ -92,14 +101,23 @@
       text-align: end;
       flex-wrap: wrap;
 
-      @include middle() {
+      @include large() {
         flex-direction: column;
         align-items: flex-end;
+        padding-top: 10px;
       }
 
       li {
         cursor: pointer;
         padding-right: 10px;
+
+        @include large() {
+          padding-bottom: 10px;
+        }
+
+        @include mobile() {
+          padding-right: 0px;
+        }
 
         &:hover {
           color: $orange;
