@@ -38,8 +38,39 @@ a {
     margin-left: 30px;
     margin-right: 20px;
 
+    @include middle() {
+      flex: 0 1 170px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
     @include mobile() {
       display: none;
+    }
+
+    &__menu {
+      padding: 30px 10px 10px 30px;
+
+      @include middle() {
+        padding: 30px 0px 10px 10px;
+      }
+
+      ul li {
+        padding-bottom: 30px;
+
+        a {
+          img {
+            width: 30px;
+            padding-right: 10px;
+            position: relative;
+            top: 0.25em;
+          }
+
+          &:hover {
+            color: $orange;
+          }
+        }
+      }
     }
   }
   .container__central {

@@ -1,7 +1,7 @@
 import { dataBase } from '../../modules/dataBase/dataBase.js';
 import { getSelectForm } from './getSelectForm.js';
 import { getAddressesForSelectedCity } from './getAddressesForSelectedCity.js';
-import { getSelectedOption } from './getSelectedOption.js';
+import { getSelectedOption } from '../../modules/getSelectedOption.js';
 import { changeSelectCityHandlerHeader } from './changeSelectCityHandler.js';
 import { changeSelectAddressHandlerHeader } from './changeSelectAddressHandler.js';
 

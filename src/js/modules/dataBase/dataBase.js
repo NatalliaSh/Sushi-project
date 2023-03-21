@@ -6,10 +6,15 @@ export const dataBase = {
         1: '+37529 854 14 849',
         2: '+37544 978 54 875',
       },
-      menuList: ['Пицца', 'Суши', 'Сеты', 'Напитки', 'Акции'],
+      menuList: [
+        { name: 'Пицца', imgName: 'pizza.png' },
+        { name: 'Суши', imgName: 'sushi.png' },
+        { name: 'Сеты', imgName: 'set.png' },
+        { name: 'Напитки', imgName: 'drinks.png' },
+        { name: 'Акции', imgName: 'sale.png' },
+      ],
       products: {
         Пицца: {
-          imgName: 'pizza.png',
           id: {
             1: {
               name: 'Сет "4 Филадельфии"',
@@ -44,7 +49,6 @@ export const dataBase = {
           },
         },
         Суши: {
-          imgName: 'sushi.png',
           id: {
             1: {
               name: 'Сет "4 Филадельфии"',
@@ -79,7 +83,6 @@ export const dataBase = {
           },
         },
         Сеты: {
-          imgName: 'set.png',
           id: {
             1: {
               name: 'Сет "4 Филадельфии"',
@@ -114,7 +117,6 @@ export const dataBase = {
           },
         },
         Напитки: {
-          imgName: 'drinks.png',
           id: {
             1: {
               name: 'Сет "4 Филадельфии"',
@@ -148,9 +150,7 @@ export const dataBase = {
             },
           },
         },
-        Акции: {
-          imgName: 'sale.png',
-        },
+        Акции: {},
       },
     },
 
@@ -160,7 +160,12 @@ export const dataBase = {
         1: '+37529 854 00 000',
         2: '+37544 978 04 005',
       },
-      menuList: ['Пицца', 'Салаты', 'Напитки', 'Акции'],
+      menuList: [
+        { name: 'Пицца', imgName: 'pizza.png' },
+        { name: 'Салаты', imgName: 'salads.png' },
+        { name: 'Напитки', imgName: 'drinks.png' },
+        { name: 'Акции', imgName: 'sale.png' },
+      ],
       products: {
         Пицца: {
           imgName: 'pizza.png',
@@ -281,7 +286,12 @@ export const dataBase = {
         1: '+37529 875 15 849',
         2: '+37544 900 44 888',
       },
-      menuList: ['Суши', 'Сеты', 'Напитки', 'Акции'],
+      menuList: [
+        { name: 'Суши', imgName: 'sushi.png' },
+        { name: 'Сеты', imgName: 'set.png' },
+        { name: 'Напитки', imgName: 'drinks.png' },
+        { name: 'Акции', imgName: 'sale.png' },
+      ],
       products: {
         Суши: {
           imgName: 'sushi.png',
@@ -401,7 +411,12 @@ export const dataBase = {
         1: '+37529 353 17 353',
         2: '+37533 458 68 800',
       },
-      menuList: ['Пицца', 'Салаты', 'Напитки', 'Акции'],
+      menuList: [
+        { name: 'Пицца', imgName: 'pizza.png' },
+        { name: 'Салаты', imgName: 'salads.png' },
+        { name: 'Напитки', imgName: 'drinks.png' },
+        { name: 'Акции', imgName: 'sale.png' },
+      ],
       products: {
         Пицца: {
           imgName: 'pizza.png',
