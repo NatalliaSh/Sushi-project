@@ -5,6 +5,7 @@ import { getSelectedOption } from '../../modules/getSelectedOption.js';
 import { renderReplace } from '../../modules/renderReplace.js';
 import { phoneNumberCart } from './phoneNumberCart.js';
 import { getLeftMenuCart } from '../../modules/menuContent/getLeftMenuCart.js';
+import { changeSelectAddressHandlerHeader } from './changeSelectAddressHandler.js';
 
 export const changeSelectCityHandlerHeader = (city, dataBase) => {
   const address = getAddressesForSelectedCity(dataBase, city);
@@ -20,4 +21,8 @@ export const changeSelectCityHandlerHeader = (city, dataBase) => {
 
   renderReplace('.contacts', phoneNumberCart(dataOfphones, true), true);
   renderReplace('#menuRoot', menu);
+
+  //Refresh listener on select address form
+  const selectAddress = document.querySelector('[name="address"]');
+  selectAddress.addEventListener('change', ({ target: { value: address } }) => changeSelectAddressHandlerHeader(address, dataBase));
 };
