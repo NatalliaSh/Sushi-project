@@ -1,14 +1,7 @@
-const route = {
-  Пицца: 'pizza',
-  Салаты: 'salads',
-  Напитки: 'drinks',
-  Акции: 'sale',
-  Суши: 'sushi',
-  Сеты: 'sets',
-  Роллы: 'rolls',
-};
+import { ROUTS } from '../CONST.js';
+import { logoMenuImgNames } from '../CONST.js';
 
-function getMenuCart(dataForSelectedLocation, imgPath) {
+function getLeftMenuCart(dataForSelectedLocation, imgPath) {
   const list = document.createElement('ul');
   list.classList.add('menuList');
 
@@ -16,23 +9,23 @@ function getMenuCart(dataForSelectedLocation, imgPath) {
 
   arrOfMenuList.forEach((element) => {
     const li = document.createElement('li');
+    const a = document.createElement('a');
 
-    let href = `/${element.name}`;
-    for (let key in route) {
-      if (key === element.name) {
-        href = `/${route[key]}`;
+    let href = `/${element}`;
+    for (let key in ROUTS) {
+      if (key === element) {
+        href = `/${ROUTS[key]}`;
       }
     }
-
-    const a = document.createElement('a');
     a.setAttribute('href', href);
+
     const img = document.createElement('img');
-    img.setAttribute('src', imgPath + element.imgName);
+    img.setAttribute('src', imgPath + logoMenuImgNames[element]);
     img.setAttribute('alt', 'Product logotype');
     a.appendChild(img);
 
     const name = document.createElement('span');
-    name.innerText = element.name;
+    name.innerText = element;
     a.appendChild(name);
 
     li.appendChild(a);
@@ -42,4 +35,4 @@ function getMenuCart(dataForSelectedLocation, imgPath) {
   return list;
 }
 
-export { getMenuCart };
+export { getLeftMenuCart };

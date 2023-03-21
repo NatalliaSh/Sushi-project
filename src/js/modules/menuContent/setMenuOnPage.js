@@ -1,4 +1,4 @@
-import { getMenuCart } from './getMenuCart.js';
+import { getLeftMenuCart } from './getLeftMenuCart.js';
 import { getDataForSelectedLocation } from '../getDataForSelectedLocation.js';
 import { getSelectedOption } from '../getSelectedOption.js';
 import { dataBase } from '../DataBase/dataBase.js';
@@ -9,6 +9,6 @@ const dataForSelectedLocation = getDataForSelectedLocation(dataBase, selectedCit
 
 //console.log(dataForSelectedLocation);
 
-const menu = getMenuCart(dataForSelectedLocation, '../../../img/menuImg/menuLogo/');
+const menu = getLeftMenuCart(dataForSelectedLocation, '../../../img/menuImg/menuLogo/');
 const root = document.querySelector('#menuRoot');
 root.appendChild(menu);

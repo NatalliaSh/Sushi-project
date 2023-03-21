@@ -4,7 +4,7 @@ import { getDataForSelectedLocation } from '../../modules/getDataForSelectedLoca
 import { getSelectedOption } from '../../modules/getSelectedOption.js';
 import { renderReplace } from '../../modules/renderReplace.js';
 import { phoneNumberCart } from './phoneNumberCart.js';
-import { getMenuCart } from '../../modules/menuContent/getMenuCart.js';
+import { getLeftMenuCart } from '../../modules/menuContent/getLeftMenuCart.js';
 
 export const changeSelectCityHandlerHeader = (city, dataBase) => {
   const address = getAddressesForSelectedCity(dataBase, city);
@@ -16,7 +16,7 @@ export const changeSelectCityHandlerHeader = (city, dataBase) => {
 
   const data = getDataForSelectedLocation(dataBase, city, getSelectedOption('[name="address"]'));
   const dataOfphones = data.phones;
-  const menu = getMenuCart(data, '../../../img/menuImg/menuLogo/');
+  const menu = getLeftMenuCart(data, '../../../img/menuImg/menuLogo/');
 
   renderReplace('.contacts', phoneNumberCart(dataOfphones, true), true);
   renderReplace('#menuRoot', menu);
