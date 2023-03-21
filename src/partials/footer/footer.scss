@@ -30,8 +30,8 @@
     }
 
     &__left {
-      padding-right: 20px;
-      flex: 1 1 200px;
+      padding-right: 10px;
+      flex: 1 1 160px;
 
       &__linkList li {
         padding: 10px 0px;
@@ -46,19 +46,20 @@
       }
 
       @include large() {
-        order: 1;
+        order: 2;
       }
     }
 
     &__central {
       flex: 1 2 200px;
-      padding: 10px 20px 40px 10px;
+      padding: 10px 10px 40px 10px;
       border-left: 0.5px solid $grey;
       border-right: 0.5px solid $grey;
 
       @include large() {
         border: none;
         padding-left: 0;
+        order: 1;
       }
 
       @include mobile() {
@@ -117,45 +118,42 @@
     }
 
     &__right {
-      padding-left: 20px;
+      padding-left: 10px;
       flex: 1 0 190px;
 
+      > p {
+        padding: 10px 0;
+
+        @include mobile() {
+          font-size: 18px;
+        }
+      }
+
+      .contactsList {
+        color: $grey;
+        padding-bottom: 10px;
+
+        &__city:not(:first-child) {
+          padding-top: 10px;
+        }
+
+        a:hover {
+          color: $orange;
+        }
+
+        ul li a {
+          text-decoration: underline;
+        }
+      }
+
       @include large() {
-        order: -1;
+        order: 3;
         padding-left: 0;
       }
 
       @include mobile() {
         flex: 1 1 auto;
         padding: 0px 15px 30px 15px;
-      }
-
-      &__contacts {
-        ul {
-          padding: 10px 0;
-
-          li {
-            padding-bottom: 5px;
-
-            a {
-              text-decoration: underline;
-
-              &:hover {
-                color: $orange;
-              }
-            }
-          }
-        }
-      }
-
-      &__address {
-        ul li {
-          padding-bottom: 5px;
-
-          a:hover {
-            color: $orange;
-          }
-        }
       }
     }
   }

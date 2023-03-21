@@ -1,4 +1,4 @@
-function phoneNumberCart(arrOfphones, ifHeader) {
+function phoneNumberCart(dataOfphones, ifHeader) {
   const phoneList = document.createElement('ul');
 
   if (ifHeader) {
@@ -7,7 +7,7 @@ function phoneNumberCart(arrOfphones, ifHeader) {
     phoneList.appendChild(caption);
   }
 
-  for (let i = 0; i < arrOfphones.length; i++) {
+  for (let key in dataOfphones) {
     const phonefield = document.createElement('li');
 
     if (!ifHeader) {
@@ -17,9 +17,9 @@ function phoneNumberCart(arrOfphones, ifHeader) {
     }
 
     const phoneLink = document.createElement('a');
-    phoneLink.setAttribute('href', 'tel:' + arrOfphones[i].split(' ').join(''));
+    phoneLink.setAttribute('href', 'tel:' + dataOfphones[key].split(' ').join(''));
     phoneLink.setAttribute('title', 'Позвонить нам');
-    phoneLink.innerText = arrOfphones[i];
+    phoneLink.innerText = dataOfphones[key];
     phonefield.appendChild(phoneLink);
 
     phoneList.appendChild(phonefield);
