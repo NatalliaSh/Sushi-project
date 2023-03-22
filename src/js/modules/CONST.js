@@ -1,21 +1,19 @@
 const ROUTS = {
-  Пицца: 'pizza',
+  WOK: 'wok',
   Салаты: 'salads',
   Напитки: 'drinks',
   Акции: 'sale',
   Суши: 'sushi',
   Сеты: 'sets',
-  Роллы: 'rolls',
 };
 
 const logoMenuImgNames = {
-  Пицца: 'pizza.png',
+  WOK: 'wok.png',
   Салаты: 'salads.png',
   Напитки: 'drinks.png',
   Акции: 'sale.png',
   Суши: 'sushi.png',
   Сеты: 'set.png',
-  Роллы: 'roll.png',
 };
 
 export { ROUTS };
