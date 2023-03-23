@@ -1,4 +1,5 @@
 import { getLeftMenuCart } from './getLeftMenuCart.js';
+import { getCentralMenuCards } from '../../partials/cards/getCentralMenuCards.js';
 import { getDataForSelectedLocation } from '../getDataForSelectedLocation.js';
 import { getSelectedOption } from '../getSelectedOption.js';
 import { dataBase } from '../DataBase/dataBase.js';
@@ -9,6 +10,10 @@ const dataForSelectedLocation = getDataForSelectedLocation(dataBase, selectedCit
 
 //console.log(dataForSelectedLocation);
 
-const menu = getLeftMenuCart(dataForSelectedLocation, '../../../img/menuImg/menuLogo/');
-const root = document.querySelector('#menuRoot');
-root.appendChild(menu);
+const menuLeft = getLeftMenuCart(dataForSelectedLocation, '../../../img/menuImg/menuLogo/');
+const rootLeft = document.querySelector('#menuRootLeft');
+rootLeft.appendChild(menuLeft);
+
+const menuCentral = getCentralMenuCards(dataForSelectedLocation, '../../../img/menuImg/menuPicture/');
+const rootCentral = document.querySelector('#rootCentral');
+rootCentral.appendChild(menuCentral);

@@ -16,5 +16,18 @@ const logoMenuImgNames = {
   Сеты: 'set.png',
 };
 
+const menuPictureNames = {
+  WOK: 'wokPicture.jpg',
+  Салаты: 'saladPicture.jpg',
+  Напитки: 'drinksPicture.jpg',
+  Акции: 'salePicture.jpg',
+  Суши: 'sushiPicture.png',
+  Сеты: 'setPicture.jpg',
+};
+
+const bigItemName = ['Сеты', 'Акции'];
+
 export { ROUTS };
 export { logoMenuImgNames };
+export { menuPictureNames };
+export { bigItemName };

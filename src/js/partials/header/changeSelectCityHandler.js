@@ -5,6 +5,7 @@ import { getSelectedOption } from '../../modules/getSelectedOption.js';
 import { renderReplace } from '../../modules/renderReplace.js';
 import { phoneNumberCart } from './phoneNumberCart.js';
 import { getLeftMenuCart } from '../../modules/menuContent/getLeftMenuCart.js';
+import { getCentralMenuCards } from '../../partials/cards/getCentralMenuCards.js';
 import { changeSelectAddressHandlerHeader } from './changeSelectAddressHandler.js';
 
 export const changeSelectCityHandlerHeader = (city, dataBase) => {
@@ -17,10 +18,12 @@ export const changeSelectCityHandlerHeader = (city, dataBase) => {
 
   const data = getDataForSelectedLocation(dataBase, city, getSelectedOption('[name="address"]'));
   const dataOfphones = data.phones;
-  const menu = getLeftMenuCart(data, '../../../img/menuImg/menuLogo/');
+  const menuLeft = getLeftMenuCart(data, '../../../img/menuImg/menuLogo/');
+  const menuCentral = getCentralMenuCards(data, '../../../img/menuImg/menuPicture/');
 
   renderReplace('.contacts', phoneNumberCart(dataOfphones, true), true);
-  renderReplace('#menuRoot', menu);
+  renderReplace('#menuRootLeft', menuLeft);
+  renderReplace('#rootCentral', menuCentral);
 
   //Refresh listener on select address form
   const selectAddress = document.querySelector('[name="address"]');

@@ -12,10 +12,15 @@
     <div class="wrapper">
       <div class="container__left">
         @@include("./partials/header/_header__logo.html")
-        <div id="menuRoot" class="container__left__menu text"></div>
+        <div id="menuRootLeft" class="container__left__menu text"></div>
       </div>
-      <div class="container__central">@@include("./partials/header/_header.html", { "schedule": "работаем с 10:00 до 00:00"}) @@include("./partials/about/_about.html") @@include("./partials/footer/_footer.html")</div>
+      <div class="container__central">
+        @@include("./partials/header/_header.html", { "schedule": "работаем с 10:00 до 00:00"})
+        <div id="rootCentral" class="container__central__generatedContent text text--semi-bold"></div>
+        @@include("./partials/about/_about.html") @@include("./partials/footer/_footer.html")
+      </div>
       <div class="container__right"></div>
     </div>
   </body>
 </html>
+v

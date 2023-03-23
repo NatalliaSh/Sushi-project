@@ -6,6 +6,7 @@
 @import './partials/header/header__logo.scss';
 @import './partials/about/about.scss';
 @import './partials/footer/footer.scss';
+@import './partials/cards/centralMenuCards.scss';
 
 body {
   box-sizing: border-box;
@@ -76,6 +77,11 @@ a {
   .container__central {
     flex: 1 1 1170px;
     background-color: $central-background;
+
+    &__generatedContent {
+      max-width: 82%;
+      margin: 30px auto;
+    }
   }
   .container__right {
     flex: 0 1 330px;
