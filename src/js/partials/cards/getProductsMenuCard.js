@@ -1,6 +1,35 @@
 import { getDOMElement } from '../../modules/getDOMElement.js';
 
-function getProductsMenuCard({ name, imgPath, price, currency = 'COM', description, count }) {
+function getProductsDataForSelectedLocation (dataForSelectedLocation) {
+  return dataForSelectedLocation.products;
+}
+
+cardArr.forEach((element) => document.body.appendChild(getCard(element)));
+const cards = cardArr.map((element) => getCard(element));
+document.body.append(...cards);
+{
+  name: 'Сет "4 Филадельфии"',
+  imgPath: './img/setImages/set4.png',
+  price: '1559',
+  description: '1100 грамм 32 кусочек',
+  count: 100,
+},
+
+function getArrOfCardsForRender (dataOfFilteredProducts) {
+  let cardArr = [];
+
+  return cardArr;
+}
+
+function filterCategories (productsDataForSelectedLocation, category) {
+  return productsDataForSelectedLocation.category;
+}
+
+function filterOnSale (productsDataForSelectedLocation, category) {
+  return productsDataForSelectedLocation.category;
+}
+
+function getProductsMenuCard({ name, imgPath, price, currency = 'руб', description, count }) {
   const cardContainer = getDOMElement('div', { className: 'card_container' });
   const imgContainer = getDOMElement('div', { className: 'card_img_container' });
   cardContainer.appendChild(imgContainer);
