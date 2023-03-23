@@ -9,11 +9,10 @@ export const productSpecificationData = {
     price: '14.90',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: true,
+    new: true,
   },
   wok2: {
     name: 'Тори Яки Тяхан (курица)',
@@ -25,11 +24,10 @@ export const productSpecificationData = {
     price: '15.99',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: true,
+    new: false,
   },
   wok3: {
     name: 'Тори Яки Удон (курица)',
@@ -41,11 +39,10 @@ export const productSpecificationData = {
     price: '15.99',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: false,
+    new: false,
   },
   wok4: {
     name: 'Батакон Яки Тяхан',
@@ -57,11 +54,10 @@ export const productSpecificationData = {
     price: '16.99',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: false,
+    new: true,
   },
   wok5: {
     name: 'Сифудо Яки Тяхан',
@@ -73,11 +69,10 @@ export const productSpecificationData = {
     price: '21.99',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: false,
+    new: true,
   },
   wok6: {
     name: 'Эби тори Яки Удон',
@@ -89,11 +84,10 @@ export const productSpecificationData = {
     price: '21.99',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: true,
-      newPrice: '15.99',
-    },
+    sale: true,
+    newPrice: '15.99',
     popular: false,
+    new: false,
   },
   wok7: {
     name: 'Бифу Яки',
@@ -105,11 +99,10 @@ export const productSpecificationData = {
     price: '21.99',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: false,
+    new: false,
   },
   wok8: {
     name: 'Ясай Сомен (говядина)',
@@ -121,11 +114,10 @@ export const productSpecificationData = {
     price: '21.99',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: false,
+    new: true,
   },
   wok9: {
     name: 'Сифудо Яки Шахэфэнь',
@@ -137,11 +129,10 @@ export const productSpecificationData = {
     price: '24.90',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: true,
+    new: false,
   },
   sushi1: {
     name: 'Каппа Пира маки',
@@ -153,11 +144,10 @@ export const productSpecificationData = {
     price: '11.90',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: true,
-      newPrice: '7.99',
-    },
+    sale: true,
+    newPrice: '7.99',
     popular: true,
+    new: false,
   },
   sushi2: {
     name: 'Бекон Пира маки',
@@ -169,11 +159,11 @@ export const productSpecificationData = {
     price: '15.50',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: true,
-      newPrice: '9.99',
-    },
+    sale: true,
+    newPrice: '9.99',
+
     popular: false,
+    new: false,
   },
   sushi3: {
     name: 'Ширу маки',
@@ -185,11 +175,10 @@ export const productSpecificationData = {
     price: '9.90',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: false,
+    new: true,
   },
   sushi4: {
     name: 'Мидори маки',
@@ -201,11 +190,10 @@ export const productSpecificationData = {
     price: '8.99',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: false,
+    new: false,
   },
   sushi5: {
     name: 'Сингапур маки',
@@ -217,11 +205,11 @@ export const productSpecificationData = {
     price: '13.90',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: true,
-      newPrice: '9.99',
-    },
+    sale: true,
+    newPrice: '9.99',
+
     popular: true,
+    new: false,
   },
   sushi6: {
     name: 'Тори Чизу маки',
@@ -233,11 +221,11 @@ export const productSpecificationData = {
     price: '15.50',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: true,
-      newPrice: '9.99',
-    },
+    sale: true,
+    newPrice: '9.99',
+
     popular: false,
+    new: true,
   },
   sushi7: {
     name: 'Флорида маки',
@@ -249,11 +237,10 @@ export const productSpecificationData = {
     price: '13.99',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: true,
+    new: false,
   },
   sushi8: {
     name: 'Шиитаке маки',
@@ -265,11 +252,10 @@ export const productSpecificationData = {
     price: '9.99',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: false,
+    new: true,
   },
   sushi9: {
     name: 'Пинку маки',
@@ -281,11 +267,10 @@ export const productSpecificationData = {
     price: '9.99',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: false,
+    new: true,
   },
   sushi10: {
     name: 'Сурими муракай маки',
@@ -297,11 +282,10 @@ export const productSpecificationData = {
     price: '9.99',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: false,
+    new: true,
   },
   sushi11: {
     name: 'Тамаго маки',
@@ -313,11 +297,10 @@ export const productSpecificationData = {
     price: '10.99',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: true,
+    new: false,
   },
   sushi12: {
     name: 'Батакон маки',
@@ -329,11 +312,10 @@ export const productSpecificationData = {
     price: '11.99',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: false,
+    new: false,
   },
   sushi13: {
     name: 'Ямато маки',
@@ -345,11 +327,10 @@ export const productSpecificationData = {
     price: '15.99',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: true,
+    new: false,
   },
   sushi14: {
     name: 'Эдо маки',
@@ -361,11 +342,10 @@ export const productSpecificationData = {
     price: '13.99',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: false,
+    new: false,
   },
   sushi15: {
     name: 'Эби Чеддер маки',
@@ -377,11 +357,10 @@ export const productSpecificationData = {
     price: '15.99',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: true,
+    new: false,
   },
   sushi16: {
     name: 'Эби Филадельфия маки',
@@ -393,11 +372,10 @@ export const productSpecificationData = {
     price: '18.99',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: false,
+    new: false,
   },
   sushi17: {
     name: 'Эби Калифорния маки',
@@ -409,11 +387,10 @@ export const productSpecificationData = {
     price: '19.99',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: false,
+    new: false,
   },
   sushi18: {
     name: 'Чили Изумитай маки',
@@ -425,11 +402,10 @@ export const productSpecificationData = {
     price: '15.99',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: false,
+    new: false,
   },
   sushi19: {
     name: 'Филадельфия Фреш маки',
@@ -441,11 +417,10 @@ export const productSpecificationData = {
     price: '19.99',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: true,
+    new: false,
   },
   sushi20: {
     name: 'Филадельфия маки',
@@ -457,11 +432,10 @@ export const productSpecificationData = {
     price: '22.99',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: true,
+    new: false,
   },
   sushi21: {
     name: 'Филадельфия Кунсей маки',
@@ -473,11 +447,10 @@ export const productSpecificationData = {
     price: '20.99',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: true,
+    new: false,
   },
   sushi22: {
     name: 'Филадельфия Авокадо маки',
@@ -489,11 +462,10 @@ export const productSpecificationData = {
     price: '22.99',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: true,
+    new: false,
   },
   sushi23: {
     name: 'Тамагу Кунсей маки',
@@ -505,11 +477,10 @@ export const productSpecificationData = {
     price: '14.99',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: true,
+    new: false,
   },
   set1: {
     name: 'Окинава сет',
@@ -521,11 +492,10 @@ export const productSpecificationData = {
     price: '35.10',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: false,
+    new: true,
   },
   set2: {
     name: 'Осака сет',
@@ -537,11 +507,10 @@ export const productSpecificationData = {
     price: '49.90',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: true,
-      newPrice: '39.90',
-    },
+    sale: true,
+    newPrice: '39.90',
     popular: true,
+    new: false,
   },
   set3: {
     name: 'Кудасай сет ',
@@ -553,11 +522,10 @@ export const productSpecificationData = {
     price: '44.10',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: true,
-      newPrice: '34.90',
-    },
+    sale: true,
+    newPrice: '34.90',
     popular: true,
+    new: false,
   },
   set4: {
     name: 'Ля Мур сет',
@@ -569,11 +537,10 @@ export const productSpecificationData = {
     price: '55.10',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: true,
-      newPrice: '49.90',
-    },
+    sale: true,
+    newPrice: '49.90',
     popular: true,
+    new: false,
   },
   set5: {
     name: 'Сяке сет',
@@ -585,11 +552,11 @@ export const productSpecificationData = {
     price: '45.99',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
+
     popular: false,
+    new: true,
   },
   set6: {
     name: 'Бонсай сет',
@@ -601,11 +568,10 @@ export const productSpecificationData = {
     price: '43.80',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: false,
+    new: true,
   },
   set7: {
     name: 'Кабуки сет',
@@ -617,11 +583,10 @@ export const productSpecificationData = {
     price: '59.99',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: false,
+    new: true,
   },
   set8: {
     name: 'Хит сет',
@@ -633,11 +598,10 @@ export const productSpecificationData = {
     price: '44.10',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: true,
+    new: true,
   },
   set9: {
     name: 'Филадельфия сан сет',
@@ -649,11 +613,10 @@ export const productSpecificationData = {
     price: '44.10',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: true,
+    new: false,
   },
   set10: {
     name: 'Сушимания сет',
@@ -665,11 +628,10 @@ export const productSpecificationData = {
     price: '70.99',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: true,
-      newPrice: '65.90',
-    },
+    sale: true,
+    newPrice: '65.90',
     popular: false,
+    new: false,
   },
   set11: {
     name: 'Ахимса сет',
@@ -681,11 +643,10 @@ export const productSpecificationData = {
     price: '37.10',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: false,
+    new: false,
   },
   salad1: {
     name: 'Киото сарада',
@@ -697,11 +658,10 @@ export const productSpecificationData = {
     price: '14.90',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: false,
+    new: false,
   },
   salad2: {
     name: 'Цезарь',
@@ -713,11 +673,10 @@ export const productSpecificationData = {
     price: '15.99',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: true,
+    new: false,
   },
   salad3: {
     name: 'Тори Киноко',
@@ -729,11 +688,10 @@ export const productSpecificationData = {
     price: '15.99',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: false,
+    new: false,
   },
   salad4: {
     name: 'Батакон Яки Тяхан',
@@ -745,11 +703,10 @@ export const productSpecificationData = {
     price: '9.99',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: false,
+    new: false,
   },
   drink1: {
     name: 'Вода "Святой источник"',
@@ -761,11 +718,10 @@ export const productSpecificationData = {
     price: '1.90',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: false,
+    new: false,
   },
   drink2: {
     name: 'Боржоми',
@@ -777,11 +733,10 @@ export const productSpecificationData = {
     price: '5.00',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: false,
+    new: false,
   },
   drink3: {
     name: 'Бонаква',
@@ -793,11 +748,10 @@ export const productSpecificationData = {
     price: '1.99',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: false,
+    new: false,
   },
   drink4: {
     name: 'Кока-кола',
@@ -809,11 +763,10 @@ export const productSpecificationData = {
     price: '3.99',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: false,
+    new: false,
   },
   drink5: {
     name: 'Fanta',
@@ -825,11 +778,10 @@ export const productSpecificationData = {
     price: '3.90',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: false,
+    new: false,
   },
   drink6: {
     name: 'Sprite',
@@ -841,11 +793,10 @@ export const productSpecificationData = {
     price: '3.90',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: false,
+    new: false,
   },
   drink7: {
     name: 'Сок Rich вишня (ПЭТ)',
@@ -857,11 +808,10 @@ export const productSpecificationData = {
     price: '2.90',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: false,
+    new: false,
   },
   drink8: {
     name: 'Сок Rich апельсин',
@@ -873,10 +823,9 @@ export const productSpecificationData = {
     price: '5.90',
     currency: 'BYN',
     count: 100,
-    sale: {
-      true: false,
-      newPrice: '',
-    },
+    sale: false,
+    newPrice: '',
     popular: false,
+    new: false,
   },
 };
