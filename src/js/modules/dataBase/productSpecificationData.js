@@ -12,7 +12,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: true,
-    new: true,
+    news: true,
   },
   wok2: {
     name: 'Тори Яки Тяхан (курица)',
@@ -27,7 +27,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: true,
-    new: false,
+    news: false,
   },
   wok3: {
     name: 'Тори Яки Удон (курица)',
@@ -42,7 +42,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: false,
-    new: false,
+    news: false,
   },
   wok4: {
     name: 'Батакон Яки Тяхан',
@@ -57,7 +57,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: false,
-    new: true,
+    news: true,
   },
   wok5: {
     name: 'Сифудо Яки Тяхан',
@@ -72,7 +72,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: false,
-    new: true,
+    news: true,
   },
   wok6: {
     name: 'Эби тори Яки Удон',
@@ -87,7 +87,7 @@ export const productSpecificationData = {
     sale: true,
     newPrice: '15.99',
     popular: false,
-    new: false,
+    news: false,
   },
   wok7: {
     name: 'Бифу Яки',
@@ -102,7 +102,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: false,
-    new: false,
+    news: false,
   },
   wok8: {
     name: 'Ясай Сомен (говядина)',
@@ -117,7 +117,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: false,
-    new: true,
+    news: true,
   },
   wok9: {
     name: 'Сифудо Яки Шахэфэнь',
@@ -132,7 +132,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: true,
-    new: false,
+    news: false,
   },
   sushi1: {
     name: 'Каппа Пира маки',
@@ -147,7 +147,7 @@ export const productSpecificationData = {
     sale: true,
     newPrice: '7.99',
     popular: true,
-    new: false,
+    news: false,
   },
   sushi2: {
     name: 'Бекон Пира маки',
@@ -161,9 +161,8 @@ export const productSpecificationData = {
     count: 100,
     sale: true,
     newPrice: '9.99',
-
     popular: false,
-    new: false,
+    news: false,
   },
   sushi3: {
     name: 'Ширу маки',
@@ -178,7 +177,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: false,
-    new: true,
+    news: true,
   },
   sushi4: {
     name: 'Мидори маки',
@@ -193,7 +192,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: false,
-    new: false,
+    news: false,
   },
   sushi5: {
     name: 'Сингапур маки',
@@ -207,9 +206,8 @@ export const productSpecificationData = {
     count: 100,
     sale: true,
     newPrice: '9.99',
-
     popular: true,
-    new: false,
+    news: false,
   },
   sushi6: {
     name: 'Тори Чизу маки',
@@ -223,9 +221,8 @@ export const productSpecificationData = {
     count: 100,
     sale: true,
     newPrice: '9.99',
-
     popular: false,
-    new: true,
+    news: true,
   },
   sushi7: {
     name: 'Флорида маки',
@@ -240,7 +237,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: true,
-    new: false,
+    news: false,
   },
   sushi8: {
     name: 'Шиитаке маки',
@@ -255,7 +252,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: false,
-    new: true,
+    news: true,
   },
   sushi9: {
     name: 'Пинку маки',
@@ -270,7 +267,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: false,
-    new: true,
+    news: true,
   },
   sushi10: {
     name: 'Сурими муракай маки',
@@ -285,7 +282,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: false,
-    new: true,
+    news: true,
   },
   sushi11: {
     name: 'Тамаго маки',
@@ -300,7 +297,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: true,
-    new: false,
+    news: false,
   },
   sushi12: {
     name: 'Батакон маки',
@@ -315,7 +312,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: false,
-    new: false,
+    news: false,
   },
   sushi13: {
     name: 'Ямато маки',
@@ -330,7 +327,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: true,
-    new: false,
+    news: false,
   },
   sushi14: {
     name: 'Эдо маки',
@@ -345,7 +342,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: false,
-    new: false,
+    news: false,
   },
   sushi15: {
     name: 'Эби Чеддер маки',
@@ -360,7 +357,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: true,
-    new: false,
+    news: false,
   },
   sushi16: {
     name: 'Эби Филадельфия маки',
@@ -375,7 +372,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: false,
-    new: false,
+    news: false,
   },
   sushi17: {
     name: 'Эби Калифорния маки',
@@ -390,7 +387,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: false,
-    new: false,
+    news: false,
   },
   sushi18: {
     name: 'Чили Изумитай маки',
@@ -405,7 +402,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: false,
-    new: false,
+    news: false,
   },
   sushi19: {
     name: 'Филадельфия Фреш маки',
@@ -420,7 +417,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: true,
-    new: false,
+    news: false,
   },
   sushi20: {
     name: 'Филадельфия маки',
@@ -435,7 +432,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: true,
-    new: false,
+    news: false,
   },
   sushi21: {
     name: 'Филадельфия Кунсей маки',
@@ -450,7 +447,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: true,
-    new: false,
+    news: false,
   },
   sushi22: {
     name: 'Филадельфия Авокадо маки',
@@ -465,7 +462,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: true,
-    new: false,
+    news: false,
   },
   sushi23: {
     name: 'Тамагу Кунсей маки',
@@ -480,7 +477,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: true,
-    new: false,
+    news: false,
   },
   set1: {
     name: 'Окинава сет',
@@ -495,7 +492,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: false,
-    new: true,
+    news: true,
   },
   set2: {
     name: 'Осака сет',
@@ -510,7 +507,7 @@ export const productSpecificationData = {
     sale: true,
     newPrice: '39.90',
     popular: true,
-    new: false,
+    news: false,
   },
   set3: {
     name: 'Кудасай сет ',
@@ -525,7 +522,7 @@ export const productSpecificationData = {
     sale: true,
     newPrice: '34.90',
     popular: true,
-    new: false,
+    news: false,
   },
   set4: {
     name: 'Ля Мур сет',
@@ -540,7 +537,7 @@ export const productSpecificationData = {
     sale: true,
     newPrice: '49.90',
     popular: true,
-    new: false,
+    news: false,
   },
   set5: {
     name: 'Сяке сет',
@@ -556,7 +553,7 @@ export const productSpecificationData = {
     newPrice: '',
 
     popular: false,
-    new: true,
+    news: true,
   },
   set6: {
     name: 'Бонсай сет',
@@ -571,7 +568,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: false,
-    new: true,
+    news: true,
   },
   set7: {
     name: 'Кабуки сет',
@@ -586,7 +583,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: false,
-    new: true,
+    news: true,
   },
   set8: {
     name: 'Хит сет',
@@ -601,7 +598,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: true,
-    new: true,
+    news: true,
   },
   set9: {
     name: 'Филадельфия сан сет',
@@ -616,7 +613,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: true,
-    new: false,
+    news: false,
   },
   set10: {
     name: 'Сушимания сет',
@@ -631,7 +628,7 @@ export const productSpecificationData = {
     sale: true,
     newPrice: '65.90',
     popular: false,
-    new: false,
+    news: false,
   },
   set11: {
     name: 'Ахимса сет',
@@ -646,7 +643,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: false,
-    new: false,
+    news: false,
   },
   salad1: {
     name: 'Киото сарада',
@@ -661,7 +658,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: false,
-    new: false,
+    news: false,
   },
   salad2: {
     name: 'Цезарь',
@@ -676,7 +673,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: true,
-    new: false,
+    news: false,
   },
   salad3: {
     name: 'Тори Киноко',
@@ -691,7 +688,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: false,
-    new: false,
+    news: false,
   },
   salad4: {
     name: 'Батакон Яки Тяхан',
@@ -706,7 +703,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: false,
-    new: false,
+    news: false,
   },
   drink1: {
     name: 'Вода "Святой источник"',
@@ -721,7 +718,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: false,
-    new: false,
+    news: false,
   },
   drink2: {
     name: 'Боржоми',
@@ -736,7 +733,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: false,
-    new: false,
+    news: false,
   },
   drink3: {
     name: 'Бонаква',
@@ -751,7 +748,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: false,
-    new: false,
+    news: false,
   },
   drink4: {
     name: 'Кока-кола',
@@ -766,7 +763,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: false,
-    new: false,
+    news: false,
   },
   drink5: {
     name: 'Fanta',
@@ -781,7 +778,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: false,
-    new: false,
+    news: false,
   },
   drink6: {
     name: 'Sprite',
@@ -796,7 +793,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: false,
-    new: false,
+    news: false,
   },
   drink7: {
     name: 'Сок Rich вишня (ПЭТ)',
@@ -811,7 +808,7 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: false,
-    new: false,
+    news: false,
   },
   drink8: {
     name: 'Сок Rich апельсин',
@@ -826,6 +823,6 @@ export const productSpecificationData = {
     sale: false,
     newPrice: '',
     popular: false,
-    new: false,
+    news: false,
   },
 };
