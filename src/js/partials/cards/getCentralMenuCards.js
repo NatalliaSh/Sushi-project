@@ -26,9 +26,9 @@ function getCentralMenuCards(dataForSelectedLocation, imgPath) {
     const a = getDOMElement('a', {
       className: 'container__menu__item__link',
       href: ref,
-
       innerText: element,
     });
+    a.setAttribute('data-link', 'internal');
 
     item.appendChild(a);
     container.appendChild(item);

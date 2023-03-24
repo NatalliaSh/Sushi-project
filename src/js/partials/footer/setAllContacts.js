@@ -1,5 +1,8 @@
-import { dataBase } from '../../modules/DataBase/dataBase.js';
 import { allContactsCart } from './allContactsCart.js';
 
-const root = document.querySelector('.footer__container__right');
-root.append(...allContactsCart(dataBase));
+function setAllContacts(dataBase, root) {
+  const rootEl = document.querySelector(root);
+  rootEl.append(...allContactsCart(dataBase));
+}
+
+export { setAllContacts };

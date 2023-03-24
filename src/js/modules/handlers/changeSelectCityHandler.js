@@ -1,10 +1,10 @@
-import { getAddressesForSelectedCity } from './getAddressesForSelectedCity.js';
-import { getSelectForm } from './getSelectForm.js';
+import { getAddressesForSelectedCity } from '../../partials/header/getAddressesForSelectedCity.js';
+import { getSelectForm } from '../../partials/header/getSelectForm.js';
 import { getDataForSelectedLocation } from '../../modules/getDataForSelectedLocation.js';
 import { getSelectedOption } from '../../modules/getSelectedOption.js';
 import { renderReplace } from '../../modules/renderReplace.js';
-import { phoneNumberCart } from './phoneNumberCart.js';
-import { getLeftMenuCart } from '../../modules/menuContent/getLeftMenuCart.js';
+import { phoneNumberCart } from '../../partials/header/phoneNumberCart.js';
+import { getLeftMenuCart } from '../../partials/cards/getLeftMenuCart.js';
 import { getCentralMenuCards } from '../../partials/cards/getCentralMenuCards.js';
 import { changeSelectAddressHandlerHeader } from './changeSelectAddressHandler.js';
 

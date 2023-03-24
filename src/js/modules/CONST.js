@@ -1,4 +1,4 @@
-const ROUTS = {
+export const ROUTS = {
   WOK: 'wok',
   Салаты: 'salads',
   Напитки: 'drinks',
@@ -7,7 +7,7 @@ const ROUTS = {
   Сеты: 'sets',
 };
 
-const logoMenuImgNames = {
+export const logoMenuImgNames = {
   WOK: 'wok.png',
   Салаты: 'salads.png',
   Напитки: 'drinks.png',
@@ -17,7 +17,7 @@ const logoMenuImgNames = {
   sale: 'sale.png',
 };
 
-const menuPictureNames = {
+export const menuPictureNames = {
   WOK: 'wokPicture.jpg',
   Салаты: 'saladPicture.jpg',
   Напитки: 'drinksPicture.jpg',
@@ -26,9 +26,10 @@ const menuPictureNames = {
   Сеты: 'setPicture.jpg',
 };
 
-const bigItemName = ['Сеты', 'Акции'];
+export const bigItemName = ['Сеты', 'Акции'];
 
-export { ROUTS };
-export { logoMenuImgNames };
-export { menuPictureNames };
-export { bigItemName };
+export const ACTIONS = {
+  login: 'login',
+  logout: 'logout',
+  changeRoute: 'changeRoute',
+};

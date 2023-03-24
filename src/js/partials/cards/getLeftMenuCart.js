@@ -18,6 +18,7 @@ function getLeftMenuCart(dataForSelectedLocation, imgPath) {
       }
     }
     a.setAttribute('href', href);
+    a.setAttribute('data-link', 'internal');
 
     const img = document.createElement('img');
     img.setAttribute('src', imgPath + logoMenuImgNames[element]);
