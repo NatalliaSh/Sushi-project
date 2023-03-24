@@ -1,5 +1,5 @@
-import { ROUTS } from '../CONST.js';
-import { logoMenuImgNames } from '../CONST.js';
+import { ROUTS } from '../../modules/CONST.js';
+import { logoMenuImgNames } from '../../modules/CONST.js';
 
 function getLeftMenuCart(dataForSelectedLocation, imgPath) {
   const list = document.createElement('ul');

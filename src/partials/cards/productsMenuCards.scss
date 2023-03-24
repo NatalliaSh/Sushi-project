@@ -1,116 +1,147 @@
-.container__card {
-  display: flex;
-  flex-direction: column;
-  max-width: 280px;
-  height: 400px;
-  background-color: $white;
-  border-radius: 10px;
-  transition: all 0.5s ease-out;
-  position: relative;
-
-  &:hover {
-    transform: scale(1.1);
-    -moz-box-shadow: 0px 0px 20px 5px rgba(16, 21, 22, 0.4);
-    -webkit-box-shadow: 0px 0px 20px 5px rgba(16, 21, 22, 0.4);
-    box-shadow: 0px 0px 20px 5px rgba(16, 21, 22, 0.4);
-    z-index: 1;
-  }
-
-  @include mobile() {
-    max-width: 100%;
-    flex-direction: row;
-    height: 120px;
-    background-color: white;
-    margin: 10px 15px;
-    border-radius: 10px;
-  }
-
-  &__label {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-
-    img {
-      margin-right: 2px;
-    }
-  }
-
-  &__img {
-    img {
-      width: 100%;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-    }
-
-    @include mobile() {
-      flex: 0 1 100px;
-      margin: 15px;
-      height: 84px;
-    }
-  }
-
-  &__goodDescription {
-    @include mobile() {
-      flex: 1 1 auto;
-    }
-
-    &__goodName {
+.container {
+  &__productsPage {
+    &__title {
       display: flex;
-      height: 80px;
-      align-items: center;
-      margin: 0 10px;
-    }
-
-    &__description {
-      margin: 0px 10px 10px 10px;
-    }
-
-    &__order {
-      display: flex;
-      flex-direction: row;
       justify-content: space-between;
-      align-items: center;
-      margin: auto 10px;
-      height: 70px;
-      /*margin-top: 3px;
-      padding: 6px 8px 6px 10px;*/
-      border-top: solid 0.5px #a4acad;
-      position: relative;
+      margin: 30px 0;
 
-      @include mobile() {
-        padding: 6px 8px 6px 0px;
-        border-top: none;
-      }
+      &__left {
+        flex: 0 1 200px;
 
-      .price {
-        &--old {
-          position: absolute;
-          top: 5px;
+        img {
+          height: 100%;
+          position: relative;
+          top: 0.15em;
+        }
 
-          &::before {
-            content: '';
-            border-bottom: 3px solid #eb5757;
-            position: absolute;
-            width: 110%;
-            bottom: 0.38em;
-            left: -5%;
-            transform: rotate(-10deg);
-          }
+        &__category {
+          display: inline;
+          margin-left: 20px;
         }
       }
+    }
 
-      button {
-        background-color: $orange;
-        border: none;
-        border-radius: 5px;
-        width: 143px;
-        height: 40px;
-        cursor: pointer;
+    &__cardsContainer {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    max-width: 280px;
+    height: 400px;
+    background-color: $white;
+    border-radius: 10px;
+    transition: all 0.5s ease-out;
+    position: relative;
+
+    &:hover {
+      transform: scale(1.1);
+      -moz-box-shadow: 0px 0px 20px 5px rgba(16, 21, 22, 0.4);
+      -webkit-box-shadow: 0px 0px 20px 5px rgba(16, 21, 22, 0.4);
+      box-shadow: 0px 0px 20px 5px rgba(16, 21, 22, 0.4);
+      z-index: 1;
+    }
+
+    @include mobile() {
+      max-width: 100%;
+      flex-direction: row;
+      height: 120px;
+      background-color: white;
+      margin: 10px 15px;
+      border-radius: 10px;
+    }
+
+    &__label {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+
+      img {
+        margin-right: 2px;
+      }
+    }
+
+    &__img {
+      img {
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      @include mobile() {
+        flex: 0 1 100px;
+        margin: 15px;
+        height: 84px;
+      }
+    }
+
+    &__goodDescription {
+      @include mobile() {
+        flex: 1 1 auto;
+      }
+
+      &__goodName {
+        display: flex;
+        height: 80px;
+        align-items: center;
+        margin: 0 10px;
+      }
+
+      &__description {
+        margin: 0px 10px 10px 10px;
+      }
+
+      &__order {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto 10px;
+        height: 70px;
+        /*margin-top: 3px;
+      padding: 6px 8px 6px 10px;*/
+        border-top: solid 0.5px #a4acad;
+        position: relative;
 
         @include mobile() {
-          font-size: 18px;
-          width: 95px;
-          height: 26px;
+          padding: 6px 8px 6px 0px;
+          border-top: none;
+        }
+
+        .price {
+          &--old {
+            position: absolute;
+            top: 5px;
+
+            &::before {
+              content: '';
+              border-bottom: 3px solid #eb5757;
+              position: absolute;
+              width: 110%;
+              bottom: 0.38em;
+              left: -5%;
+              transform: rotate(-10deg);
+            }
+          }
+        }
+
+        button {
+          background-color: $orange;
+          border: none;
+          border-radius: 5px;
+          width: 143px;
+          height: 40px;
+          cursor: pointer;
+
+          @include mobile() {
+            font-size: 18px;
+            width: 95px;
+            height: 26px;
+          }
         }
       }
     }

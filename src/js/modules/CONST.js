@@ -14,6 +14,7 @@ const logoMenuImgNames = {
   Акции: 'sale.png',
   Суши: 'sushi.png',
   Сеты: 'set.png',
+  sale: 'sale.png',
 };
 
 const menuPictureNames = {
