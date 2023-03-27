@@ -1,5 +1,4 @@
 import { getDOMElement } from '../../modules/getDOMElement.js';
-import { ROUTS } from '../../modules/CONST.js';
 import { menuPictureNames } from '../../modules/CONST.js';
 import { bigItemName } from '../../modules/CONST.js';
 
@@ -17,12 +16,7 @@ function getCentralMenuCards(dataForSelectedLocation, imgPath) {
       }
     });
 
-    let ref = `/${element}`;
-    for (let key in ROUTS) {
-      if (key === element) {
-        ref = `/${ROUTS[key]}`;
-      }
-    }
+    let ref = `&category=${encodeURIComponent(element)}`;
     const a = getDOMElement('a', {
       className: 'container__menu__item__link',
       href: ref,

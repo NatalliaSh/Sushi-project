@@ -11,20 +11,23 @@ export const linkInternalClickHandler = (e) => {
   if (link === 'internal') {
     e.preventDefault();
     const path = e.target.getAttribute('href');
-    history.pushState({}, '', path);
+    if (path.includes('&')) {
+      const query = window.location.search.split('&category')[0];
+      history.pushState({}, '', query + path);
+    } else {
+      history.pushState({}, '', path);
+    }
     eventBus.dispatch(ACTIONS.changeRoute, path);
   }
 };
 
-// const withCheckChanges = fn => e => {
-//   e.preventDefault();
-//   const path = e.target.getAttribute('href');
-//   if (path === '/user') {
-//       showModal();
-//       fn(e);
-//   } else {
-//       fn(e);
-//   }
-// }
-
-window.addEventListener('click', linkInternalClickHandler);
+const withCheckChanges = (fn) => (e) => {
+  const path = e.target.getAttribute('href');
+  e.preventDefault();
+  if (path === '/user') {
+    showModal();
+    fn(e);
+  } else {
+    fn(e);
+  }
+};

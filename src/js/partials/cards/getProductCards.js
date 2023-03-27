@@ -18,8 +18,12 @@ function getProductCard({ name, imgName, price, currency, description, sale, new
   }
 
   const imgContainer = getDOMElement('a', { className: 'container__card__img', href: '/' + id });
+  imgContainer.setAttribute('data-link', 'internal');
   cardContainer.appendChild(imgContainer);
-  imgContainer.appendChild(getDOMElement('img', { src: imgPath + imgName }));
+  const img = getDOMElement('img', { src: imgPath + imgName });
+  img.setAttribute('data-link', 'internal');
+  img.setAttribute('href', '/' + id);
+  imgContainer.appendChild(img);
 
   const goodDescriptionContainer = getDOMElement('div', {
     className: 'container__card__goodDescription',
@@ -30,7 +34,11 @@ function getProductCard({ name, imgName, price, currency, description, sale, new
     className: 'container__card__goodDescription__goodName text--semi-bold',
   });
   goodDescriptionContainer.appendChild(goodNameContainer);
-  goodNameContainer.appendChild(getDOMElement('a', { innerText: name, href: '/' + id, title: 'Посмотреть карточку товара' }));
+
+  const linkName = getDOMElement('a', { innerText: name, href: '/' + id, title: 'Посмотреть карточку товара' });
+  linkName.setAttribute('data-link', 'internal');
+  goodNameContainer.appendChild(linkName);
+
   goodDescriptionContainer.appendChild(
     getDOMElement('div', {
       className: 'container__card__goodDescription__description text--grey text--s',

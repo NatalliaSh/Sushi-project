@@ -7,7 +7,7 @@
 @import './partials/about/about.scss';
 @import './partials/footer/footer.scss';
 @import './partials/cards/centralMenuCards.scss';
-@import './partials/cards/productsMenuCards.scss';
+@import './partials/cards/productsPage.scss';
 
 body {
   box-sizing: border-box;
@@ -80,7 +80,8 @@ a {
     background-color: $central-background;
 
     &__generatedContent {
-      max-width: 82%;
+      max-width: 950px;
+      padding: 0 20px;
       margin: 30px auto;
     }
   }

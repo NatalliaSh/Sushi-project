@@ -37,6 +37,7 @@ const serverConfig = {
   server: {
     baseDir: './dist',
   },
+  single: true,
   tunnel: false,
   host: 'localhost',
   port: 9000,
@@ -59,12 +60,7 @@ const httpBuild = () =>
         basepath: '@file',
       }),
     )
-    .pipe(
-      replace(
-        /(<link rel="stylesheet" href=").+\/(main.)scss(" \/>)/,
-        '$1/css/$2css$3',
-      ),
-    )
+    .pipe(replace(/(<link rel="stylesheet" href=").+\/(main.)scss(" \/>)/, '$1/css/$2css$3'))
     .pipe(replace(/(src=").+(\/img)/g, '$1.$2'))
     .pipe(dest(path.dist.html))
     .pipe(browsersync.stream());
@@ -80,13 +76,10 @@ const stylesBuild = () =>
     .pipe(dest(path.dist.css))
     .pipe(browsersync.stream());
 
-const fontsBuild = () =>
-  src(path.src.fonts).pipe(dest(path.dist.fonts)).pipe(browsersync.stream());
+const fontsBuild = () => src(path.src.fonts).pipe(dest(path.dist.fonts)).pipe(browsersync.stream());
 
-const imgsBuild = () =>
-  src(path.src.img).pipe(dest(path.dist.img)).pipe(browsersync.stream());
-const jsBuild = () =>
-  src(path.src.js).pipe(dest(path.dist.js)).pipe(browsersync.stream());
+const imgsBuild = () => src(path.src.img).pipe(dest(path.dist.img)).pipe(browsersync.stream());
+const jsBuild = () => src(path.src.js).pipe(dest(path.dist.js)).pipe(browsersync.stream());
 
 const server = () => {
   browsersync.init(serverConfig);
@@ -98,10 +91,7 @@ const server = () => {
   watch(path.src.js, jsBuild);
 };
 
-const build = series(
-  cleanDist,
-  parallel(httpBuild, stylesBuild, fontsBuild, imgsBuild, jsBuild),
-);
+const build = series(cleanDist, parallel(httpBuild, stylesBuild, fontsBuild, imgsBuild, jsBuild));
 exports.start = series(build, server);
 exports.clean = series(cleanDist);
 exports.build = series(build);

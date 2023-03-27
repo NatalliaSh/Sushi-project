@@ -3,8 +3,10 @@ import { renderReplace } from '../renderReplace.js';
 import { phoneNumberCart } from '../../partials/header/phoneNumberCart.js';
 import { getLeftMenuCart } from '../../partials/cards/getLeftMenuCart.js';
 import { getCentralMenuCards } from '../../partials/cards/getCentralMenuCards.js';
+import { setQueryParam } from '../setQueryParam.js';
 
-export const changeSelectAddressHandlerHeader = (address, dataBase) => {
+export const changeSelectAddressHandlerHeader = (dataBase) => {
+  setQueryParam();
   const data = getDataForSelectedLocation(dataBase);
   const dataOfphones = data.phones;
   const menuLeft = getLeftMenuCart(data, '../../../img/menuImg/menuLogo/');

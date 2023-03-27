@@ -1,47 +1,36 @@
 import { eventBus } from './eventBus.js';
 import { ACTIONS } from './CONST.js';
+import { ROUTS } from './CONST.js';
 import { getProductsPage } from './pages/productsPage.js';
-import { listOfRouts } from './menuContent/setMenuOnPage.js';
 
-const root = document.querySelector('#root');
-const ROUTS = {
-  WOK: 'wok',
-  Салаты: 'salads',
-  Напитки: 'drinks',
-  Акции: 'sale',
-  Суши: 'sushi',
-  Сеты: 'sets',
-};
+import { getDataForSelectedLocation } from './getDataForSelectedLocation.js';
+import { dataBase } from './dataBase/dataBase.js';
+import { productSpecificationData } from './dataBase/productSpecificationData.js';
+import { renderReplace } from './renderReplace.js';
 
-function getListOfRouts(dataForSelectedLocation, productSpecificationData) {
-  let obj = {};
-  const arrOfCaterories = dataForSelectedLocation.menuList;
-  const arrOfRoutsForCategories = arrOfCaterories.map((element) => {
-    return '/' + ROUTS[element];
-  });
-  obj.productsPage = arrOfRoutsForCategories;
+function getRoutes(productSpecificationData) {
+  const listOfSelfProduct = Object.keys(productSpecificationData);
+  const listOfSelfProductPath = listOfSelfProduct.map((element) => '/' + element);
 
-  obj.selfProductPage = [];
-  for (let key in productSpecificationData) {
-    obj.selfProductPage.push('/' + key);
-  }
+  const routes = {};
+  listOfSelfProductPath.forEach((element) => (routes[element] = 'selfProductPage'));
+
+  return routes;
 }
 
-// const routes = {
+//const dataForSelectedLocation = getDataForSelectedLocation(dataBase);
+//const routes = getRoutes(dataForSelectedLocation, productSpecificationData);
+//const root = document.querySelector('#rootCentral');
 
-//   '/backet': productsPage, //на этот слеш отрендорить эту страницу
-//   '/user': selfProductPage,
-// };
-
-listOfRouts.productsPage.forEach((element) => (routes[element] = productsPage));
-
-listOfRouts.selfProductPage.forEach((element) => (routes[element] = selfProductPage));
-
-console.log(routes);
-
-const changeRouteHandler = (path) => {
-  const page = ROUTS[path] || '';
-  root.innerHTML = page;
+/*const changeRouteHandler = (path) => {
+  if (routes[path] === 'productsPage') {
+    const page = getProductsPage(dataForSelectedLocation, productSpecificationData, '../../img/menuImg/productsImg', path.slice(1));
+  } /*else if (routes[path] === 'selfProductPage') {
+    const page = getSelfProductsPage();
+  } else {
+    const page = getMainPage();
+  }*/
+/* renderReplace(root, page);
 };
 
 const windowPopState = (e) => {
@@ -58,4 +47,4 @@ window.onpopstate = windowPopState;
 
 eventBus.subscribe(ACTIONS.changeRoute, changeRouteHandler);
 
-export { getListOfRouts };
+*/ export { getRoutes };

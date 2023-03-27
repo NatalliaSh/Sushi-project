@@ -5,6 +5,7 @@ export const ROUTS = {
   Акции: 'sale',
   Суши: 'sushi',
   Сеты: 'sets',
+  Акции: 'sale',
 };
 
 export const logoMenuImgNames = {

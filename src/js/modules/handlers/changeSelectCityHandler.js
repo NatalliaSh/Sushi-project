@@ -6,6 +6,7 @@ import { phoneNumberCart } from '../../partials/header/phoneNumberCart.js';
 import { getLeftMenuCart } from '../../partials/cards/getLeftMenuCart.js';
 import { getCentralMenuCards } from '../../partials/cards/getCentralMenuCards.js';
 import { changeSelectAddressHandlerHeader } from './changeSelectAddressHandler.js';
+import { setQueryParam } from '../setQueryParam.js';
 
 export const changeSelectCityHandlerHeader = (city, dataBase) => {
   const address = getAddressesForSelectedCity(dataBase, city);
@@ -14,6 +15,8 @@ export const changeSelectCityHandlerHeader = (city, dataBase) => {
   const root = document.querySelector('.location__address');
   const oldSelectAdressForm = root.querySelector('select');
   root.replaceChild(newSelectAdressForm, oldSelectAdressForm);
+
+  setQueryParam();
 
   const data = getDataForSelectedLocation(dataBase);
   const dataOfphones = data.phones;
@@ -26,5 +29,5 @@ export const changeSelectCityHandlerHeader = (city, dataBase) => {
 
   //Refresh listener on select address form
   const selectAddress = document.querySelector('[name="address"]');
-  selectAddress.addEventListener('change', ({ target: { value: address } }) => changeSelectAddressHandlerHeader(address, dataBase));
+  selectAddress.addEventListener('change', () => changeSelectAddressHandlerHeader(dataBase));
 };

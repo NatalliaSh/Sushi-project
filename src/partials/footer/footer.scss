@@ -1,6 +1,7 @@
 .footer {
   border-top: 0.5px solid $grey;
-  max-width: 82%;
+  max-width: 950px;
+  padding: 0 20px;
   margin: 0 auto;
 
   @include mobile() {
