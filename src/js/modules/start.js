@@ -19,6 +19,8 @@ import { renderReplace } from './renderReplace.js';
 import { getSelectedOption } from './getSelectedOption.js';
 import { setQueryParam } from './setQueryParam.js';
 import { getSelfProductPage } from './pages/selfProductPage.js';
+import { numberBtnMinusHandler } from './buttons/inputNumberButtons.js';
+import { numberBtnPlusHandler } from './buttons/inputNumberButtons.js';
 
 async function start() {
   const dataBase = await getDataBase();
@@ -49,7 +51,7 @@ async function start() {
       }
       page = getProductsPage(dataForSelectedLocation, productSpecificationData, '../../img/menuImg/productsImg/', category, parametr);
     } else if (routes[path] === 'selfProductPage') {
-      page = getSelfProductPage(productSpecificationData[path.slice(1)], '../../img/menuImg/productsImg/');
+      page = getSelfProductPage(productSpecificationData[path.slice(1)], '../../img/menuImg/productsImg/', path.slice(1, path.length - 1), dataForSelectedLocation, productSpecificationData);
     } /* else {
       const page = getMainPage();
     }*/

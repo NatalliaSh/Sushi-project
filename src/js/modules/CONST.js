@@ -34,3 +34,11 @@ export const ACTIONS = {
   logout: 'logout',
   changeRoute: 'changeRoute',
 };
+
+export const categoriesToRecomendation = {
+  wok: ['WOK'],
+  set: ['Сеты', 'Суши'],
+  sushi: ['Сеты', 'Суши'],
+  salad: ['Салаты'],
+  drink: ['Напитки'],
+};
