@@ -19,6 +19,7 @@ import { getSelectedOption } from './getSelectedOption.js';
 import { setQueryParam } from './setQueryParam.js';
 import { getSelfProductPage } from './pages/selfProductPage.js';
 import { getMainPage } from './pages/mainPage.js';
+import { selfProductPageSlider } from '../modules/sliders/selfProductPageSlider.js';
 import { numberBtnMinusHandler } from './buttons/inputNumberButtons.js';
 import { numberBtnPlusHandler } from './buttons/inputNumberButtons.js';
 
@@ -31,10 +32,10 @@ async function start() {
   setPhones(dataBase, '.contacts', true);
   setAllContacts(dataBase, '.footer__container__right');
   setLeftMenuOnPage(dataBase, '#menuRootLeft');
-
-  //main page
   const dataForSelectedLocation = getDataForSelectedLocation(dataBase);
-  getMainPage(dataForSelectedLocation, productSpecificationData, '../../img/menuImg/productsImg/', '#rootCentral');
+
+  const root = document.querySelector('#rootCentral');
+  root.appendChild(getMainPage(dataForSelectedLocation, productSpecificationData, '../../img/menuImg/productsImg/'));
 
   const routes = getRoutes(productSpecificationData);
   const changeRouteHandler = (path) => {
@@ -52,11 +53,12 @@ async function start() {
       page = getProductsPage(dataForSelectedLocation, productSpecificationData, '../../img/menuImg/productsImg/', category, parametr);
     } else if (routes[path] === 'selfProductPage') {
       page = getSelfProductPage(productSpecificationData[path.slice(1)], '../../img/menuImg/productsImg/', path.slice(1, path.length - 1), dataForSelectedLocation, productSpecificationData);
-    } /* else {
-      const page = getMainPage();
-    }*/
+    } else {
+      getMainPage(dataForSelectedLocation, productSpecificationData, '../../img/menuImg/productsImg/');
+    }
 
     renderReplace(root, page);
+    selfProductPageSlider();
   };
 
   const windowPopState = (e) => {
@@ -77,9 +79,9 @@ async function start() {
   const selectCity = document.querySelector('[name="city"]');
   const selectAddress = document.querySelector('[name="address"]');
 
-  selectCity.addEventListener('change', ({ target: { value: city } }) => changeSelectCityHandlerHeader(city, dataBase));
+  selectCity.addEventListener('change', ({ target: { value: city } }) => changeSelectCityHandlerHeader(city, dataBase, productSpecificationData));
 
-  selectAddress.addEventListener('change', () => changeSelectAddressHandlerHeader(dataBase));
+  selectAddress.addEventListener('change', () => changeSelectAddressHandlerHeader(dataBase, productSpecificationData));
 
   window.addEventListener('click', linkInternalClickHandler);
 }

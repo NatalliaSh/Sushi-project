@@ -7,8 +7,10 @@ import { getLeftMenuCart } from '../../partials/cards/getLeftMenuCart.js';
 import { getCentralMenuCards } from '../../partials/cards/getCentralMenuCards.js';
 import { changeSelectAddressHandlerHeader } from './changeSelectAddressHandler.js';
 import { setQueryParam } from '../setQueryParam.js';
+import { getMainPage } from '../pages/mainPage.js';
+import { mainPageSlider } from '../sliders/mainPageSlider.js';
 
-export const changeSelectCityHandlerHeader = (city, dataBase) => {
+export const changeSelectCityHandlerHeader = (city, dataBase, productSpecificationData) => {
   const address = getAddressesForSelectedCity(dataBase, city);
 
   const newSelectAdressForm = getSelectForm(address, 'address');
@@ -21,13 +23,14 @@ export const changeSelectCityHandlerHeader = (city, dataBase) => {
   const data = getDataForSelectedLocation(dataBase);
   const dataOfphones = data.phones;
   const menuLeft = getLeftMenuCart(data, '../../../img/menuImg/menuLogo/');
-  const menuCentral = getCentralMenuCards(data, '../../../img/menuImg/menuPicture/');
+  const mainPage = getMainPage(data, productSpecificationData, '../../img/menuImg/productsImg/');
 
   renderReplace('.contacts', phoneNumberCart(dataOfphones, true), true);
   renderReplace('#menuRootLeft', menuLeft);
-  renderReplace('#rootCentral', menuCentral);
+  renderReplace('#rootCentral', mainPage);
+  mainPageSlider();
 
   //Refresh listener on select address form
   const selectAddress = document.querySelector('[name="address"]');
-  selectAddress.addEventListener('change', () => changeSelectAddressHandlerHeader(dataBase));
+  selectAddress.addEventListener('change', () => changeSelectAddressHandlerHeader(dataBase, productSpecificationData));
 };

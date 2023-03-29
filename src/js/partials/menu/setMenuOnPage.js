@@ -10,11 +10,11 @@ function setLeftMenuOnPage(dataBase, root) {
   rootLeft.appendChild(menuLeft);
 }
 
-function setCentralMenuOnPage(dataForSelectedLocation, root) {
+function getCentralMenuOnPage(dataForSelectedLocation) {
   const menuCentral = getCentralMenuCards(dataForSelectedLocation, '../../../img/menuImg/menuPicture/');
-  const rootCentral = document.querySelector(root);
-  rootCentral.appendChild(menuCentral);
+
+  return menuCentral;
 }
 
 export { setLeftMenuOnPage };
-export { setCentralMenuOnPage };
+export { getCentralMenuOnPage };
