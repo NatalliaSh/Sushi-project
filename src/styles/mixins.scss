@@ -17,3 +17,15 @@
     @content;
   }
 }
+
+@mixin xlarge() {
+  @media only all and (max-width: $xlarge-size) {
+    @content;
+  }
+}
+
+@mixin xxlarge() {
+  @media only all and (max-width: $xxlarge-size) {
+    @content;
+  }
+}

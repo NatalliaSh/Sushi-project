@@ -23,6 +23,11 @@
     font-weight: 700;
   }
 
+  &--bold-italic {
+    font-weight: 700;
+    font-style: italic;
+  }
+
   &--xs {
     font-size: 14px;
     @include mobile() {

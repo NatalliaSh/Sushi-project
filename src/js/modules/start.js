@@ -5,7 +5,6 @@ import { setPhones } from '../partials/header/setPhones.js';
 import '../partials/about/about.js';
 import { setAllContacts } from '../partials/footer/setAllContacts.js';
 import { setLeftMenuOnPage } from '../partials/menu/setMenuOnPage.js';
-import { setCentralMenuOnPage } from '../partials/menu/setMenuOnPage.js';
 import { changeSelectAddressHandlerHeader } from './handlers/changeSelectAddressHandler.js';
 import { changeSelectCityHandlerHeader } from './handlers/changeSelectCityHandler.js';
 import { linkInternalClickHandler } from './handlers/linkInternalClickHandler.js';
@@ -19,6 +18,7 @@ import { renderReplace } from './renderReplace.js';
 import { getSelectedOption } from './getSelectedOption.js';
 import { setQueryParam } from './setQueryParam.js';
 import { getSelfProductPage } from './pages/selfProductPage.js';
+import { getMainPage } from './pages/mainPage.js';
 import { numberBtnMinusHandler } from './buttons/inputNumberButtons.js';
 import { numberBtnPlusHandler } from './buttons/inputNumberButtons.js';
 
@@ -33,11 +33,11 @@ async function start() {
   setLeftMenuOnPage(dataBase, '#menuRootLeft');
 
   //main page
-  setCentralMenuOnPage(dataBase, '#rootCentral');
+  const dataForSelectedLocation = getDataForSelectedLocation(dataBase);
+  getMainPage(dataForSelectedLocation, productSpecificationData, '../../img/menuImg/productsImg/', '#rootCentral');
 
   const routes = getRoutes(productSpecificationData);
   const changeRouteHandler = (path) => {
-    const dataForSelectedLocation = getDataForSelectedLocation(dataBase);
     const root = '#rootCentral';
     let page = '';
     let category = '';

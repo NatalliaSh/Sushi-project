@@ -21,6 +21,13 @@
 
 @font-face {
   font-family: 'DIN Pro';
+  src: url('../fonts/DINPro-BoldItalic.ttf');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'DIN Pro';
   src: url('../fonts/DINPro-Medium.ttf');
   font-weight: 500;
   font-style: normal;
