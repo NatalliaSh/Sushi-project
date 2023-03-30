@@ -1,10 +1,7 @@
 import { getLeftMenuCart } from '../cards/getLeftMenuCart.js';
 import { getCentralMenuCards } from '../cards/getCentralMenuCards.js';
-import { getDataForSelectedLocation } from '../../modules/getDataForSelectedLocation.js';
 
-function setLeftMenuOnPage(dataBase, root) {
-  const dataForSelectedLocation = getDataForSelectedLocation(dataBase);
-
+function setLeftMenuOnPage(dataForSelectedLocation, root) {
   const menuLeft = getLeftMenuCart(dataForSelectedLocation, '../../../img/menuImg/menuLogo/');
   const rootLeft = document.querySelector(root);
   rootLeft.appendChild(menuLeft);

@@ -8,7 +8,7 @@ import { dataBase } from './dataBase/dataBase.js';
 import { productSpecificationData } from './dataBase/productSpecificationData.js';
 import { renderReplace } from './renderReplace.js';
 
-function getRoutes(productSpecificationData) {
+function getRoutesForSelfProductPage(productSpecificationData) {
   const listOfSelfProduct = Object.keys(productSpecificationData);
   const listOfSelfProductPath = listOfSelfProduct.map((element) => '/' + element);
 
@@ -47,4 +47,4 @@ window.onpopstate = windowPopState;
 
 eventBus.subscribe(ACTIONS.changeRoute, changeRouteHandler);
 
-*/ export { getRoutes };
+*/ export { getRoutesForSelfProductPage };

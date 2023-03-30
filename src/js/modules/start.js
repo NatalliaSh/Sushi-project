@@ -9,36 +9,33 @@ import { changeSelectAddressHandlerHeader } from './handlers/changeSelectAddress
 import { changeSelectCityHandlerHeader } from './handlers/changeSelectCityHandler.js';
 import { linkInternalClickHandler } from './handlers/linkInternalClickHandler.js';
 import { getDataForSelectedLocation } from './getDataForSelectedLocation.js';
-import { ROUTS } from './CONST.js';
 import { eventBus } from './eventBus.js';
 import { ACTIONS } from './CONST.js';
-import { getRoutes } from './router.js';
+import { getRoutesForSelfProductPage } from './router.js';
 import { getProductsPage } from './pages/productsPage.js';
 import { renderReplace } from './renderReplace.js';
-import { getSelectedOption } from './getSelectedOption.js';
-import { setQueryParam } from './setQueryParam.js';
+
 import { getSelfProductPage } from './pages/selfProductPage.js';
 import { getMainPage } from './pages/mainPage.js';
 import { selfProductPageSlider } from '../modules/sliders/selfProductPageSlider.js';
-import { numberBtnMinusHandler } from './buttons/inputNumberButtons.js';
-import { numberBtnPlusHandler } from './buttons/inputNumberButtons.js';
 import { getParameterFromURL } from './getParameterFromURL.js';
+import { getLeftMenuCart } from '../partials/cards/getLeftMenuCart.js';
+import { phoneNumberCart } from '../partials/header/phoneNumberCart.js';
+import { mainPageSlider } from './sliders/mainPageSlider.js';
+import { getAddressesForSelectedCity } from '../partials/header/getAddressesForSelectedCity.js';
+import { getSelectForm } from '../partials/header/getSelectForm.js';
+import { withCheckURL } from './withCheckURL.js';
+import { setQueryParam } from './setQueryParam.js';
 
 async function start() {
   const dataBase = await getDataBase();
   const productSpecificationData = await getproductSpecificationData();
+  const routesForSelfProductPage = getRoutesForSelfProductPage(productSpecificationData);
 
   addSelectFormOnPage(dataBase, '.location__city', '.location__address');
-  setQueryParam();
-  setPhones(dataBase, '.contacts', true);
   setAllContacts(dataBase, '.footer__container__right');
-  setLeftMenuOnPage(dataBase, '#menuRootLeft');
-  const dataForSelectedLocation = getDataForSelectedLocation(dataBase);
+  withCheckURL(dataBase, productSpecificationData, routesForSelfProductPage);
 
-  const root = document.querySelector('#rootCentral');
-  root.appendChild(getMainPage(dataForSelectedLocation, productSpecificationData, '../../img/menuImg/productsImg/'));
-
-  const routes = getRoutes(productSpecificationData);
   const changeRouteHandler = (path) => {
     const root = '#rootCentral';
     let page = '';
@@ -53,21 +50,14 @@ async function start() {
       }
       const dataForSelectedLocation = getDataForSelectedLocation(dataBase);
       page = getProductsPage(dataForSelectedLocation, productSpecificationData, '../../img/menuImg/productsImg/', category, parametr);
-    } else if (routes[path] === 'selfProductPage') {
+    } else if (routesForSelfProductPage[path] === 'selfProductPage') {
+      setQueryParam();
       page = getSelfProductPage(productSpecificationData[path.slice(1)], '../../img/menuImg/productsImg/', path.match(/[^\/](\D)*[^\d]/i)[0], dataForSelectedLocation, productSpecificationData);
     } else {
-      const city = getParameterFromURL('city');
-      const address = getParameterFromURL('str');
-      const cityInSelect = document.querySelector(`[value=${city}]`);
-      cityInSelect.setAttribute('selected', true);
-
-      const addressInSelect = document.querySelector(`[value=${address}]`);
-      addressInSelect.setAttribute('selected', true);
-
-      page = getMainPage(dataForSelectedLocation, productSpecificationData, '../../img/menuImg/productsImg/');
     }
 
     renderReplace(root, page);
+    mainPageSlider();
     selfProductPageSlider();
   };
 
