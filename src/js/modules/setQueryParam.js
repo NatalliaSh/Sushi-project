@@ -5,9 +5,9 @@ function setQueryParam(category) {
   const address = getSelectedOption('[name="address"]');
 
   if (category) {
-    history.pushState({}, '', `?city=${encodeURIComponent(city)}&str=${encodeURIComponent(address)}&category=${encodeURIComponent(category)}`);
+    history.replaceState(history.state, '', `?city=${encodeURIComponent(city)}&str=${encodeURIComponent(address)}&category=${encodeURIComponent(category)}`);
   } else {
-    history.pushState({}, '', `?city=${encodeURIComponent(city)}&str=${encodeURIComponent(address)}`);
+    history.replaceState(history.state, '', `?city=${encodeURIComponent(city)}&str=${encodeURIComponent(address)}`);
   }
 }
 

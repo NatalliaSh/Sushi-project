@@ -26,8 +26,12 @@ function withCheckURL(dataBase, productSpecificationData, routesForSelfProductPa
 
     if (path === '/' || path === '') {
       page = getMainPage(dataForSelectedLocation, productSpecificationData, '../../img/menuImg/productsImg/');
+      renderReplace(root, page);
+      mainPageSlider();
     } else if (routesForSelfProductPage[path] === 'selfProductPage') {
       page = getSelfProductPage(productSpecificationData[path.slice(1)], '../../img/menuImg/productsImg/', path.match(/[^\/](\D)*[^\d]/i)[0], dataForSelectedLocation, productSpecificationData);
+      renderReplace(root, page);
+      selfProductPageSlider();
     }
   }
 
@@ -53,16 +57,18 @@ function withCheckURL(dataBase, productSpecificationData, routesForSelfProductPa
           category = categoryFromURL;
         }
         page = getProductsPage(data, productSpecificationData, '../../img/menuImg/productsImg/', category, parametr);
+        renderReplace(root, page);
       } else {
         page = getMainPage(data, productSpecificationData, '../../img/menuImg/productsImg/');
+        renderReplace(root, page);
+        mainPageSlider();
       }
     } else if (routesForSelfProductPage[path] === 'selfProductPage') {
       page = getSelfProductPage(productSpecificationData[path.slice(1)], '../../img/menuImg/productsImg/', path.match(/[^\/](\D)*[^\d]/i)[0], data, productSpecificationData);
+      renderReplace(root, page);
+      selfProductPageSlider();
     }
   }
-  renderReplace(root, page);
-  mainPageSlider();
-  selfProductPageSlider();
 }
 
 export { withCheckURL };
