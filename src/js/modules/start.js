@@ -54,7 +54,7 @@ async function start() {
       const dataForSelectedLocation = getDataForSelectedLocation(dataBase);
       page = getProductsPage(dataForSelectedLocation, productSpecificationData, '../../img/menuImg/productsImg/', category, parametr);
     } else if (routes[path] === 'selfProductPage') {
-      page = getSelfProductPage(productSpecificationData[path.slice(1)], '../../img/menuImg/productsImg/', path.slice(1, path.length - 1), dataForSelectedLocation, productSpecificationData);
+      page = getSelfProductPage(productSpecificationData[path.slice(1)], '../../img/menuImg/productsImg/', path.match(/[^\/](\D)*[^\d]/i)[0], dataForSelectedLocation, productSpecificationData);
     } else {
       const city = getParameterFromURL('city');
       const address = getParameterFromURL('str');
