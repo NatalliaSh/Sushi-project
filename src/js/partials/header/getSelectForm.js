@@ -2,6 +2,7 @@ function getSelectForm(arrOfOptions, name) {
   const select = document.createElement('select');
   select.classList.add('text', 'text--s');
   select.setAttribute('name', name);
+  select.setAttribute('id', name + 'Select');
 
   for (let i = 0; i < arrOfOptions.length; i++) {
     const option = document.createElement('option');

@@ -3,10 +3,7 @@ import { getDataForSelectedLocation } from '../../modules/getDataForSelectedLoca
 import { renderReplace } from '../../modules/renderReplace.js';
 import { phoneNumberCart } from '../../partials/header/phoneNumberCart.js';
 import { getLeftMenuCart } from '../../partials/cards/getLeftMenuCart.js';
-import { changeSelectAddressHandlerHeader } from './changeSelectAddressHandler.js';
 import { setQueryParam } from '../setQueryParam.js';
-import { getMainPage } from '../pages/mainPage.js';
-import { mainPageSlider } from '../sliders/mainPageSlider.js';
 import { withCheckPath } from '../withCheckPath.js';
 
 export const changeSelectCityHandlerHeader = (city, dataBase, productSpecificationData) => {
@@ -21,8 +18,4 @@ export const changeSelectCityHandlerHeader = (city, dataBase, productSpecificati
 
   const path = window.location.pathname;
   withCheckPath(path, '#rootCentral', data, productSpecificationData);
-
-  //Refresh listener on select address form
-  const selectAddress = document.querySelector('[name="address"]');
-  selectAddress.addEventListener('change', () => changeSelectAddressHandlerHeader(dataBase, productSpecificationData));
 };
