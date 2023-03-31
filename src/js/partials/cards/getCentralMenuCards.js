@@ -16,7 +16,7 @@ function getCentralMenuCards(dataForSelectedLocation, imgPath) {
       }
     });
 
-    let ref = `&category=${encodeURIComponent(element)}`;
+    let ref = '/' + encodeURIComponent(element);
     const a = getDOMElement('a', {
       className: 'container__menu__item__link',
       href: ref,

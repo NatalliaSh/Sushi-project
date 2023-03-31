@@ -10,7 +10,7 @@ function getLeftMenuCart(dataForSelectedLocation, imgPath) {
     const li = document.createElement('li');
     const a = document.createElement('a');
 
-    let href = `&category=${encodeURIComponent(element)}`;
+    let href = '/' + encodeURIComponent(element);
     a.setAttribute('href', href);
     a.setAttribute('data-link', 'internal');
 

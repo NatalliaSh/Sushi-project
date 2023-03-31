@@ -7,6 +7,7 @@ import { changeSelectAddressHandlerHeader } from './changeSelectAddressHandler.j
 import { setQueryParam } from '../setQueryParam.js';
 import { getMainPage } from '../pages/mainPage.js';
 import { mainPageSlider } from '../sliders/mainPageSlider.js';
+import { withCheckPath } from '../withCheckPath.js';
 
 export const changeSelectCityHandlerHeader = (city, dataBase, productSpecificationData) => {
   changeAddressSelectForm(dataBase, city);
@@ -15,12 +16,11 @@ export const changeSelectCityHandlerHeader = (city, dataBase, productSpecificati
   const data = getDataForSelectedLocation(dataBase);
   const dataOfphones = data.phones;
   const menuLeft = getLeftMenuCart(data, '../../../img/menuImg/menuLogo/');
-  const mainPage = getMainPage(data, productSpecificationData, '../../img/menuImg/productsImg/');
-
   renderReplace('.contacts', phoneNumberCart(dataOfphones, true), true);
   renderReplace('#menuRootLeft', menuLeft);
-  renderReplace('#rootCentral', mainPage);
-  mainPageSlider();
+
+  const path = window.location.pathname;
+  withCheckPath(path, '#rootCentral', data, productSpecificationData);
 
   //Refresh listener on select address form
   const selectAddress = document.querySelector('[name="address"]');

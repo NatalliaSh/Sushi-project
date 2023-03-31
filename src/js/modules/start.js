@@ -9,43 +9,52 @@ import { linkInternalClickHandler } from './handlers/linkInternalClickHandler.js
 import { getDataForSelectedLocation } from './getDataForSelectedLocation.js';
 import { eventBus } from './eventBus.js';
 import { ACTIONS } from './CONST.js';
-import { getRoutesForSelfProductPage } from './router.js';
-import { getProductsPage } from './pages/productsPage.js';
-import { renderReplace } from './renderReplace.js';
-
-import { getSelfProductPage } from './pages/selfProductPage.js';
-import { selfProductPageSlider } from '../modules/sliders/selfProductPageSlider.js';
+import { getRoutes } from './router.js';
+import { withCheckPath } from './withCheckPath.js';
 import { withCheckURL } from './withCheckURL.js';
+import { getParameterFromURL } from './getParameterFromURL.js';
+import { getSelectedOption } from './getSelectedOption.js';
+import { changeAddressSelectForm } from '../partials/header/changeAddressSelectForm.js';
+import { setLocationDataOnStaticParts } from './setLocationDataOnStaticParts.js';
 
 async function start() {
   const dataBase = await getDataBase();
   const productSpecificationData = await getproductSpecificationData();
-  const routesForSelfProductPage = getRoutesForSelfProductPage(productSpecificationData);
 
   addSelectFormOnPage(dataBase, '.location__city', '.location__address');
   setAllContacts(dataBase, '.footer__container__right');
-  withCheckURL(dataBase, productSpecificationData, routesForSelfProductPage);
+
+  withCheckURL(dataBase, productSpecificationData);
 
   const changeRouteHandler = (path) => {
-    let page = '';
-    let category = '';
-    let parametr = '';
     const root = '#rootCentral';
-    const dataForSelectedLocation = getDataForSelectedLocation(dataBase);
+    const cityFromURL = getParameterFromURL('city');
+    const addressFromURL = getParameterFromURL('str');
+    let dataForSelectedLocation = {};
 
-    if (path.includes('&category')) {
-      if (path.includes(encodeURIComponent('Акции'))) {
-        parametr = 'sale';
-      } else {
-        category = decodeURIComponent(path.split('=')[1]);
+    const citySelectedInForm = getSelectedOption('[name="city"]');
+    let addressSelectedInForm = getSelectedOption('[name="address"]');
+
+    if (cityFromURL !== citySelectedInForm || addressFromURL !== addressSelectedInForm) {
+      if (cityFromURL !== citySelectedInForm) {
+        const selectCity = document.querySelector('[name=city]');
+        selectCity.value = cityFromURL;
+        changeAddressSelectForm(dataBase, cityFromURL);
       }
-      page = getProductsPage(dataForSelectedLocation, productSpecificationData, '../../img/menuImg/productsImg/', category, parametr);
-      renderReplace(root, page);
-    } else if (routesForSelfProductPage[path] === 'selfProductPage') {
-      page = getSelfProductPage(productSpecificationData[path.slice(1)], '../../img/menuImg/productsImg/', path.match(/[^\/](\D)*[^\d]/i)[0], dataForSelectedLocation, productSpecificationData);
-      renderReplace(root, page);
-      selfProductPageSlider();
+
+      addressSelectedInForm = getSelectedOption('[name="address"]');
+
+      if (addressFromURL !== addressSelectedInForm) {
+        const selectAddress = document.querySelector('[name=address]');
+        selectAddress.value = addressFromURL;
+      }
+
+      dataForSelectedLocation = getDataForSelectedLocation(dataBase);
+      setLocationDataOnStaticParts(dataForSelectedLocation);
+    } else {
+      dataForSelectedLocation = getDataForSelectedLocation(dataBase);
     }
+    withCheckPath(path, root, dataForSelectedLocation, productSpecificationData);
   };
 
   const windowPopState = (e) => {
