@@ -9,7 +9,6 @@ import { linkInternalClickHandler } from './handlers/linkInternalClickHandler.js
 import { getDataForSelectedLocation } from './getDataForSelectedLocation.js';
 import { eventBus } from './eventBus.js';
 import { ACTIONS } from './CONST.js';
-import { getRoutes } from './router.js';
 import { withCheckPath } from './withCheckPath.js';
 import { withCheckURL } from './withCheckURL.js';
 import { getParameterFromURL } from './getParameterFromURL.js';
@@ -28,8 +27,8 @@ async function start() {
 
   const changeRouteHandler = (path) => {
     const root = '#rootCentral';
-    const cityFromURL = getParameterFromURL('city');
-    const addressFromURL = getParameterFromURL('str');
+    const cityFromURL = getParameterFromURL('city') || '';
+    const addressFromURL = getParameterFromURL('str') || '';
     let dataForSelectedLocation = {};
 
     const citySelectedInForm = getSelectedOption('[name="city"]');

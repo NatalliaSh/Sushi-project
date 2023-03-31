@@ -42,3 +42,5 @@ export const categoriesToRecomendation = {
   salad: ['Салаты'],
   drink: ['Напитки'],
 };
+
+export const MESSAGE = 'К сожалению, по данному адресу отсутствует запрашиваемый товар :((';

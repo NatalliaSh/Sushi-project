@@ -1,10 +1,10 @@
 import { getLeftMenuCart } from '../cards/getLeftMenuCart.js';
 import { getCentralMenuCards } from '../cards/getCentralMenuCards.js';
+import { renderReplace } from '../../modules/renderReplace.js';
 
 function setLeftMenuOnPage(dataForSelectedLocation, root) {
   const menuLeft = getLeftMenuCart(dataForSelectedLocation, '../../../img/menuImg/menuLogo/');
-  const rootLeft = document.querySelector(root);
-  rootLeft.appendChild(menuLeft);
+  renderReplace(root, menuLeft);
 }
 
 function getCentralMenuOnPage(dataForSelectedLocation) {
