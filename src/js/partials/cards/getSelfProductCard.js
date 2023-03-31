@@ -54,11 +54,11 @@ function getSelfProductCard({ name, imgName, price, currency, description, ingri
 
   const counterContainer = getDOMElement('div', { className: 'orderContainer__counter number text text--bold' });
   orderContainer.appendChild(counterContainer);
-  const numberMinus = getDOMElement('button', { type: 'button', className: 'number__button number__button--minus text text--bold' });
+  const numberMinus = getDOMElement('button', { type: 'button', className: 'number__button number__button--minus text text--bold', id: 'minusBtn' });
   counterContainer.appendChild(numberMinus);
   const counter = getDOMElement('input', { type: 'number', min: 0, max: count, value: 1, className: 'number__input text text--bold' });
   counterContainer.appendChild(counter);
-  const numberPlus = getDOMElement('button', { type: 'button', className: 'number__button number__button--plus text text--bold' });
+  const numberPlus = getDOMElement('button', { type: 'button', className: 'number__button number__button--plus text text--bold', id: 'plusBtn' });
   counterContainer.appendChild(numberPlus);
 
   const ingridientsContainer = getDOMElement('div', {

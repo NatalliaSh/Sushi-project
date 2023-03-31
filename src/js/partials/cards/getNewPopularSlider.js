@@ -17,6 +17,7 @@ function getNewPopularSlider(dataForSelectedLocation, allProductSpecificationDat
       type: 'button',
       className: 'button__choice--new text text--semi-bold active',
       innerText: 'Новинки',
+      id: 'newChoiseBtn',
     }),
   );
   choiceContainer.appendChild(
@@ -24,6 +25,7 @@ function getNewPopularSlider(dataForSelectedLocation, allProductSpecificationDat
       type: 'button',
       className: 'button__choice--popular text text--semi-bold',
       innerText: 'Популярное',
+      id: 'popularChoiseBtn',
     }),
   );
 

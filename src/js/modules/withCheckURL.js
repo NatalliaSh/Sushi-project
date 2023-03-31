@@ -10,11 +10,8 @@ function withCheckURL(dataBase, productSpecificationData) {
   const path = window.location.pathname;
   const root = '#rootCentral';
 
-  let dataForSelectedLocation = {};
-
   if (!queryParam) {
     setQueryParam();
-    dataForSelectedLocation = getDataForSelectedLocation(dataBase);
   } else {
     const city = getParameterFromURL('city');
     const address = getParameterFromURL('str');
@@ -24,9 +21,8 @@ function withCheckURL(dataBase, productSpecificationData) {
     changeAddressSelectForm(dataBase, city);
     const selectAddress = document.querySelector('[name=address]');
     selectAddress.value = address;
-
-    dataForSelectedLocation = getDataForSelectedLocation(dataBase);
   }
+  const dataForSelectedLocation = getDataForSelectedLocation(dataBase);
 
   setLocationDataOnStaticParts(dataForSelectedLocation);
 
