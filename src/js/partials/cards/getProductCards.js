@@ -1,4 +1,5 @@
 import { getDOMElement } from '../../modules/getDOMElement.js';
+import { getPlusMinusBtnNumberInput } from '../buttons/getPlusMinusBtnNumberInput.js';
 
 function getProductCard({ name, imgName, price, currency, description, sale, newPrice, id, popular, news }, imgPath) {
   const cardContainer = getDOMElement('div', { className: 'container__card text' });
@@ -57,7 +58,17 @@ function getProductCard({ name, imgName, price, currency, description, sale, new
     orderContainer.appendChild(getDOMElement('p', { innerText: `${price} ${currency}`, className: 'price text--bold' }));
   }
 
-  orderContainer.appendChild(getDOMElement('button', { innerText: 'Хочу!', type: 'button', className: 'text text--semi-bold text--white ' }));
+  orderContainer.appendChild(getDOMElement('button', { id: 'wantBtn', innerText: 'Хочу!', type: 'button', className: 'text text--semi-bold text--white active' }));
+
+  const orderButtonsContainer = getDOMElement('div', { type: 'button', className: 'orderButtonsContainer text' });
+  orderContainer.appendChild(orderButtonsContainer);
+
+  orderButtonsContainer.appendChild(getPlusMinusBtnNumberInput(100));
+
+  const addToBacketBtn = getDOMElement('button', { id: 'addToBacketBtn', type: 'button', className: 'text text--white' });
+  orderButtonsContainer.appendChild(addToBacketBtn);
+  addToBacketBtn.appendChild(getDOMElement('i', { className: 'fa-solid fa-basket-shopping' }));
+  addToBacketBtn.appendChild(getDOMElement('span', { className: 'text--bold' }));
 
   return cardContainer;
 }

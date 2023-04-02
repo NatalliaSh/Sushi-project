@@ -1,0 +1,35 @@
+.loginLogout {
+  max-width: 290px;
+  margin: 60px auto;
+  padding: 0 20px;
+
+  &.active {
+    display: block;
+  }
+
+  &__message {
+    background-color: $central-background;
+    text-align: center;
+
+    h5 {
+      padding: 10px 0;
+    }
+
+    p {
+      padding-bottom: 25px;
+    }
+  }
+
+  &__button {
+    &--login,
+    &--createAccount {
+      background-color: $orange;
+      border: none;
+      text-align: center;
+      padding: 10px;
+      margin-bottom: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+}

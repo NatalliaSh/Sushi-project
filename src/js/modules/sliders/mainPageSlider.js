@@ -9,7 +9,7 @@ function mainPageSlider() {
   });
 
   $(document).ready(function () {
-    $('.container__newPopularSlider--slider').slick({
+    $('.slider').slick({
       slidesToShow: 3,
       autoplay: true,
       autoplaySpeed: 1000,

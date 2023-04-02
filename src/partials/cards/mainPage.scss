@@ -104,7 +104,7 @@
 
     &__newPopularSlider {
       margin-top: 50px;
-      //margin: 50px;
+
       &--choice .button__choice {
         &--new,
         &--popular {
@@ -123,20 +123,27 @@
         }
       }
       &--slider {
-        display: none;
-        &.active {
-          display: block;
-        }
-        .container__card {
-          margin: 10px 10px 10px 0;
-          width: 280px;
-
-          &:hover {
-            transform: scale(1.03);
-            -moz-box-shadow: 0px 0px 20px 5px rgba(16, 21, 22, 0.4);
-            -webkit-box-shadow: 0px 0px 20px 5px rgba(16, 21, 22, 0.4);
-            box-shadow: 0px 0px 20px 5px rgba(16, 21, 22, 0.4);
+        position: relative;
+        .slider {
+          z-index: -1;
+          height: 0;
+          //with display:none/block it takes time to upload slider. with visability some delay present too.
+          &.active {
             z-index: 1;
+            height: auto;
+          }
+
+          .container__card {
+            margin: 10px 10px 10px 0;
+            width: 280px;
+
+            &:hover {
+              transform: scale(1.03);
+              -moz-box-shadow: 0px 0px 20px 5px rgba(16, 21, 22, 0.4);
+              -webkit-box-shadow: 0px 0px 20px 5px rgba(16, 21, 22, 0.4);
+              box-shadow: 0px 0px 20px 5px rgba(16, 21, 22, 0.4);
+              z-index: 1;
+            }
           }
         }
         /*.slick-arrow {

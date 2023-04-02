@@ -21,7 +21,7 @@ function getCardForSliderSelfPage({ name, imgName, price, currency, newPrice, sa
     priceContainer.appendChild(getDOMElement('p', { innerText: `${price} ${currency}`, className: 'price--regular text--bold' }));
   }
 
-  orderContainer.appendChild(getDOMElement('button', { type: 'button', className: 'cardContainer__order--button text--white addToBacket' }));
+  orderContainer.appendChild(getDOMElement('button', { id: 'addToBacketBtn', type: 'button', className: 'cardContainer__order--button text--white addToBacket' }));
 
   return cardContainer;
 }

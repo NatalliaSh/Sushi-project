@@ -1,0 +1,54 @@
+.number {
+  display: flex;
+  justify-content: center;
+  padding-right: 10px;
+
+  &__button {
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+
+    &:focus,
+    &:hover {
+      background-color: $orange;
+      color: $white;
+    }
+
+    &::before {
+      content: '';
+      border-bottom: 2px solid;
+      width: 20px;
+      position: absolute;
+      top: 50%;
+      left: 10px;
+    }
+
+    &--plus {
+      &::after {
+        content: '';
+        border-top: 2px solid;
+        width: 20px;
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: rotate(90deg);
+      }
+    }
+  }
+  &__input {
+    border: none;
+    outline: none;
+    text-align: center;
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+    appearance: textfield;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      display: none;
+    }
+  }
+}

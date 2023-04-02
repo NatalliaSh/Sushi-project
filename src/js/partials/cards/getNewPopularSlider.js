@@ -29,18 +29,23 @@ function getNewPopularSlider(dataForSelectedLocation, allProductSpecificationDat
     }),
   );
 
-  const sliderContainerNew = getDOMElement('div', {
-    className: 'container__newPopularSlider--slider new active',
+  const sliderContainer = getDOMElement('div', {
+    className: 'container__newPopularSlider--slider',
   });
-  container.append(sliderContainerNew);
+  container.append(sliderContainer);
+
+  const sliderContainerNew = getDOMElement('div', {
+    className: 'slider slider--new active',
+  });
+  sliderContainer.append(sliderContainerNew);
 
   const arrOfCardsNew = getArrOfCardsForRender(dataForSelectedLocation, allProductSpecificationData, '', 'news').map((element) => getProductCard(element, imgPath));
   sliderContainerNew.append(...arrOfCardsNew);
 
   const sliderContainerPopular = getDOMElement('div', {
-    className: 'container__newPopularSlider--slider popular',
+    className: 'slider slider--popular',
   });
-  container.append(sliderContainerPopular);
+  sliderContainer.append(sliderContainerPopular);
 
   const arrOfCardsPopular = getArrOfCardsForRender(dataForSelectedLocation, allProductSpecificationData, '', 'popular').map((element) => getProductCard(element, imgPath));
   sliderContainerPopular.append(...arrOfCardsPopular);

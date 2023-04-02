@@ -1,4 +1,5 @@
 import { getDOMElement } from '../../modules/getDOMElement.js';
+import { getPlusMinusBtnNumberInput } from '../../partials/buttons/getPlusMinusBtnNumberInput.js';
 
 function getSelfProductCard({ name, imgName, price, currency, description, ingridients, count, sale, newPrice, popular, news }, imgPath) {
   const cardContainer = getDOMElement('div', { className: 'container__selfProductPage--selfCard selfCardContainer text' });
@@ -52,14 +53,7 @@ function getSelfProductCard({ name, imgName, price, currency, description, ingri
     priceContainer.appendChild(getDOMElement('p', { innerText: `${price} ${currency}`, className: 'orderContainer__price--regular text--bold' }));
   }
 
-  const counterContainer = getDOMElement('div', { className: 'orderContainer__counter number text text--bold' });
-  orderContainer.appendChild(counterContainer);
-  const numberMinus = getDOMElement('button', { type: 'button', className: 'number__button number__button--minus text text--bold', id: 'minusBtn' });
-  counterContainer.appendChild(numberMinus);
-  const counter = getDOMElement('input', { type: 'number', min: 0, max: count, value: 1, className: 'number__input text text--bold' });
-  counterContainer.appendChild(counter);
-  const numberPlus = getDOMElement('button', { type: 'button', className: 'number__button number__button--plus text text--bold', id: 'plusBtn' });
-  counterContainer.appendChild(numberPlus);
+  orderContainer.appendChild(getPlusMinusBtnNumberInput(count));
 
   const ingridientsContainer = getDOMElement('div', {
     className: 'selfCardContainer__goodDescription--ingridiensts text--s',
@@ -78,7 +72,7 @@ function getSelfProductCard({ name, imgName, price, currency, description, ingri
   );
   goodDescriptionContainer.appendChild(ingridientsContainer);
 
-  goodDescriptionContainer.appendChild(getDOMElement('button', { innerText: 'Хочу!', type: 'button', className: 'selfCardContainer__goodDescription--submit text text--semi-bold text--white ' }));
+  goodDescriptionContainer.appendChild(getDOMElement('button', { id: 'addToBacketBtn', innerText: 'Хочу!', type: 'button', className: 'selfCardContainer__goodDescription--submit text text--semi-bold text--white ' }));
 
   return cardContainer;
 }
