@@ -9,6 +9,29 @@
     display: block;
   }
 
+  &__user {
+    display: flex;
+    justify-content: space-between;
+    background-color: $orange;
+    padding: 10px;
+
+    &--logout {
+      border: none;
+      cursor: pointer;
+      background: transparent;
+      z-index: 2;
+
+      i {
+        position: relative;
+        z-index: -1;
+      }
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
   &__message {
     background-color: $central-background;
 

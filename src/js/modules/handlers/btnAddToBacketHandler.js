@@ -3,11 +3,9 @@ import { getDOMElement } from '../getDOMElement.js';
 export const btnAddToBacketHandler = ({ target }) => {
   const mainContainer = target.offsetParent;
   const wantBtn = mainContainer.querySelector('#wantBtn');
-  console.log(mainContainer);
   const addToBacketBtn = mainContainer.querySelector('#addToBacketBtn');
   const addToBacketCont = mainContainer.querySelector('.orderButtonsContainer');
   const input = mainContainer.querySelector('input');
-  console.log(input);
   const span = addToBacketCont.querySelector('span');
 
   if (input.value === '0') {

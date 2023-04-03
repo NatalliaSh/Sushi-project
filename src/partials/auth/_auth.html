@@ -1,0 +1,40 @@
+<div class="modal">
+  @@include('./_errorMessage.html')
+  <div class="modal__content">
+    <button class="modal__close text text--semi-bold text--s text--grey">X</button>
+    <div class="tabs">
+      <input type="radio" name="tabs" id="tab-1" checked />
+      <input type="radio" name="tabs" id="tab-2" />
+      <div class="tabs__items text text--s text--semi-bold">
+        <label class="tabs__item" for="tab-1"> Войти в аккаунт </label>
+        <label class="tabs__item" for="tab-2"> Создать аккаунт </label>
+      </div>
+      <form id="login" class="form text text--s text--semi-bold">
+        <label class="form__field">
+          E-mail
+          <input type="text" name="email" />
+        </label>
+        <label class="form__field">
+          Пароль
+          <input type="password" name="password" />
+        </label>
+        <button class="text text--white text--semi-bold">Войти в аккаунт</button>
+      </form>
+      <form id="create" class="form text text--s text--semi-bold">
+        <label class="form__field">
+          E-mail
+          <input type="text" name="email" />
+        </label>
+        <label class="form__field">
+          Пароль
+          <input type="password" name="password" />
+        </label>
+        <label class="form__field">
+          Имя пользователя
+          <input type="text" name="userName" />
+        </label>
+        <button class="text text--white text--semi-bold">Создать аккаунт</button>
+      </form>
+    </div>
+  </div>
+</div>
