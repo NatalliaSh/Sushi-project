@@ -11,6 +11,8 @@ import { ACTIONS } from './CONST.js';
 import { withCheckURL } from './withCheckURL.js';
 import { changeRouteHandler } from './handlers/changeRouteHandler.js';
 import { windowEventHandler } from './handlers/windowEventHandler.js';
+import { renderBacketItemsHandler } from './handlers/renderBacketItemsHandler.js';
+import { addProductToBacket } from './backet.js';
 
 async function start() {
   const dataBase = await getDataBase();
@@ -27,6 +29,9 @@ async function start() {
   windowEventHandler.register(({ target: { value: city } }) => changeSelectCityHandlerHeader(city, dataBase, productSpecificationData), 'citySelect', 'change');
 
   windowEventHandler.register(() => changeSelectAddressHandlerHeader(dataBase, productSpecificationData), 'addressSelect', 'change');
+
+  eventBus.subscribe(ACTIONS.renderBacketItems, (userBacket) => renderBacketItemsHandler(userBacket, productSpecificationData, '#backetRoot'));
+  eventBus.subscribe(ACTIONS.addToBacket, (data) => addProductToBacket(data, productSpecificationData, '#backetRoot'));
 }
 
 export { start };

@@ -1,7 +1,7 @@
 import { eventBus } from '../eventBus.js';
 import { ACTIONS } from '../CONST.js';
 import { login } from '../authFirebase.js';
-import { showModalMessage, closeModalMessage, clearForm } from './closeModalMessage.js';
+import { showErrorModalMessage, closeErrorModalMessage, clearForm } from './errorModalMessageHandlers.js';
 import { formValidator, onFieldChangeHandler } from '../formValidator.js';
 
 const loginHandler = (e) => {
@@ -20,11 +20,11 @@ const loginHandler = (e) => {
     })
     .catch((e) => {
       console.log(e);
-      showModalMessage();
+      showErrorModalMessage();
       const messageContext = document.querySelector('.modal__message--context');
       messageContext.innerText = 'Неверный e-mail или пароль';
       setTimeout(() => {
-        closeModalMessage();
+        closeErrorModalMessage();
         clearForm(elements);
       }, 4000);
     });

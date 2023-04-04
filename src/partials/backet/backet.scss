@@ -32,8 +32,14 @@
     }
   }
 
-  &__message {
+  &__message--empty,
+  &__message--full {
     background-color: $central-background;
+    display: none;
+
+    &.active {
+      display: block;
+    }
 
     h5 {
       padding: 10px 0;
@@ -46,9 +52,38 @@
 
   &__deliveryPrice {
     background-color: $orange;
+    display: none;
+
+    &.active {
+      display: block;
+    }
 
     p {
       padding: 10px 0;
+    }
+  }
+
+  &__products {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+    &--orderSection.orderSection {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+
+      .orderSection {
+        &__submitOrder {
+          border: none;
+          background-color: $orange;
+          padding: 5px 10px;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+      }
     }
   }
 }

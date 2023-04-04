@@ -1,8 +1,6 @@
-import { eventBus } from '../eventBus.js';
-import { ACTIONS } from '../CONST.js';
 import { createAccount } from '../authFirebase.js';
-import { showModalMessage, closeModalMessage, clearForm } from './closeModalMessage.js';
-import { closeModal } from '../modal.js';
+import { showErrorModalMessage, closeErrorModalMessage, clearForm } from './errorModalMessageHandlers.js';
+import { closeModalAuth } from '../modal.js';
 import { formValidator, onFieldChangeHandler } from '../formValidator.js';
 
 const createAccountHandler = (e) => {
@@ -17,21 +15,21 @@ const createAccountHandler = (e) => {
 
   createAccount(elements.email.value, elements.password.value, elements.userName.value)
     .then(() => {
-      showModalMessage();
+      showErrorModalMessage();
       const messageContext = document.querySelector('.modal__message--context');
       messageContext.innerText = 'На указанный e-mail отправлена ссылка для верификации. Пожалуйста, перейдите по ней, чтобы активировать аккаунт';
       setTimeout(() => {
-        closeModalMessage();
+        closeErrorModalMessage();
         clearForm(elements);
-        closeModal();
+        closeModalAuth();
       }, 4000);
     })
     .catch((e) => {
-      showModalMessage();
+      showErrorModalMessage();
       const messageContext = document.querySelector('.modal__message--context');
       messageContext.innerText = 'Error: ' + e.message.match(/(?:auth\/)(\D*)(\))/)[1];
       setTimeout(() => {
-        closeModalMessage();
+        closeErrorModalMessage();
         clearForm(elements);
       }, 3000);
     });

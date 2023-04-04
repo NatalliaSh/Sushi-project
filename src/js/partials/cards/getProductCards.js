@@ -66,6 +66,7 @@ function getProductCard({ name, imgName, price, currency, description, sale, new
   orderButtonsContainer.appendChild(getPlusMinusBtnNumberInput(100));
 
   const addToBacketBtn = getDOMElement('button', { id: 'addToBacketBtn', type: 'button', className: 'text text--white' });
+  addToBacketBtn.setAttribute('data-producid', id);
   orderButtonsContainer.appendChild(addToBacketBtn);
   addToBacketBtn.appendChild(getDOMElement('i', { className: 'fa-solid fa-basket-shopping' }));
   addToBacketBtn.appendChild(getDOMElement('span', { className: 'text--bold' }));

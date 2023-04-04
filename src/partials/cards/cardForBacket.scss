@@ -1,0 +1,58 @@
+.productsSection__cardContainer {
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+
+  &--img {
+    flex: 0 1 70px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &--substance.substance {
+    margin-left: 5px;
+    .substance {
+      &__goodName {
+        margin-bottom: 5px;
+        text-align: left;
+      }
+
+      &__amountPrice {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .number {
+          align-items: center;
+
+          &__button {
+            width: 20px;
+            height: 20px;
+
+            &::before {
+              width: 10px;
+              left: 5px;
+              top: 9px;
+            }
+
+            &--plus {
+              &::after {
+                width: 10px;
+                position: absolute;
+                left: 5px;
+                top: 9px;
+              }
+            }
+          }
+          &__input {
+            margin: 0 5px;
+            font-size: 18px;
+            width: 30px;
+          }
+        }
+      }
+    }
+  }
+}

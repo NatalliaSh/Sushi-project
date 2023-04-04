@@ -33,6 +33,10 @@ export const ACTIONS = {
   login: 'login',
   logout: 'logout',
   changeRoute: 'changeRoute',
+  removeFromBacket: 'removeFromBacket',
+  addToBacket: 'addToBacket',
+  renderBacketItems: 'renderBacketItems',
+  changesInBacket: 'changesInBacket',
 };
 
 export const categoriesToRecomendation = {

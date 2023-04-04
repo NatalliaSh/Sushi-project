@@ -5,11 +5,23 @@
       <i class="fa-solid fa-arrow-right-from-bracket"></i>
     </button>
   </div>
-  <div class="backet__message">
-    <h5>Ваша корзина пуста.</h5>
+
+  <div class="backet__message--empty active">
+    <h5>Ваша корзина пуста</h5>
     <p class="text--grey text--s">Добавьте же скорее что-нибудь!</p>
   </div>
-  <div class="backet__deliveryPrice text--white text--xs">
+  <div class="backet__message--full">
+    <h5>Корзина</h5>
+  </div>
+
+  <div class="backet__deliveryPrice active text--white text--xs">
     <p>Бесплатная доставка от @@price @@currency</p>
+  </div>
+  <div class="backet__products text">
+    <div id="backetRoot" class="backet__products--productsSection productsSection"></div>
+    <div class="backet__products--orderSection orderSection">
+      <div id="totalPrice" class="orderSection__totalPrice text--bold"></div>
+      <button id="submitOrder" class="orderSection__submitOrder text--white text--s" type="button">Оформить заказ</button>
+    </div>
   </div>
 </div>

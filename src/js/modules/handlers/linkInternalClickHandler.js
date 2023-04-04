@@ -18,14 +18,3 @@ export const linkInternalClickHandler = (e) => {
     eventBus.dispatch(ACTIONS.changeRoute, path);
   }
 };
-
-/*const withCheckChanges = (fn) => (e) => {
-  const path = e.target.getAttribute('href');
-  e.preventDefault();
-  if (path === '/user') {
-    showModal();
-    fn(e);
-  } else {
-    fn(e);
-  }
-};*/

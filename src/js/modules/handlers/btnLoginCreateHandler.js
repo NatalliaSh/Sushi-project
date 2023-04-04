@@ -1,7 +1,7 @@
-import { showModal } from '../modal.js';
+import { showModalAuth } from '../modal.js';
 
 export const btnLoginCreateHandler = ({ target }) => {
-  showModal();
+  showModalAuth();
   let input = '';
   if (target.id === 'createAccountBtnToOpenModal') {
     input = document.querySelector('#tab-2');

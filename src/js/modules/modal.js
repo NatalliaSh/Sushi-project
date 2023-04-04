@@ -1,21 +1,35 @@
 import { eventBus } from './eventBus.js';
 import { ACTIONS } from './CONST.js';
 
-const modal = document.querySelector('.modal');
-const closer = modal.querySelector('.modal__close');
+const modalAuth = document.querySelector('#modalAuth');
+const closerAuth = modalAuth.querySelector('.modal__close');
+const modalMessage = document.querySelector('#modalMessage');
+const closerMessage = modalMessage.querySelector('.modal__close');
 
-closer.addEventListener('click', () => {
-  modal.classList.remove('active');
+closerAuth.addEventListener('click', () => {
+  modalAuth.classList.remove('active');
 });
 
-const showModal = () => {
-  modal.classList.add('active');
+closerMessage.addEventListener('click', () => {
+  modalMessage.classList.remove('active');
+});
+
+const showModalAuth = () => {
+  modalAuth.classList.add('active');
 };
 
-const closeModal = () => {
-  modal.classList.remove('active');
+const closeModalAuth = () => {
+  modalAuth.classList.remove('active');
 };
 
-eventBus.subscribe(ACTIONS.login, closeModal);
+const showModalMessage = () => {
+  modalMessage.classList.add('active');
+};
 
-export { showModal, closeModal };
+const closeModalMessage = () => {
+  modalMessage.classList.remove('active');
+};
+
+eventBus.subscribe(ACTIONS.login, closeModalAuth);
+
+export { showModalAuth, closeModalAuth, showModalMessage, closeModalMessage };
