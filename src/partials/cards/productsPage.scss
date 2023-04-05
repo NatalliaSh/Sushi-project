@@ -5,8 +5,16 @@
       justify-content: space-between;
       margin: 30px 0;
 
+      @include mobile() {
+        justify-content: center;
+      }
+
       &__left {
         flex: 0 1 200px;
+
+        @include mobile() {
+          flex: 0 1 120px;
+        }
 
         img {
           height: 100%;

@@ -17,6 +17,7 @@
 @import './partials/auth/errorMessage.scss';
 @import './partials/cards/cardForBacket.scss';
 @import './partials/modalMessage/modalMessage.scss';
+@import './partials/mobileMenu/mobileMenu.scss';
 
 body {
   box-sizing: border-box;
@@ -49,7 +50,7 @@ a {
     margin-left: 30px;
     margin-right: 20px;
 
-    @include middle() {
+    @include xlarge() {
       flex: 0 1 170px;
       margin-left: 10px;
       margin-right: 10px;
@@ -85,20 +86,39 @@ a {
     }
   }
   .container__central {
-    flex: 1 1 1170px;
+    flex: 2 2 740px;
     background-color: $central-background;
 
     &__generatedContent {
       max-width: 950px;
       padding: 0 20px;
       margin: 30px auto;
+
+      @include mobile() {
+        margin: 20px auto;
+      }
     }
   }
   .container__right {
-    flex: 0 1 330px;
+    flex: 1 1 230px;
+    max-width: 330px;
 
     @include mobile() {
       display: none;
+    }
+  }
+  .container__mobileMenu {
+    display: none;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 10000;
+    background-color: $white;
+    width: 100%;
+    border-top: 1px solid $grey;
+
+    @include mobile() {
+      display: block;
     }
   }
 }

@@ -1,21 +1,30 @@
 .container__central__generatedContent {
   margin: 0 auto 50px auto;
-  width: 950px;
 
-  @include xxlarge() {
-    width: 700px;
-  }
-
-  @include xlarge() {
-    width: 534px;
-  }
-
-  @include large() {
-    width: 460px;
-  }
   .container {
     &__saleSlider {
       margin-bottom: 50px;
+
+      @include mobile() {
+        display: none;
+      }
+
+      &--wrapper {
+        width: 800px;
+        margin: 0 auto;
+
+        @include xxlarge() {
+          width: 700px;
+        }
+
+        @include xlarge() {
+          width: 460px;
+        }
+
+        @include large() {
+          width: 460px;
+        }
+      }
       .cardContainer {
         margin-right: 10px;
         height: 450px;
@@ -29,6 +38,9 @@
 
         &__goodName {
           padding: 20px 0;
+          @include xlarge() {
+            font-size: 46px;
+          }
         }
 
         &__price {
@@ -64,9 +76,15 @@
     }
 
     &__menu {
+      margin: 0 20px;
       display: flex;
       flex-wrap: wrap;
       gap: 30px;
+
+      @include mobile() {
+        margin: 0 15px;
+        gap: 15px;
+      }
 
       &__item {
         width: 220px;
@@ -77,8 +95,19 @@
         background-repeat: no-repeat;
         transition: all 0.5s ease-out;
 
+        @include mobile() {
+          width: 40vw;
+        }
+
         &--big {
           width: 470px;
+          @include xlarge() {
+            width: 400px;
+          }
+
+          @include mobile() {
+            width: 40vw;
+          }
         }
 
         &:hover {
@@ -95,6 +124,11 @@
           align-items: flex-end;
           padding: 0 0 10px 10px;
 
+          @include mobile() {
+            align-items: flex-start;
+            padding-top: 10px;
+          }
+
           &:hover {
             color: $orange;
           }
@@ -103,7 +137,21 @@
     }
 
     &__newPopularSlider {
-      margin-top: 50px;
+      margin: 50px auto;
+      width: 895px;
+
+      @include mobile() {
+        display: none;
+      }
+
+      @include xxlarge() {
+        width: 700px;
+      }
+
+      @include xlarge() {
+        width: 380px;
+        margin: 50px 20px 50px 20px;
+      }
 
       &--choice .button__choice {
         &--new,

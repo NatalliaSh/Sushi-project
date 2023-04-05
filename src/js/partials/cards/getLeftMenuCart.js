@@ -1,8 +1,19 @@
 import { logoMenuImgNames } from '../../modules/CONST.js';
+import { getDOMElement } from '../../modules/getDOMElement.js';
 
-function getLeftMenuCart(dataForSelectedLocation, imgPath) {
+function getLeftMenuCart(dataForSelectedLocation, imgPath, ifMobile) {
   const list = document.createElement('ul');
   list.classList.add('menuList');
+
+  if (ifMobile) {
+    list.appendChild(
+      getDOMElement('li', {
+        classList: 'closer',
+        id: 'closeMobileMenu',
+        innerText: 'X',
+      }),
+    );
+  }
 
   const arrOfMenuList = dataForSelectedLocation.menuList;
 

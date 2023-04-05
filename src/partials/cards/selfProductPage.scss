@@ -1,5 +1,6 @@
 .container {
   &__selfProductPage {
+    padding: 0 20px;
     .selfCardContainer {
       display: flex;
       width: 100%;
@@ -99,7 +100,20 @@
     }
 
     .sliderContainer {
-      width: 100%;
+      width: 850px;
+      margin: 0 auto;
+
+      @include xxlarge() {
+        width: 650px;
+      }
+
+      @include xlarge() {
+        width: 440px;
+      }
+
+      @include large() {
+        width: 280px;
+      }
 
       &__title {
         text-align: center;

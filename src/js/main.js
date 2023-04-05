@@ -17,6 +17,7 @@ import { removeProductFromBacket } from './modules/backet.js';
 import { changesInBacketHandler } from './modules/handlers/changesInBacketHandler.js';
 import { btnSubmitOrderHandler } from './modules/handlers/btnSubmitOrderHandler.js';
 import { setStatusBtnAddToBacket, changeBtnAddToBacketIFRemoveFromBacket } from './modules/setStatusBtnAddToBacket.js';
+import './modules/mobile/closer.js';
 
 start();
 
@@ -30,7 +31,9 @@ initialize();
 
 eventBus.subscribe(ACTIONS.login, setUserStatus);
 eventBus.subscribe(ACTIONS.login, localStorageHandler);
+//eventBus.subscribe(ACTIONS.login, setStatusBtnAddToBacket);
 eventBus.subscribe(ACTIONS.logout, setUserStatus);
+//eventBus.subscribe(ACTIONS.logout, setStatusBtnAddToBacket);
 eventBus.subscribe(ACTIONS.addToBacket, addProductToLocalStorage);
 eventBus.subscribe(ACTIONS.removeFromBacket, removeProductFromLocalStorage);
 eventBus.subscribe(ACTIONS.removeFromBacket, (producid) => removeProductFromBacket(producid));

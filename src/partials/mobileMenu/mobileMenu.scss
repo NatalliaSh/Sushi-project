@@ -1,0 +1,64 @@
+.container__mobileMenu--buttons {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 10px 0;
+
+  button {
+    flex: 0 0 50px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+
+.container__mobileMenu--menu {
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  background-color: $white;
+  width: 100vw;
+  height: 92vh;
+  transition: all 1s ease-out;
+
+  &.active {
+    top: -92vh;
+  }
+
+  ul {
+    margin: 20px 40px;
+    position: relative;
+
+    li {
+      padding-top: 30px;
+
+      &:first-child {
+        width: 20px;
+        position: absolute;
+        right: 0;
+        padding-top: 0px;
+        cursor: pointer;
+
+        &:hover {
+          color: $orange;
+        }
+      }
+      a {
+        img {
+          width: 30px;
+          padding-right: 10px;
+          position: relative;
+          top: 0.25em;
+        }
+
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+  }
+}

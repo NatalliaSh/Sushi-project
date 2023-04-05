@@ -18,7 +18,7 @@ function getCentralMenuCards(dataForSelectedLocation, imgPath) {
 
     let ref = '/' + encodeURIComponent(element);
     const a = getDOMElement('a', {
-      className: 'container__menu__item__link',
+      className: 'container__menu__item__link text text--semi-bold',
       href: ref,
       innerText: element,
     });
