@@ -16,12 +16,14 @@ import { localStorageHandler, addProductToLocalStorage, removeProductFromLocalSt
 import { removeProductFromBacket } from './modules/backet.js';
 import { changesInBacketHandler } from './modules/handlers/changesInBacketHandler.js';
 import { btnSubmitOrderHandler } from './modules/handlers/btnSubmitOrderHandler.js';
+import { setStatusBtnAddToBacket, changeBtnAddToBacketIFRemoveFromBacket } from './modules/setStatusBtnAddToBacket.js';
 
 start();
 
 async function initialize() {
   const currentUser = await getUser();
-  setUserStatus(currentUser);
+  await setUserStatus(currentUser);
+  setStatusBtnAddToBacket();
 }
 
 initialize();
@@ -32,7 +34,10 @@ eventBus.subscribe(ACTIONS.logout, setUserStatus);
 eventBus.subscribe(ACTIONS.addToBacket, addProductToLocalStorage);
 eventBus.subscribe(ACTIONS.removeFromBacket, removeProductFromLocalStorage);
 eventBus.subscribe(ACTIONS.removeFromBacket, (producid) => removeProductFromBacket(producid));
+eventBus.subscribe(ACTIONS.removeFromBacket, (producid) => changeBtnAddToBacketIFRemoveFromBacket(producid));
 eventBus.subscribe(ACTIONS.changesInBacket, changesInBacketHandler);
+eventBus.subscribe(ACTIONS.changesInBacket, setStatusBtnAddToBacket);
+eventBus.subscribe(ACTIONS.newPage, setStatusBtnAddToBacket);
 
 windowEventHandler.register(btnChoiceHandler, 'newChoiseBtn', 'click');
 windowEventHandler.register(btnChoiceHandler, 'popularChoiseBtn', 'click');

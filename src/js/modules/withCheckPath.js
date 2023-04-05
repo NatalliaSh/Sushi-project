@@ -6,7 +6,8 @@ import { mainPageSlider } from './sliders/mainPageSlider.js';
 import { selfProductPageSlider } from './sliders/selfProductPageSlider.js';
 import { getRoutes } from './router.js';
 import { getDOMElement } from './getDOMElement.js';
-import { MESSAGE } from './CONST.js';
+import { ACTIONS, MESSAGE } from './CONST.js';
+import { eventBus } from './eventBus.js';
 
 function isProductInSelectedLocation(dataForSelectedLocation, path, routes) {
   let is = false;
@@ -49,6 +50,7 @@ function withCheckPath(path, root, dataForSelectedLocation, productSpecification
       renderReplace(root, page);
       selfProductPageSlider();
     }
+    eventBus.dispatch(ACTIONS.newPage, '');
   } else {
     page = getDOMElement('div', {
       class: 'Error massage text text--bold',

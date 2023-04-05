@@ -37,6 +37,7 @@ export const ACTIONS = {
   addToBacket: 'addToBacket',
   renderBacketItems: 'renderBacketItems',
   changesInBacket: 'changesInBacket',
+  newPage: 'newPage',
 };
 
 export const categoriesToRecomendation = {
