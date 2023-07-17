@@ -3,20 +3,41 @@
   margin-top: 10px;
   align-items: center;
 
+  @include middle() {
+    background-color: $white;
+    border-radius: 5px;
+  }
+
   &--img {
     flex: 0 1 70px;
 
+    @include middle() {
+      flex: 0 1 100px;
+      margin-right: 20px;
+    }
+
     img {
       width: 100%;
+      border-radius: 5px;
     }
   }
 
   &--substance.substance {
     margin-left: 5px;
+
+    @include middle() {
+      flex: 1 1 auto;
+      margin-right: 10px;
+    }
+
     .substance {
       &__goodName {
         margin-bottom: 5px;
         text-align: left;
+
+        @include middle() {
+          margin-bottom: 10px;
+        }
       }
 
       &__amountPrice {

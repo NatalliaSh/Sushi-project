@@ -38,7 +38,7 @@
   &--s {
     font-size: 18px;
     @include mobile() {
-      font-size: 12px;
+      font-size: 18px;
     }
   }
 
@@ -61,6 +61,10 @@
     @include mobile() {
       font-size: 24px;
     }
+  }
+
+  &--icon {
+    font-size: 32px;
   }
 
   &--grey {

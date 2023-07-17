@@ -1,6 +1,6 @@
 import { getCardForBacket } from '../../partials/cards/getCardForBacket.js';
 import { renderReplace } from '../renderReplace.js';
-import { countTotalPrice } from '../countTotalPrice.js';
+import { fillBacketTotalFields } from '../backet.js';
 import { changeActiveClassesInBacket, clearBacket } from '../backet.js';
 
 function renderBacketItemsHandler(userBacket, productSpecificationData, root) {
@@ -15,10 +15,10 @@ function renderBacketItemsHandler(userBacket, productSpecificationData, root) {
     containerForcards.append(...cardsArr);
     renderReplace(root, containerForcards);
 
-    countTotalPrice(productSpecificationData[arrOfProductsID[0]].currency);
+    fillBacketTotalFields(productSpecificationData[arrOfProductsID[0]].currency);
   } else {
     clearBacket();
   }
 }
 
-export { renderBacketItemsHandler, countTotalPrice };
+export { renderBacketItemsHandler };

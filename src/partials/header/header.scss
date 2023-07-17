@@ -24,7 +24,7 @@
     .logo--mobile {
       display: none;
 
-      @include mobile() {
+      @include middle() {
         display: flex;
         align-items: center;
         margin-left: 10px;

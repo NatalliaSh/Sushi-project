@@ -1,4 +1,7 @@
 <div class="container__right--backet backet text">
+  <div class="backet__closer">
+    <div id="closeMobileBacket">X</div>
+  </div>
   <div class="backet__user text--white text--semi-bold">
     <div class="backet__user--userName"></div>
     <button id="logoutBtn" class="backet__user--logout text text--grey text--semi-bold">
@@ -20,8 +23,16 @@
   <div class="backet__products text">
     <div id="backetRoot" class="backet__products--productsSection productsSection"></div>
     <div class="backet__products--orderSection orderSection">
-      <div id="totalPrice" class="orderSection__totalPrice text--bold"></div>
-      <button id="submitOrder" class="orderSection__submitOrder text--white text--s" type="button">Оформить заказ</button>
+      <div class="orderSection--mobileTitle text--semi-bold text--orange text--l">Итого</div>
+      <div class="orderSection--mobileFirstLine">
+        <div id="goodsAmount"></div>
+        <div id="totalPrice" class="orderSection__totalPrice text--bold"></div>
+      </div>
+      <div class="orderSection--mobileSecondLine">
+        <div>Доставка</div>
+        <div id="deliveryPrice" class="text--bold"></div>
+      </div>
+      <button id="submitOrder" class="orderSection__submitOrder text text--semi-bold text--white text--s" type="button">Оформить заказ</button>
     </div>
   </div>
 </div>

@@ -1,19 +1,51 @@
 .backet {
   max-width: 290px;
   margin: 60px auto;
-  padding: 0 20px;
+  padding: 0 10px;
   text-align: center;
   display: none;
+  position: relative;
+
+  @include large() {
+    margin: 10px auto;
+  }
+
+  @include middle() {
+    max-width: 100vw;
+    margin-bottom: 100px;
+  }
 
   &.active {
     display: block;
   }
 
+  &__closer {
+    display: none;
+
+    @include middle() {
+      display: flex;
+      justify-content: flex-end;
+
+      #closeMobileBacket {
+        width: 15px;
+        margin-bottom: 10px;
+        cursor: pointer;
+
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+  }
   &__user {
     display: flex;
     justify-content: space-between;
     background-color: $orange;
     padding: 10px;
+
+    @include middle() {
+      border-radius: 5px;
+    }
 
     &--logout {
       border: none;
@@ -54,6 +86,11 @@
     background-color: $orange;
     display: none;
 
+    @include middle() {
+      font-size: 18px;
+      border-radius: 5px;
+    }
+
     &.active {
       display: block;
     }
@@ -73,15 +110,68 @@
     &--orderSection.orderSection {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       margin-top: 30px;
 
+      @include middle() {
+        display: block;
+        background-color: $white;
+        border-radius: 5px;
+      }
+
       .orderSection {
+        &--mobileTitle {
+          display: none;
+
+          @include middle() {
+            display: block;
+            text-align: center;
+          }
+        }
+
+        &--mobileFirstLine {
+          @include middle() {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: solid 0.5px $grey;
+          }
+          #goodsAmount {
+            display: none;
+
+            @include middle() {
+              display: block;
+            }
+          }
+        }
+
+        &--mobileSecondLine {
+          display: none;
+          @include middle() {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: solid 0.5px $grey;
+          }
+        }
+
         &__submitOrder {
           border: none;
-          background-color: $orange;
-          padding: 5px 10px;
+          background-color: $dark-orange;
+          padding: 10px;
           border-radius: 5px;
           cursor: pointer;
+
+          @include middle() {
+            width: 100%;
+            height: 48px;
+            margin-top: 10px;
+            font-size: 24px;
+          }
+
+          @include mobile() {
+            font-size: 18px;
+          }
         }
       }
     }

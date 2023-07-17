@@ -7,10 +7,10 @@ function setLeftMenuOnPage(dataForSelectedLocation, root) {
   renderReplace(root, menuLeft);
 }
 
-function setMobileMenu(dataForSelectedLocation, root) {
+/*function setMobileMenu(dataForSelectedLocation, root) {
   const menuLeft = getLeftMenuCart(dataForSelectedLocation, '../../../img/menuImg/menuLogo/', true);
   renderReplace(root, menuLeft);
-}
+}*/
 
 function getCentralMenuOnPage(dataForSelectedLocation) {
   const menuCentral = getCentralMenuCards(dataForSelectedLocation, '../../../img/menuImg/menuPicture/');
@@ -18,4 +18,4 @@ function getCentralMenuOnPage(dataForSelectedLocation) {
   return menuCentral;
 }
 
-export { setLeftMenuOnPage, setMobileMenu, getCentralMenuOnPage };
+export { setLeftMenuOnPage, getCentralMenuOnPage };

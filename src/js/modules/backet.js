@@ -37,6 +37,10 @@ function showBacket(user) {
   getUserBacket(user.uid).then((userBacket) => {
     eventBus.dispatch(ACTIONS.renderBacketItems, userBacket);
   });
+
+  const backetMobileButton = document.querySelector('#openBacketButton');
+  const spanWithAmountOfItemsInBacket = backetMobileButton.querySelector('span');
+  spanWithAmountOfItemsInBacket.classList.add('active');
 }
 
 const hideBacket = () => {
@@ -44,7 +48,38 @@ const hideBacket = () => {
   const backetBlock = document.querySelector('.backet');
   backetBlock.classList.remove('active');
   loginBlock.classList.add('active');
+
+  const backetMobileButton = document.querySelector('#openBacketButton');
+  const spanWithAmountOfItemsInBacket = backetMobileButton.querySelector('span');
+  spanWithAmountOfItemsInBacket.classList.remove('active');
 };
+
+function getNumWord(num, word1, word2, word5) {
+  const dd = num % 100;
+  if (dd >= 11 && dd <= 19) return word5;
+  const d = num % 10;
+  if (d == 1) return word1;
+  if (d >= 2 && d <= 4) return word2;
+  return word5;
+}
+
+function fillBacketTotalFields(currency = 'BYN') {
+  const fieldForAmount = document.querySelector('#goodsAmount');
+  const amountOfitemsInBacket = document.querySelectorAll('.productsSection__cardContainer').length;
+  fieldForAmount.innerText = `${amountOfitemsInBacket} ${getNumWord(amountOfitemsInBacket, 'товар', 'товара', 'товаров')}`;
+
+  const totalPrice = countTotalPrice();
+
+  const totalPriceNode = document.querySelector('#totalPrice');
+  totalPriceNode.innerText = `${totalPrice} ${currency}`;
+
+  const deliveryPriceNode = document.querySelector('#deliveryPrice');
+  deliveryPriceNode.innerText = totalPrice >= 30 ? `0 ${currency}` : `10 ${currency}`;
+
+  const backetMobileButton = document.querySelector('#openBacketButton');
+  const spanWithAmountOfItemsInBacket = backetMobileButton.querySelector('span');
+  spanWithAmountOfItemsInBacket.innerText = amountOfitemsInBacket;
+}
 
 function addProductToBacket(data, productSpecificationData, root) {
   const key = Object.keys(data)[0];
@@ -58,13 +93,13 @@ function addProductToBacket(data, productSpecificationData, root) {
     const priceForOne = productData.sale ? productData.newPrice : productData.price;
 
     input.value = data[key];
-    priceNode.innerText = (priceForOne * data[key]).toFixed(2);
+    priceNode.innerText = (priceForOne * data[key]).toFixed(2) + ' ' + productData.currency;
 
-    countTotalPrice(productData.currency);
+    fillBacketTotalFields();
   } else {
     const rootNode = document.querySelector(root);
     rootNode.appendChild(getCardForBacket(key, productData, data[key], '../../img/menuImg/productsImg/'));
-    countTotalPrice(productData.currency);
+    fillBacketTotalFields();
     changeActiveClassesInBacket(false);
   }
 }
@@ -73,7 +108,7 @@ function removeProductFromBacket(producid) {
   const productCard = document.querySelector(`[data-productid=${producid}]`);
   const rootNode = productCard.parentElement;
   rootNode.removeChild(productCard);
-  countTotalPrice();
+  fillBacketTotalFields();
 
   const backetRoot = document.querySelector('#backetRoot');
   const isProductsInBacket = backetRoot.querySelector('[data-productid]');
@@ -88,6 +123,10 @@ function clearBacket() {
   const backetRoot = document.querySelector('#backetRoot');
   backetRoot.removeChild(newChild);
   changeActiveClassesInBacket(true);
+
+  const backetMobileButton = document.querySelector('#openBacketButton');
+  const spanWithAmountOfItemsInBacket = backetMobileButton.querySelector('span');
+  spanWithAmountOfItemsInBacket.innerText = 0;
 }
 
-export { changeActiveClassesInBacket, showBacket, hideBacket, addProductToBacket, removeProductFromBacket, clearBacket };
+export { changeActiveClassesInBacket, showBacket, hideBacket, addProductToBacket, removeProductFromBacket, clearBacket, fillBacketTotalFields };

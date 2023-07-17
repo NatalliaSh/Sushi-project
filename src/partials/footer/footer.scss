@@ -4,10 +4,11 @@
   padding: 0 20px;
   margin: 0 auto;
 
-  @include mobile() {
-    border-top: none;
+  @include middle() {
+    margin-bottom: 80px;
     border-bottom: 0.5px solid $grey;
     max-width: 100vw;
+    border-top: none;
   }
 
   &__container {
@@ -83,6 +84,7 @@
           border: none;
           background: transparent;
           cursor: pointer;
+          width: 180px;
 
           @include mobile() {
             display: none;
@@ -109,6 +111,10 @@
 
           &:not(:last-child) {
             padding-right: 20px;
+
+            @include xlarge() {
+              padding-right: 10px;
+            }
           }
 
           &:hover {
