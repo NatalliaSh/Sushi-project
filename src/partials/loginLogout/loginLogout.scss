@@ -22,6 +22,9 @@
   }
 
   &__button {
+    display: flex;
+    justify-content: space-around;
+
     &--login,
     &--createAccount {
       background-color: $orange;

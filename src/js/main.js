@@ -17,7 +17,7 @@ import { removeProductFromBacket } from './modules/backet.js';
 import { changesInBacketHandler } from './modules/handlers/changesInBacketHandler.js';
 import { btnSubmitOrderHandler } from './modules/handlers/btnSubmitOrderHandler.js';
 import { setStatusBtnAddToBacket, changeBtnAddToBacketIFRemoveFromBacket } from './modules/setStatusBtnAddToBacket.js';
-//import './modules/mobile/closer.js';
+
 import './modules/handlers/MobileMenuHandlers.js';
 
 start();
