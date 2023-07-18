@@ -15,7 +15,7 @@ function getArrOfCardsForRender(dataForSelectedLocation, allProductSpecification
 
   arrOfProductID.forEach((item) => {
     if (item in productSpecificationData) {
-      productSpecificationData[item].id = item;
+      //productSpecificationData[item].id = item;
       cardArr.push(productSpecificationData[item]);
     }
   });

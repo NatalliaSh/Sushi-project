@@ -1,7 +1,7 @@
 import { getDOMElement } from '../../modules/getDOMElement.js';
-import { getPlusMinusBtnNumberInput } from '../../partials/buttons/getPlusMinusBtnNumberInput.js';
+import { wantBtnNodeBlock } from './getProductCards.js';
 
-function getSelfProductCard({ name, imgName, price, currency, description, ingridients, count, sale, newPrice, popular, news }, imgPath) {
+function getSelfProductCard({ name, imgName, price, currency, description, ingridients, count, sale, newPrice, popular, news, id }, imgPath) {
   const cardContainer = getDOMElement('div', { className: 'container__selfProductPage--selfCard selfCardContainer text' });
 
   const imgContainer = getDOMElement('div', { className: 'selfCardContainer__img' });
@@ -53,8 +53,6 @@ function getSelfProductCard({ name, imgName, price, currency, description, ingri
     priceContainer.appendChild(getDOMElement('p', { innerText: `${price} ${currency}`, className: 'orderContainer__price--regular text--bold' }));
   }
 
-  orderContainer.appendChild(getPlusMinusBtnNumberInput(count));
-
   const ingridientsContainer = getDOMElement('div', {
     className: 'selfCardContainer__goodDescription--ingridiensts text--s',
   });
@@ -72,7 +70,7 @@ function getSelfProductCard({ name, imgName, price, currency, description, ingri
   );
   goodDescriptionContainer.appendChild(ingridientsContainer);
 
-  goodDescriptionContainer.appendChild(getDOMElement('button', { id: 'addToBacketBtn', innerText: 'Хочу!', type: 'button', className: 'selfCardContainer__goodDescription--submit text text--semi-bold text--white ' }));
+  wantBtnNodeBlock(goodDescriptionContainer, { id, count });
 
   return cardContainer;
 }

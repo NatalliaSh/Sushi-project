@@ -1,5 +1,6 @@
 export const productSpecificationData = {
   wok1: {
+    id: 'wok1',
     name: 'Ясай Яки Сомен (грибы)',
     imgName: 'WOK1.jpg',
     description: '410 грамм',
@@ -15,6 +16,7 @@ export const productSpecificationData = {
     news: true,
   },
   wok2: {
+    id: 'wok2',
     name: 'Тори Яки Тяхан (курица)',
     imgName: 'WOK2.jpg',
     description: '431 грамм',
@@ -30,6 +32,7 @@ export const productSpecificationData = {
     news: false,
   },
   wok3: {
+    id: 'wok3',
     name: 'Тори Яки Удон (курица)',
     imgName: 'WOK3.jpg',
     description: '414 грамм',
@@ -45,6 +48,7 @@ export const productSpecificationData = {
     news: false,
   },
   wok4: {
+    id: 'wok4',
     name: 'Батакон Яки Тяхан',
     imgName: 'WOK4.jpg',
     description: '445 грамм',
@@ -60,6 +64,7 @@ export const productSpecificationData = {
     news: true,
   },
   wok5: {
+    id: 'wok5',
     name: 'Сифудо Яки Тяхан',
     imgName: 'WOK5.jpg',
     description: '415 грамм',
@@ -75,6 +80,7 @@ export const productSpecificationData = {
     news: true,
   },
   wok6: {
+    id: 'wok6',
     name: 'Эби тори Яки Удон',
     imgName: 'WOK6.jpg',
     description: '419 грамм',
@@ -90,6 +96,7 @@ export const productSpecificationData = {
     news: false,
   },
   wok7: {
+    id: 'wok7',
     name: 'Бифу Яки',
     imgName: 'WOK7.jpg',
     description: '410 грамм',
@@ -105,6 +112,7 @@ export const productSpecificationData = {
     news: false,
   },
   wok8: {
+    id: 'wok8',
     name: 'Ясай Сомен (говядина)',
     imgName: 'WOK8.jpg',
     description: '423 грамм',
@@ -120,6 +128,7 @@ export const productSpecificationData = {
     news: true,
   },
   wok9: {
+    id: 'wok9',
     name: 'Сифудо Яки Шахэфэнь',
     imgName: 'WOK9.jpg',
     description: '445 грамм',
@@ -135,6 +144,7 @@ export const productSpecificationData = {
     news: false,
   },
   sushi1: {
+    id: 'sushi1',
     name: 'Каппа Пира маки',
     imgName: 'sushi1.jpg',
     description: '219 грамм 8шт.',
@@ -150,6 +160,7 @@ export const productSpecificationData = {
     news: false,
   },
   sushi2: {
+    id: 'sushi2',
     name: 'Бекон Пира маки',
     imgName: 'sushi2.jpg',
     description: '231 грамм 8шт.',
@@ -165,6 +176,7 @@ export const productSpecificationData = {
     news: false,
   },
   sushi3: {
+    id: 'sushi3',
     name: 'Ширу маки',
     imgName: 'sushi3.jpg',
     description: '259 грамм 8шт.',
@@ -180,6 +192,7 @@ export const productSpecificationData = {
     news: true,
   },
   sushi4: {
+    id: 'sushi4',
     name: 'Мидори маки',
     imgName: 'sushi4.jpg',
     description: '224 грамм 8шт.',
@@ -195,6 +208,7 @@ export const productSpecificationData = {
     news: false,
   },
   sushi5: {
+    id: 'sushi5',
     name: 'Сингапур маки',
     imgName: 'sushi5.jpg',
     description: '259 грамм 8шт.',
@@ -210,6 +224,7 @@ export const productSpecificationData = {
     news: false,
   },
   sushi6: {
+    id: 'sushi6',
     name: 'Тори Чизу маки',
     imgName: 'sushi6.jpg',
     description: '240 грамм 8шт.',
@@ -225,6 +240,7 @@ export const productSpecificationData = {
     news: true,
   },
   sushi7: {
+    id: 'sushi7',
     name: 'Флорида маки',
     imgName: 'sushi7.jpg',
     description: '222 грамм 8шт.',
@@ -240,6 +256,7 @@ export const productSpecificationData = {
     news: false,
   },
   sushi8: {
+    id: 'sushi8',
     name: 'Шиитаке маки',
     imgName: 'sushi8.jpg',
     description: '199 грамм 8шт.',
@@ -255,6 +272,7 @@ export const productSpecificationData = {
     news: true,
   },
   sushi9: {
+    id: 'sushi9',
     name: 'Пинку маки',
     imgName: 'sushi9.jpg',
     description: '210 грамм 8шт.',
@@ -270,6 +288,7 @@ export const productSpecificationData = {
     news: true,
   },
   sushi10: {
+    id: 'sushi10',
     name: 'Сурими муракай маки',
     imgName: 'sushi10.jpg',
     description: '222 грамм 8шт.',
@@ -285,6 +304,7 @@ export const productSpecificationData = {
     news: true,
   },
   sushi11: {
+    id: 'sushi11',
     name: 'Тамаго маки',
     imgName: 'sushi11.jpg',
     description: '237 грамм 8шт.',
@@ -300,6 +320,7 @@ export const productSpecificationData = {
     news: false,
   },
   sushi12: {
+    id: 'sushi12',
     name: 'Батакон маки',
     imgName: 'sushi12.jpg',
     description: '252 грамм 8шт.',
@@ -315,6 +336,7 @@ export const productSpecificationData = {
     news: false,
   },
   sushi13: {
+    id: 'sushi13',
     name: 'Ямато маки',
     imgName: 'sushi13.jpg',
     description: '219 грамм 8шт.',
@@ -330,6 +352,7 @@ export const productSpecificationData = {
     news: false,
   },
   sushi14: {
+    id: 'sushi14',
     name: 'Эдо маки',
     imgName: 'sushi14.jpg',
     description: '214 грамм 8шт.',
@@ -345,6 +368,7 @@ export const productSpecificationData = {
     news: false,
   },
   sushi15: {
+    id: 'sushi15',
     name: 'Эби Чеддер маки',
     imgName: 'sushi15.jpg',
     description: '219 грамм 8шт.',
@@ -360,6 +384,7 @@ export const productSpecificationData = {
     news: false,
   },
   sushi16: {
+    id: 'sushi16',
     name: 'Эби Филадельфия маки',
     imgName: 'sushi16.jpg',
     description: '244 грамм 8шт.',
@@ -375,6 +400,7 @@ export const productSpecificationData = {
     news: false,
   },
   sushi17: {
+    id: 'sushi17',
     name: 'Эби Калифорния маки',
     imgName: 'sushi17.jpg',
     description: '204 грамм 8шт.',
@@ -390,6 +416,7 @@ export const productSpecificationData = {
     news: false,
   },
   sushi18: {
+    id: 'sushi18',
     name: 'Чили Изумитай маки',
     imgName: 'sushi18.jpg',
     description: '240 грамм 8шт.',
@@ -405,6 +432,7 @@ export const productSpecificationData = {
     news: false,
   },
   sushi19: {
+    id: 'sushi19',
     name: 'Филадельфия Фреш маки',
     imgName: 'sushi19.jpg',
     description: '253 грамм 8шт.',
@@ -420,6 +448,7 @@ export const productSpecificationData = {
     news: false,
   },
   sushi20: {
+    id: 'sushi20',
     name: 'Филадельфия маки',
     imgName: 'sushi20.jpg',
     description: '282 грамм 8шт.',
@@ -435,6 +464,7 @@ export const productSpecificationData = {
     news: false,
   },
   sushi21: {
+    id: 'sushi21',
     name: 'Филадельфия Кунсей маки',
     imgName: 'sushi21.jpg',
     description: '262 грамм 8шт.',
@@ -450,6 +480,7 @@ export const productSpecificationData = {
     news: false,
   },
   sushi22: {
+    id: 'sushi22',
     name: 'Филадельфия Авокадо маки',
     imgName: 'sushi22.jpg',
     description: '285 грамм 8шт.',
@@ -465,6 +496,7 @@ export const productSpecificationData = {
     news: false,
   },
   sushi23: {
+    id: 'sushi23',
     name: 'Тамагу Кунсей маки',
     imgName: 'sushi23.jpg',
     description: '259 грамм 8шт.',
@@ -480,6 +512,7 @@ export const productSpecificationData = {
     news: false,
   },
   set1: {
+    id: 'set1',
     name: 'Окинава сет',
     imgName: 'set1.jpg',
     description: '900 грамм 32шт.',
@@ -495,6 +528,7 @@ export const productSpecificationData = {
     news: true,
   },
   set2: {
+    id: 'set2',
     name: 'Осака сет',
     imgName: 'set2.jpg',
     description: '864 грамм 32шт.',
@@ -510,6 +544,7 @@ export const productSpecificationData = {
     news: false,
   },
   set3: {
+    id: 'set3',
     name: 'Кудасай сет ',
     imgName: 'set3.jpg',
     description: '864 грамм 32шт.',
@@ -525,6 +560,7 @@ export const productSpecificationData = {
     news: false,
   },
   set4: {
+    id: 'set4',
     name: 'Ля Мур сет',
     imgName: 'set4.jpg',
     description: '997 грамм 32шт.',
@@ -540,6 +576,7 @@ export const productSpecificationData = {
     news: false,
   },
   set5: {
+    id: 'set5',
     name: 'Сяке сет',
     imgName: 'set5.jpg',
     description: '846 грамм 40шт.',
@@ -556,6 +593,7 @@ export const productSpecificationData = {
     news: true,
   },
   set6: {
+    id: 'set6',
     name: 'Бонсай сет',
     imgName: 'set6.jpg',
     description: '929 грамм 32шт.',
@@ -571,6 +609,7 @@ export const productSpecificationData = {
     news: true,
   },
   set7: {
+    id: 'set7',
     name: 'Кабуки сет',
     imgName: 'set7.jpg',
     description: '903 грамм 32шт.',
@@ -586,6 +625,7 @@ export const productSpecificationData = {
     news: true,
   },
   set8: {
+    id: 'set8',
     name: 'Хит сет',
     imgName: 'set8.jpg',
     description: '1030 грамм 32шт.',
@@ -601,6 +641,7 @@ export const productSpecificationData = {
     news: true,
   },
   set9: {
+    id: 'set9',
     name: 'Филадельфия сан сет',
     imgName: 'set9.jpg',
     description: '1085 грамм 32шт.',
@@ -616,6 +657,7 @@ export const productSpecificationData = {
     news: false,
   },
   set10: {
+    id: 'set10',
     name: 'Сушимания сет',
     imgName: 'set10.jpg',
     description: '1200 грамм 40шт.',
@@ -631,6 +673,7 @@ export const productSpecificationData = {
     news: false,
   },
   set11: {
+    id: 'set11',
     name: 'Ахимса сет',
     imgName: 'set11.jpg',
     description: '678 грамм 32шт.',
@@ -646,6 +689,7 @@ export const productSpecificationData = {
     news: false,
   },
   salad1: {
+    id: 'salad1',
     name: 'Киото сарада',
     imgName: 'salad1.jpg',
     description: '158 грамм',
@@ -661,6 +705,7 @@ export const productSpecificationData = {
     news: false,
   },
   salad2: {
+    id: 'salad2',
     name: 'Цезарь',
     imgName: 'salad2.jpg',
     description: '170 грамм',
@@ -676,6 +721,7 @@ export const productSpecificationData = {
     news: false,
   },
   salad3: {
+    id: 'salad3',
     name: 'Тори Киноко',
     imgName: 'salad3.jpg',
     description: '320 грамм',
@@ -691,6 +737,7 @@ export const productSpecificationData = {
     news: false,
   },
   salad4: {
+    id: 'salad4',
     name: 'Батакон Яки Тяхан',
     imgName: 'salad4.jpg',
     description: '145 грамм',
@@ -706,6 +753,7 @@ export const productSpecificationData = {
     news: false,
   },
   drink1: {
+    id: 'drink1',
     name: 'Вода "Святой источник"',
     imgName: 'drink1.jpg',
     description: '500 мл',
@@ -721,6 +769,7 @@ export const productSpecificationData = {
     news: false,
   },
   drink2: {
+    id: 'drink2',
     name: 'Боржоми',
     imgName: 'drink2.jpg',
     description: '330 мл',
@@ -736,6 +785,7 @@ export const productSpecificationData = {
     news: false,
   },
   drink3: {
+    id: 'drink3',
     name: 'Бонаква',
     imgName: 'drink3.jpg',
     description: '500 мл',
@@ -751,6 +801,7 @@ export const productSpecificationData = {
     news: false,
   },
   drink4: {
+    id: 'drink4',
     name: 'Кока-кола',
     imgName: 'drink4.jpg',
     description: '500 мл',
@@ -766,6 +817,7 @@ export const productSpecificationData = {
     news: false,
   },
   drink5: {
+    id: 'drink5',
     name: 'Fanta',
     imgName: 'drink5.jpg',
     description: '500 мл',
@@ -781,6 +833,7 @@ export const productSpecificationData = {
     news: false,
   },
   drink6: {
+    id: 'drink6',
     name: 'Sprite',
     imgName: 'drink6.jpg',
     description: '500 мл',
@@ -796,6 +849,7 @@ export const productSpecificationData = {
     news: false,
   },
   drink7: {
+    id: 'drink7',
     name: 'Сок Rich вишня (ПЭТ)',
     imgName: 'drink7.jpg',
     description: '330 мл',
@@ -811,6 +865,7 @@ export const productSpecificationData = {
     news: false,
   },
   drink8: {
+    id: 'drink8',
     name: 'Сок Rich апельсин',
     imgName: 'drink8.jpg',
     description: '1000 мл',

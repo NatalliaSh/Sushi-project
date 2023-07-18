@@ -1,7 +1,22 @@
 import { getDOMElement } from '../../modules/getDOMElement.js';
 import { getPlusMinusBtnNumberInput } from '../buttons/getPlusMinusBtnNumberInput.js';
 
-function getProductCard({ name, imgName, price, currency, description, sale, newPrice, id, popular, news }, imgPath) {
+function wantBtnNodeBlock(containerNode, { id, count }) {
+  containerNode.appendChild(getDOMElement('button', { id: 'wantBtn', innerText: 'Хочу!', type: 'button', className: 'text text--semi-bold text--white active' }));
+
+  const orderButtonsContainer = getDOMElement('div', { type: 'button', className: 'orderButtonsContainer text' });
+  containerNode.appendChild(orderButtonsContainer);
+
+  orderButtonsContainer.appendChild(getPlusMinusBtnNumberInput(count));
+
+  const addToBacketBtn = getDOMElement('button', { id: 'addToBacketBtn', type: 'button', className: 'text text--white' });
+  addToBacketBtn.setAttribute('data-producid', id);
+  orderButtonsContainer.appendChild(addToBacketBtn);
+  addToBacketBtn.appendChild(getDOMElement('i', { className: 'fa-solid fa-basket-shopping' }));
+  addToBacketBtn.appendChild(getDOMElement('span', { className: 'text--bold' }));
+}
+
+function getProductCard({ name, imgName, price, currency, description, sale, newPrice, id, popular, news, count }, imgPath) {
   const cardContainer = getDOMElement('div', { className: 'container__card text' });
 
   if (sale || popular || news) {
@@ -22,8 +37,8 @@ function getProductCard({ name, imgName, price, currency, description, sale, new
   imgContainer.setAttribute('data-link', 'internal');
   cardContainer.appendChild(imgContainer);
   const img = getDOMElement('img', { src: imgPath + imgName });
-  img.setAttribute('data-link', 'internal');
-  img.setAttribute('href', '/' + id);
+  /*img.setAttribute('data-link', 'internal');
+  img.setAttribute('href', '/' + id);*/
   imgContainer.appendChild(img);
 
   const goodDescriptionContainer = getDOMElement('div', {
@@ -58,20 +73,9 @@ function getProductCard({ name, imgName, price, currency, description, sale, new
     orderContainer.appendChild(getDOMElement('p', { innerText: `${price} ${currency}`, className: 'price text--bold' }));
   }
 
-  orderContainer.appendChild(getDOMElement('button', { id: 'wantBtn', innerText: 'Хочу!', type: 'button', className: 'text text--semi-bold text--white active' }));
-
-  const orderButtonsContainer = getDOMElement('div', { type: 'button', className: 'orderButtonsContainer text' });
-  orderContainer.appendChild(orderButtonsContainer);
-
-  orderButtonsContainer.appendChild(getPlusMinusBtnNumberInput(100));
-
-  const addToBacketBtn = getDOMElement('button', { id: 'addToBacketBtn', type: 'button', className: 'text text--white' });
-  addToBacketBtn.setAttribute('data-producid', id);
-  orderButtonsContainer.appendChild(addToBacketBtn);
-  addToBacketBtn.appendChild(getDOMElement('i', { className: 'fa-solid fa-basket-shopping' }));
-  addToBacketBtn.appendChild(getDOMElement('span', { className: 'text--bold' }));
+  wantBtnNodeBlock(orderContainer, { id, count });
 
   return cardContainer;
 }
 
-export { getProductCard };
+export { getProductCard, wantBtnNodeBlock };
