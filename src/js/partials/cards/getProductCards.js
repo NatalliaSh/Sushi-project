@@ -17,7 +17,7 @@ function wantBtnNodeBlock(containerNode, { id, count }) {
 }
 
 function getProductCard({ name, imgName, price, currency, description, sale, newPrice, id, popular, news, count }, imgPath) {
-  const cardContainer = getDOMElement('div', { className: 'container__card text' });
+  const cardContainer = getDOMElement('div', { className: 'container__card swiper-slide text' });
 
   if (sale || popular || news) {
     const lableContainer = getDOMElement('div', { className: 'container__card__label' });

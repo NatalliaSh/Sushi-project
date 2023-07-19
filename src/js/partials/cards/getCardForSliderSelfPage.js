@@ -1,7 +1,7 @@
 import { getDOMElement } from '../../modules/getDOMElement.js';
 
 function getCardForSliderSelfPage({ name, imgName, price, currency, newPrice, sale, id }, imgPath) {
-  const cardContainer = getDOMElement('a', { href: `/${encodeURIComponent(id)}`, className: ' sliderContainer__allCards--card cardContainer text' });
+  const cardContainer = getDOMElement('a', { href: `/${encodeURIComponent(id)}`, className: ' sliderContainer__allCards--card swiper-slide cardContainer text' });
   cardContainer.setAttribute('data-link', 'internal');
 
   cardContainer.appendChild(getDOMElement('img', { src: imgPath + imgName, className: 'cardContainer__img' }));

@@ -1,6 +1,4 @@
 .container__central__generatedContent {
-  margin: 0 auto 50px auto;
-
   .container {
     &__saleSlider {
       margin-bottom: 50px;
@@ -9,27 +7,9 @@
         display: none;
       }
 
-      &--wrapper {
-        width: 800px;
-        margin: 0 auto;
-
-        @include xxlarge() {
-          width: 700px;
-        }
-
-        @include xlarge() {
-          width: 460px;
-        }
-
-        @include large() {
-          width: 460px;
-        }
-      }
       .cardContainer {
-        margin-right: 10px;
         height: 450px;
         text-align: end;
-        padding-right: 30px;
         border-radius: 30px;
         background-color: $white;
         background-repeat: no-repeat;
@@ -37,20 +17,24 @@
         background-position: left;
 
         &__goodName {
-          padding: 20px 0;
+          padding: 20px;
           @include xlarge() {
             font-size: 46px;
           }
         }
 
+        &__description {
+          padding-right: 20px;
+        }
+
         &__price {
-          padding: 110px 0 120px 0;
+          padding: 110px 20px 120px 0;
           position: relative;
 
           &--old {
             position: absolute;
             top: 3.2em;
-            right: 0px;
+            right: 20px;
 
             &::before {
               content: '';
@@ -72,18 +56,18 @@
           height: 50px;
           cursor: pointer;
           padding: 0 10px;
+          margin-right: 20px;
         }
       }
     }
 
     &__menu {
-      margin: 0 20px;
       display: flex;
       flex-wrap: wrap;
       gap: 30px;
 
       @include mobile() {
-        margin: 0 15px;
+        //margin: 0 15px;
         gap: 15px;
       }
 
@@ -139,19 +123,9 @@
 
     &__newPopularSlider {
       margin: 50px auto;
-      width: 895px;
 
       @include mobile() {
         display: none;
-      }
-
-      @include xxlarge() {
-        width: 700px;
-      }
-
-      @include xlarge() {
-        width: 380px;
-        margin: 50px 20px 50px 20px;
       }
 
       &--choice .button__choice {
@@ -172,19 +146,15 @@
         }
       }
       &--slider {
-        position: relative;
         .slider {
-          z-index: -1;
-          height: 0;
-          //with display:none/block it takes time to upload slider. with visability some delay present too.
+          display: none;
+
           &.active {
-            z-index: 1;
-            height: auto;
+            display: flex;
           }
 
           .container__card {
             margin: 10px 10px 10px 0;
-            width: 280px;
 
             &:hover {
               transform: scale(1.03);
@@ -195,15 +165,34 @@
             }
           }
         }
-        /*.slick-arrow {
-          &::before {
-            font-size: 60px;
-            color: black;
+        .swiper-button-next,
+        .swiper-button-prev {
+          border-radius: 50%;
+          color: $orange;
+          width: 1.1em;
+          height: 1.1em;
+
+          &:hover {
+            background-color: #000000ab;
+            color: white;
           }
-          &.slick-prev {
-            left: -65px;
+          &::after {
+            font-size: 20px;
+            position: relative;
           }
-        }*/
+        }
+        .swiper-button-next {
+          right: 0px;
+          &::after {
+            left: 0.1em;
+          }
+        }
+        .swiper-button-prev {
+          left: 0px;
+          &::after {
+            right: 0.1em;
+          }
+        }
       }
     }
   }

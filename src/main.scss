@@ -46,21 +46,21 @@ a {
 
 .wrapper {
   display: grid;
-  grid-template-columns: minmax(220px, 250px) 1fr minmax(230px, 310px);
+  grid-template-columns: minmax(220px, 250px) minmax(460px, 1fr) minmax(230px, 310px);
   max-width: 1920px;
   background-color: $white;
 
   @include xlarge() {
-    grid-template-columns: 185px 1fr minmax(230px, 260px);
+    grid-template-columns: 185px minmax(460px, 1fr) minmax(230px, 260px);
   }
 
   @include large() {
-    grid-template-columns: 230px 1fr;
+    grid-template-columns: 230px minmax(460px, 1fr);
     grid-template-rows: minmax(400px, auto) auto;
   }
 
   @include middle() {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(460px, 1fr);
     grid-template-rows: auto;
   }
 
@@ -156,7 +156,8 @@ a {
     }
 
     &__generatedContent {
-      max-width: 950px;
+      max-width: 1020px;
+      min-width: 460px;
       padding: 0 20px;
       margin: 30px auto;
 

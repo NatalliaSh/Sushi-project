@@ -1,15 +1,14 @@
 .container {
   &__selfProductPage {
-    padding: 0 20px;
     .selfCardContainer {
       display: flex;
       width: 100%;
       background-color: $white;
       border-radius: 20px;
 
-      @include large() {
+      /* @include middle() {
         flex-direction: column;
-      }
+      }*/
 
       &__img {
         flex: 1 1 50%;
@@ -102,20 +101,7 @@
     }
 
     .sliderContainer {
-      width: 850px;
       margin: 0 auto;
-
-      @include xxlarge() {
-        width: 650px;
-      }
-
-      @include xlarge() {
-        width: 440px;
-      }
-
-      @include large() {
-        width: 280px;
-      }
 
       &__title {
         text-align: center;
@@ -156,34 +142,35 @@
                 transform: rotate(-10deg);
               }
             }
-            /* &--button {
-              background-color: $orange;
-              width: 26px;
-              height: 26px;
-              border: none;
-              border-radius: 50%;
-              position: relative;
-              cursor: pointer;
+          }
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+          border-radius: 50%;
+          color: black;
+          width: 1.1em;
+          height: 1.1em;
 
-              &::before {
-                content: '';
-                border-bottom: 2px solid;
-                width: 14px;
-                position: absolute;
-                top: 12px;
-                left: 6px;
-              }
-
-              &::after {
-                content: '';
-                border-top: 2px solid;
-                width: 14px;
-                position: absolute;
-                top: 12px;
-                left: 6px;
-                transform: rotate(90deg);
-              }
-            }*/
+          &:hover {
+            background-color: #000000ab;
+            color: white;
+          }
+          &::after {
+            font-size: 20px;
+            font-weight: bold;
+            position: relative;
+          }
+        }
+        .swiper-button-next {
+          right: 0px;
+          &::after {
+            left: 0.1em;
+          }
+        }
+        .swiper-button-prev {
+          left: 0px;
+          &::after {
+            right: 0.1em;
           }
         }
       }

@@ -1,35 +1,31 @@
 function selfProductPageSlider() {
-  $(document).ready(function () {
-    $('.sliderContainer__allCards').slick({
-      slidesToShow: 4,
-      autoplay: true,
-      autoplaySpeed: 3000,
-      speed: 3000,
-      arrows: true,
-      dots: false,
-      easing: 'ease',
-      infinite: true,
-      responsive: [
-        {
-          breakpoint: 1400,
-          settings: {
-            slidesToShow: 3,
-          },
-        },
-        {
-          breakpoint: 1200,
-          settings: {
-            slidesToShow: 2,
-          },
-        },
-        {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: 1,
-          },
-        },
-      ],
-    });
+  new Swiper('.sliderContainer__allCards', {
+    slidesPerView: 'auto',
+    spaceBetween: 10,
+    loop: true,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    speed: 4000,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    observer: true,
+    observeParents: true,
+    parallax: true,
+    on: {
+      init() {
+        this.el.addEventListener('mouseenter', () => {
+          this.autoplay.stop();
+        });
+
+        this.el.addEventListener('mouseleave', () => {
+          this.autoplay.start();
+        });
+      },
+    },
   });
 }
 

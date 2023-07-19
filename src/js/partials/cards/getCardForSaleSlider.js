@@ -2,7 +2,7 @@ import { getDOMElement } from '../../modules/getDOMElement.js';
 
 function getCardForSaleSlider({ name, imgName, price, currency, description, sale, newPrice, id }, imgPath) {
   const saleCardContainer = getDOMElement('div', {
-    className: 'container__saleSlider--card cardContainer text',
+    className: 'container__saleSlider--card cardContainer swiper-slide text',
     style: `background-image: url(${imgPath + imgName})`,
   });
 

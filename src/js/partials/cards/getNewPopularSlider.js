@@ -30,12 +30,12 @@ function getNewPopularSlider(dataForSelectedLocation, allProductSpecificationDat
   );
 
   const sliderContainer = getDOMElement('div', {
-    className: 'container__newPopularSlider--slider',
+    className: 'container__newPopularSlider--slider swiper',
   });
   container.append(sliderContainer);
 
   const sliderContainerNew = getDOMElement('div', {
-    className: 'slider slider--new active',
+    className: 'slider slider--new swiper-wrapper active',
   });
   sliderContainer.append(sliderContainerNew);
 
@@ -46,6 +46,9 @@ function getNewPopularSlider(dataForSelectedLocation, allProductSpecificationDat
     className: 'slider slider--popular',
   });
   sliderContainer.append(sliderContainerPopular);
+
+  sliderContainer.append(getDOMElement('div', { className: 'swiper-button-next' }));
+  sliderContainer.append(getDOMElement('div', { className: 'swiper-button-prev' }));
 
   const arrOfCardsPopular = getArrOfCardsForRender(dataForSelectedLocation, allProductSpecificationData, '', 'popular').map((element) => getProductCard(element, imgPath));
   sliderContainerPopular.append(...arrOfCardsPopular);
