@@ -8,6 +8,7 @@ import { getRoutes } from './router.js';
 import { getDOMElement } from './getDOMElement.js';
 import { ACTIONS, MESSAGE } from './CONST.js';
 import { eventBus } from './eventBus.js';
+import { setStatusBtnAddToBacket } from '../modules/setStatusBtnAddToBacket.js';
 
 function isProductInSelectedLocation(dataForSelectedLocation, path, routes) {
   let is = false;
@@ -35,6 +36,7 @@ function withCheckPath(path, root, dataForSelectedLocation, productSpecification
   if (path === '/' || path === '') {
     page = getMainPage(dataForSelectedLocation, productSpecificationData, '../../img/menuImg/productsImg/');
     renderReplace(root, page);
+    setStatusBtnAddToBacket();
     mainPageSlider();
   } else if ((routes[path] === 'category' || routes[path] === 'selfProductPage') && isProductInSelectedLocation(dataForSelectedLocation, path, routes)) {
     if (routes[path] === 'category') {

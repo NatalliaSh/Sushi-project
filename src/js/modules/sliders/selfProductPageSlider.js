@@ -12,9 +12,8 @@ function selfProductPageSlider() {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-    observer: true,
-    observeParents: true,
-    parallax: true,
+    //allowTouchMove: false,
+
     on: {
       init() {
         this.el.addEventListener('mouseenter', () => {
