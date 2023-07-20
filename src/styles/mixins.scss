@@ -6,6 +6,12 @@
   }
 }
 
+@mixin xsmall() {
+  @media only all and (max-width: $xsmall-size) {
+    @content;
+  }
+}
+
 @mixin large() {
   @media only all and (max-width: $large-size) {
     @content;

@@ -7,11 +7,6 @@
   border-bottom: 0.5px solid $grey;
   align-items: center;
 
-  /*@include middle() {
-    flex-direction: column;
-    align-items: flex-end;
-  }*/
-
   @include middle() {
     flex-direction: row;
     background-color: $white;
@@ -20,6 +15,11 @@
   .header__left {
     display: flex;
     justify-content: start;
+
+    @include xsmall() {
+      justify-content: space-between;
+      width: 100%;
+    }
 
     .logo--mobile {
       display: none;
@@ -43,6 +43,10 @@
 
       @include mobile() {
         border-right: none;
+      }
+
+      @include xsmall() {
+        justify-content: center;
       }
 
       .contacts {
@@ -76,6 +80,10 @@
             line-height: 15px;
           }
         }
+
+        @include xsmall() {
+          display: none;
+        }
       }
     }
 
@@ -105,6 +113,10 @@
   .header__right {
     @include mobile() {
       margin: auto 0;
+    }
+
+    @include xsmall() {
+      display: none;
     }
 
     ul {

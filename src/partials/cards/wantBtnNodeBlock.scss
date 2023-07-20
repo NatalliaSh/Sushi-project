@@ -92,14 +92,9 @@
 
     span {
       position: absolute;
-      top: 3px;
-      right: 5px;
+      top: 0.1em;
+      right: 0.3em;
       font-size: 12px;
-
-      @include mobile() {
-        top: 4px;
-        right: 7px;
-      }
     }
   }
 }

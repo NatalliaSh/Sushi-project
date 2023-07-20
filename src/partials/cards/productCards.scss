@@ -14,14 +14,17 @@
     -webkit-box-shadow: 0px 0px 20px 5px rgba(16, 21, 22, 0.4);
     box-shadow: 0px 0px 20px 5px rgba(16, 21, 22, 0.4);
     z-index: 1;
+
+    @include mobile() {
+      transform: scale(1.04);
+    }
   }
 
   @include mobile() {
     width: 100%;
     flex-direction: row;
-    height: fit-content;
+    height: auto;
     background-color: white;
-    margin: 10px 15px;
     border-radius: 10px;
   }
 
@@ -93,10 +96,10 @@
       .price {
         &--old {
           position: absolute;
-          top: 0px;
+          top: 0.3em;
 
           @include mobile() {
-            top: -10px;
+            top: -1em;
           }
 
           &::before {

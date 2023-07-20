@@ -1,5 +1,9 @@
 .container {
   &__productsPage {
+    @include mobile() {
+      margin: 0 10px;
+    }
+
     &__title {
       display: flex;
       justify-content: space-between;
@@ -13,18 +17,26 @@
         flex: 0 1 200px;
 
         @include mobile() {
-          flex: 0 1 120px;
+          flex: 0 1 150px;
         }
 
         img {
           height: 100%;
           position: relative;
           top: 0.15em;
+
+          @include mobile() {
+            top: 0.3em;
+          }
         }
 
         &__category {
           display: inline;
           margin-left: 20px;
+
+          @include mobile() {
+            margin-left: 10px;
+          }
         }
       }
     }
@@ -34,6 +46,11 @@
       gap: 30px;
       flex-wrap: wrap;
       justify-content: center;
+
+      @include mobile() {
+        gap: 0;
+        row-gap: 10px;
+      }
     }
   }
 }

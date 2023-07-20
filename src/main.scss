@@ -64,6 +64,11 @@ a {
     grid-template-rows: auto;
   }
 
+  @include mobile() {
+    grid-template-columns: minmax(320px, 1fr);
+    grid-template-rows: auto;
+  }
+
   .container__left {
     margin: 0 auto;
     padding: 0 20px;
@@ -163,6 +168,8 @@ a {
 
       @include mobile() {
         margin: 20px auto;
+        min-width: 320px;
+        padding: 0px;
       }
     }
   }
