@@ -7,8 +7,13 @@ export const linkInternalClickHandler = (e) => {
       dataset: { link },
     },
   } = e;*/
-
-  const link = e.target.dataset.link || e.target.parentNode.dataset.link;
+  let link;
+  try {
+    link = e.target.dataset.link || e.target.parentNode.dataset.link;
+  } catch (error) {
+    console.log(error);
+    link = null;
+  }
 
   if (link === 'internal') {
     e.preventDefault();
