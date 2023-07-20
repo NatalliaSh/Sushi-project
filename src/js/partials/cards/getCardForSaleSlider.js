@@ -14,7 +14,7 @@ function getCardForSaleSlider({ name, imgName, price, currency, description, sal
 
   saleCardContainer.appendChild(
     getDOMElement('div', {
-      className: 'cardContainer__description text--orange text--light text--s',
+      className: 'cardContainer__description text--orange text--semi-bold text--s',
       innerText: description,
     }),
   );

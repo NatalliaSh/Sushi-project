@@ -16,8 +16,13 @@
         background-size: contain;
         background-position: left;
 
+        @include xlarge() {
+          background-size: cover;
+        }
+
         &__goodName {
           padding: 20px;
+          text-shadow: 3px 2px 15px white;
           @include xlarge() {
             font-size: 46px;
           }
@@ -25,16 +30,23 @@
 
         &__description {
           padding-right: 20px;
+          /*display: inline;
+          box-shadow: -17px 0px 30px white;
+          background-color: #ffffff6e;
+          border-radius: 20px;
+          text-shadow: 3px 2px 15px white;*/
         }
 
         &__price {
           padding: 110px 20px 120px 0;
           position: relative;
+          text-shadow: 3px 2px 15px white;
 
           &--old {
             position: absolute;
             top: 3.2em;
             right: 20px;
+            text-shadow: 0px 0px 10px white;
 
             &::before {
               content: '';
@@ -57,6 +69,7 @@
           cursor: pointer;
           padding: 0 10px;
           margin-right: 20px;
+          /*box-shadow: 0px 0px 10px white;*/
         }
       }
     }
