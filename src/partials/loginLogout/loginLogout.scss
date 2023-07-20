@@ -1,6 +1,6 @@
 .loginLogout {
   max-width: 290px;
-  margin: 60px auto;
+  margin: 30px auto;
   padding: 0 20px;
   display: none;
 
@@ -8,9 +8,18 @@
     display: block;
   }
 
+  @include large() {
+    margin-top: 10px;
+  }
+
+  @include middle() {
+    margin-top: 0px;
+  }
+
   &__message {
     background-color: $central-background;
     text-align: center;
+    border-radius: 5px;
 
     h5 {
       padding: 10px 0;
@@ -22,11 +31,14 @@
   }
 
   &__button {
-    display: flex;
-    justify-content: space-around;
+    @include middle() {
+      display: flex;
+      justify-content: space-around;
+    }
 
     &--login,
     &--createAccount {
+      width: 100%;
       background-color: $orange;
       border: none;
       text-align: center;
@@ -34,6 +46,10 @@
       margin-bottom: 5px;
       border-radius: 5px;
       cursor: pointer;
+
+      @include middle() {
+        width: auto;
+      }
     }
   }
 }
