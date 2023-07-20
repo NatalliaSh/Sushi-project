@@ -1,11 +1,12 @@
 import { getDOMElement } from '../../modules/getDOMElement.js';
 import { getPlusMinusBtnNumberInput } from '../buttons/getPlusMinusBtnNumberInput.js';
 
-function getCardForBacket(productID, { name, imgName, price, currency, newPrice, sale, count }, amount, imgPath) {
+function getCardForBacket(productID, { name, imgName, price, currency, newPrice, sale, count, id }, amount, imgPath) {
   const cardContainer = getDOMElement('div', { className: ' productsSection__cardContainer' });
   cardContainer.setAttribute('data-productid', productID);
 
-  const imgContainer = getDOMElement('div', { className: ' productsSection__cardContainer--img' });
+  const imgContainer = getDOMElement('a', { href: `/${encodeURIComponent(id)}`, className: ' productsSection__cardContainer--img' });
+  imgContainer.setAttribute('data-link', 'internal');
   cardContainer.appendChild(imgContainer);
   imgContainer.appendChild(getDOMElement('img', { src: imgPath + imgName }));
 
