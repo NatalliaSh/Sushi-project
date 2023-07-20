@@ -13,7 +13,7 @@ import './modules/handlers/loginHandler.js';
 import './modules/handlers/createAccountHandler.js';
 import { setUserStatus } from './modules/setUserStatus.js';
 import { localStorageHandler, addProductToLocalStorage, removeProductFromLocalStorage } from './modules/localStorage.js';
-import { removeProductFromBacket } from './modules/backet.js';
+import { removeProductFromBacket, clearBacket } from './modules/backet.js';
 import { changesInBacketHandler } from './modules/handlers/changesInBacketHandler.js';
 import { btnSubmitOrderHandler } from './modules/handlers/btnSubmitOrderHandler.js';
 import { setStatusBtnAddToBacket, changeBtnAddToBacketIFRemoveFromBacket } from './modules/setStatusBtnAddToBacket.js';
@@ -24,17 +24,14 @@ start();
 
 async function initialize() {
   const currentUser = await getUser();
-  await setUserStatus(currentUser);
-  setStatusBtnAddToBacket();
+  setUserStatus(currentUser);
 }
 
 initialize();
 
 eventBus.subscribe(ACTIONS.login, setUserStatus);
 eventBus.subscribe(ACTIONS.login, localStorageHandler);
-//eventBus.subscribe(ACTIONS.login, setStatusBtnAddToBacket);
 eventBus.subscribe(ACTIONS.logout, setUserStatus);
-//eventBus.subscribe(ACTIONS.logout, setStatusBtnAddToBacket);
 eventBus.subscribe(ACTIONS.addToBacket, addProductToLocalStorage);
 eventBus.subscribe(ACTIONS.removeFromBacket, removeProductFromLocalStorage);
 eventBus.subscribe(ACTIONS.removeFromBacket, (producid) => removeProductFromBacket(producid));
