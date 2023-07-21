@@ -43,6 +43,11 @@
         &.active {
           display: block;
         }
+
+        i {
+          position: relative;
+          top: -0.1em;
+        }
       }
     }
   }

@@ -1,7 +1,8 @@
 import { ACTIONS } from '../CONST.js';
 import { eventBus } from '../eventBus.js';
-import { windowEventHandler } from '../handlers/windowEventHandler.js';
+import { windowEventHandler } from './windowEventHandler.js';
 import { showModalAuth } from '../modal.js';
+import { logout } from '../authFirebase.js';
 
 const menuRoot = document.querySelector('.container__left');
 const backetRoot = document.querySelector('.container__right');
@@ -46,7 +47,7 @@ const logButtonMobileMenuHandler = (eo) => {
   if (eo.target.id === 'loginButtonMobileMenu' || eo.target.classList.contains('fa-arrow-right-to-bracket')) {
     showModalAuth();
   } else {
-    eventBus.dispatch(ACTIONS.logout);
+    logout();
   }
 };
 

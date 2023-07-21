@@ -13,12 +13,12 @@ import './modules/handlers/loginHandler.js';
 import './modules/handlers/createAccountHandler.js';
 import { setUserStatus } from './modules/setUserStatus.js';
 import { localStorageHandler, addProductToLocalStorage, removeProductFromLocalStorage } from './modules/localStorage.js';
-import { removeProductFromBacket, clearBacket } from './modules/backet.js';
+import { removeProductFromBacket } from './modules/backet.js';
 import { changesInBacketHandler } from './modules/handlers/changesInBacketHandler.js';
 import { btnSubmitOrderHandler } from './modules/handlers/btnSubmitOrderHandler.js';
 import { setStatusBtnAddToBacket, changeBtnAddToBacketIFRemoveFromBacket } from './modules/setStatusBtnAddToBacket.js';
 
-import './modules/handlers/MobileMenuHandlers.js';
+import './modules/handlers/mobileMenuHandlers.js';
 
 start();
 

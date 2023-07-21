@@ -25,7 +25,9 @@ body {
   box-sizing: border-box;
 
   &.lock {
-    overflow: hidden;
+    @include middle() {
+      overflow: hidden;
+    }
   }
 }
 
