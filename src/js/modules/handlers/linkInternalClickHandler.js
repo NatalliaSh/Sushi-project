@@ -18,10 +18,12 @@ export const linkInternalClickHandler = (e) => {
   if (link === 'internal') {
     e.preventDefault();
     const path = e.target.getAttribute('href') || e.target.parentNode.getAttribute('href');
-    const queryParams = window.location.search;
-
-    history.pushState({}, '', path + queryParams);
-
-    eventBus.dispatch(ACTIONS.changeRoute, path);
+    if (path === 'back') {
+      history.back();
+    } else {
+      const queryParams = window.location.search;
+      history.pushState({}, '', path + queryParams);
+      eventBus.dispatch(ACTIONS.changeRoute, path);
+    }
   }
 };

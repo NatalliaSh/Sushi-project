@@ -60,6 +60,7 @@ function withCheckPath(path, root, dataForSelectedLocation, productSpecification
     });
     renderReplace(root, page);
   }
+  window.scroll(top);
 }
 
 export { withCheckPath };

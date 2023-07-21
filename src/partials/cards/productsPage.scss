@@ -7,7 +7,7 @@
     &__title {
       display: flex;
       justify-content: space-between;
-      margin: 30px 0;
+      margin-bottom: 30px;
 
       @include mobile() {
         justify-content: center;
