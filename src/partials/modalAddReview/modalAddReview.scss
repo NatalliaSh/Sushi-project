@@ -1,0 +1,21 @@
+#modalAddReview {
+  flex-direction: column;
+
+  label {
+    text-align: center;
+  }
+
+  textarea {
+    margin-top: 10px;
+    flex: 1 0 200px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid $grey;
+    resize: none;
+  }
+
+  .buttonsContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+}

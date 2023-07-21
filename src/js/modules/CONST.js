@@ -38,6 +38,7 @@ export const ACTIONS = {
   renderBacketItems: 'renderBacketItems',
   changesInBacket: 'changesInBacket',
   newPage: 'newPage',
+  sendReview: 'sendReview',
 };
 
 export const categoriesToRecomendation = {

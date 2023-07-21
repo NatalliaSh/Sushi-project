@@ -17,6 +17,8 @@ import { removeProductFromBacket } from './modules/backet.js';
 import { changesInBacketHandler } from './modules/handlers/changesInBacketHandler.js';
 import { btnSubmitOrderHandler } from './modules/handlers/btnSubmitOrderHandler.js';
 import { setStatusBtnAddToBacket, changeBtnAddToBacketIFRemoveFromBacket } from './modules/setStatusBtnAddToBacket.js';
+import { showModalAddReview } from './modules/modal.js';
+import { addReviewHandler } from './modules/handlers/addReviewHandler.js';
 
 import './modules/handlers/mobileMenuHandlers.js';
 
@@ -51,3 +53,8 @@ windowEventHandler.register(logout, 'logoutBtn', 'click');
 windowEventHandler.register(btnWantHandler, 'wantBtn', 'click');
 windowEventHandler.register(btnAddToBacketHandler, 'addToBacketBtn', 'click');
 windowEventHandler.register(btnSubmitOrderHandler, 'submitOrder', 'click');
+
+windowEventHandler.register(showModalAddReview, 'addReviewBtn', 'click');
+
+const form = document.querySelector('#addReviewForm');
+form.addEventListener('submit', addReviewHandler);

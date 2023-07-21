@@ -2,15 +2,12 @@ import { logoMenuImgNames } from '../CONST.js';
 import { getDOMElement } from '../getDOMElement.js';
 import { getArrOfCardsForRender } from '../../partials/cards/getArrOfCardsForRender.js';
 import { getProductCard } from '../../partials/cards/getProductCards.js';
+import { getBreadcrumbs } from '../../partials/breadcrumbs/getBreadcrumbs.js';
 
 function getProductsPage(dataForSelectedLocation, allProductSpecificationData, imgPath, category, parametr) {
   const container = getDOMElement('div', { className: 'container__productsPage text' });
 
-  const breadcrumbs = getDOMElement('div', { className: 'container__selfProductPage breadcrumbs text--light text--xs text--grey', innerHTML: '&larr; ' });
-  container.appendChild(breadcrumbs);
-  const breadcrumbsMainPage = getDOMElement('a', { href: '/', className: 'breadcrumbs__toMainPage', innerText: `На главную` });
-  breadcrumbsMainPage.setAttribute('data-link', 'internal');
-  breadcrumbs.appendChild(breadcrumbsMainPage);
+  container.appendChild(getBreadcrumbs(true));
 
   const titleContainer = getDOMElement('div', { className: 'container__productsPage__title' });
   const titleLeft = getDOMElement('div', { className: 'container__productsPage__title__left' });

@@ -19,7 +19,9 @@
 @import './partials/modalMessage/modalMessage.scss';
 @import './partials/mobileMenu/mobileMenu.scss';
 @import './partials/cards/wantBtnNodeBlock.scss';
-@import './styles/breadcrumbs.scss';
+@import './partials/breadcrumbs/breadcrumbs.scss';
+@import './partials/modalAddReview/modalAddReview.scss';
+@import './partials/cards/reviewPage.scss';
 
 body {
   box-sizing: border-box;

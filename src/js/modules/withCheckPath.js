@@ -9,6 +9,7 @@ import { getDOMElement } from './getDOMElement.js';
 import { ACTIONS, MESSAGE } from './CONST.js';
 import { eventBus } from './eventBus.js';
 import { setStatusBtnAddToBacket } from '../modules/setStatusBtnAddToBacket.js';
+import { getReviewPage } from './pages/review.js';
 
 function isProductInSelectedLocation(dataForSelectedLocation, path, routes) {
   let is = false;
@@ -28,7 +29,7 @@ function isProductInSelectedLocation(dataForSelectedLocation, path, routes) {
   return is;
 }
 
-function withCheckPath(path, root, dataForSelectedLocation, productSpecificationData) {
+async function withCheckPath(path, root, dataForSelectedLocation, productSpecificationData) {
   let page = '';
   let category = '';
   let parametr = '';
@@ -53,6 +54,9 @@ function withCheckPath(path, root, dataForSelectedLocation, productSpecification
       selfProductPageSlider();
     }
     eventBus.dispatch(ACTIONS.newPage, '');
+  } else if (path === '/reviews') {
+    page = await getReviewPage();
+    renderReplace(root, page);
   } else {
     page = getDOMElement('div', {
       class: 'Error massage text text--bold',
