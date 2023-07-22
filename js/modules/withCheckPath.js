@@ -34,7 +34,7 @@ async function withCheckPath(path, root, dataForSelectedLocation, productSpecifi
   let category = '';
   let parametr = '';
   const routes = getRoutes(productSpecificationData, dataForSelectedLocation);
-  if (path === '/' || path === '') {
+  if (path === '/' || path === '' || path === '/Sushi-project/') {
     page = getMainPage(dataForSelectedLocation, productSpecificationData, '../../img/menuImg/productsImg/');
     renderReplace(root, page);
     setStatusBtnAddToBacket();
