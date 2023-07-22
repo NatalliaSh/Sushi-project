@@ -51,4 +51,4 @@
 
 - Link with address in the footer contact information leads to the google map with this address.
 
-#### Thank you for your attention. <br> Have a good day
+#### Thank you for your attention
