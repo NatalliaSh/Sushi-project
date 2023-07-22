@@ -9,7 +9,7 @@ function renderBacketItemsHandler(userBacket, productSpecificationData, root) {
 
     const arrOfProductsID = Object.keys(userBacket);
     const cardsArr = arrOfProductsID.map((productID) => {
-      return getCardForBacket(productID, productSpecificationData[productID], userBacket[productID], './img/menuImg/productsImg/');
+      return getCardForBacket(productID, productSpecificationData[productID], userBacket[productID], 'img/menuImg/productsImg/');
     });
     const containerForcards = document.createElement('div');
     containerForcards.append(...cardsArr);
