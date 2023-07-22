@@ -25,7 +25,7 @@ function getLeftMenuCart(dataForSelectedLocation) {
     a.setAttribute('data-link', 'internal');
 
     const img = document.createElement('img');
-    img.setAttribute('src', `../../../img/menuImg/menuLogo' + ${logoMenuImgNames[element]}`);
+    img.setAttribute('src', `./img/menuImg/menuLogo' + ${logoMenuImgNames[element]}`);
     img.setAttribute('alt', 'Product logotype');
     a.appendChild(img);
     img.setAttribute('data-link', 'internal');
