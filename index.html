@@ -8,268 +8,270 @@
     <title>First project</title>
     <script src="https://kit.fontawesome.com/f3c979d858.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script type="module" src="./js/main.js" defer></script>
+    <script type="module" src="/js/main.js" defer></script>
   </head>
   <body>
     <div id="modalAuth" class="modal">
-  <div class="modal__message">
-  <button class="modal__message--close text text--semi-bold text--s text--grey">X</button>
-  <div class="modal__message--context text text--red"></div>
-</div>
+      <div class="modal__message">
+        <button class="modal__message--close text text--semi-bold text--s text--grey">X</button>
+        <div class="modal__message--context text text--red"></div>
+      </div>
 
-  <div class="modal__content">
-    <button class="modal__close text text--semi-bold text--s text--grey">X</button>
-    <div class="tabs">
-      <input type="radio" name="tabs" id="tab-1" checked />
-      <input type="radio" name="tabs" id="tab-2" />
-      <div class="tabs__items text text--s text--semi-bold">
-        <label class="tabs__item" for="tab-1"> Войти в аккаунт </label>
-        <label class="tabs__item" for="tab-2"> Создать аккаунт </label>
+      <div class="modal__content">
+        <button class="modal__close text text--semi-bold text--s text--grey">X</button>
+        <div class="tabs">
+          <input type="radio" name="tabs" id="tab-1" checked />
+          <input type="radio" name="tabs" id="tab-2" />
+          <div class="tabs__items text text--s text--semi-bold">
+            <label class="tabs__item" for="tab-1"> Войти в аккаунт </label>
+            <label class="tabs__item" for="tab-2"> Создать аккаунт </label>
+          </div>
+          <form id="login" class="form text text--s text--semi-bold">
+            <label class="form__field">
+              E-mail
+              <input type="text" name="email" autocomplete="email" />
+            </label>
+            <label class="form__field">
+              Пароль
+              <input type="password" name="password" autocomplete="current-password" />
+            </label>
+            <button type="submit" class="text text--white text--semi-bold">Войти в аккаунт</button>
+          </form>
+          <form id="create" class="form text text--s text--semi-bold">
+            <label class="form__field">
+              E-mail
+              <input type="text" name="email" autocomplete="email" />
+            </label>
+            <label class="form__field">
+              Пароль
+              <input type="password" name="password" autocomplete="current-password" />
+            </label>
+            <label class="form__field">
+              Имя пользователя
+              <input type="text" name="userName" />
+            </label>
+            <button type="submit" class="text text--white text--semi-bold">Создать аккаунт</button>
+          </form>
+        </div>
       </div>
-      <form id="login" class="form text text--s text--semi-bold">
-        <label class="form__field">
-          E-mail
-          <input type="text" name="email" autocomplete="email" />
-        </label>
-        <label class="form__field">
-          Пароль
-          <input type="password" name="password" autocomplete="current-password" />
-        </label>
-        <button type="submit" class="text text--white text--semi-bold">Войти в аккаунт</button>
-      </form>
-      <form id="create" class="form text text--s text--semi-bold">
-        <label class="form__field">
-          E-mail
-          <input type="text" name="email" autocomplete="email" />
-        </label>
-        <label class="form__field">
-          Пароль
-          <input type="password" name="password" autocomplete="current-password" />
-        </label>
-        <label class="form__field">
-          Имя пользователя
-          <input type="text" name="userName" />
-        </label>
-        <button type="submit" class="text text--white text--semi-bold">Создать аккаунт</button>
-      </form>
     </div>
-  </div>
-</div>
- <div id="modalMessage" class="modal text text--semi-bold">
-  <div class="modal__content">
-    <button id="modalCloser" class="modal__close text text--semi-bold text--s text--grey">X</button>
-    <div class="modal__content--message"></div>
-  </div>
-</div>
- <div id="modalAddReview" class="modal">
-  <div class="modal__content">
-    <button class="modal__close text text--semi-bold text--s text--grey">X</button>
-    <form id="addReviewForm" class="form text text--s text--semi-bold">
-      <label class="form__field text text text--semi-bold">
-        Поделитесь своими впечатлениями <br />
-        о нашем заведении
-        <textarea maxlength="400" name="review"></textarea>
-      </label>
-      <div class="buttonsContainer">
-        <button type="button" class="cancel text text--white text--semi-bold">Отмена</button>
-        <button type="submit" class="text text--white text--semi-bold">Отправить отзыв</button>
+    <div id="modalMessage" class="modal text text--semi-bold">
+      <div class="modal__content">
+        <button id="modalCloser" class="modal__close text text--semi-bold text--s text--grey">X</button>
+        <div class="modal__content--message"></div>
       </div>
-    </form>
-  </div>
-</div>
+    </div>
+    <div id="modalAddReview" class="modal">
+      <div class="modal__content">
+        <button class="modal__close text text--semi-bold text--s text--grey">X</button>
+        <form id="addReviewForm" class="form text text--s text--semi-bold">
+          <label class="form__field text text text--semi-bold">
+            Поделитесь своими впечатлениями <br />
+            о нашем заведении
+            <textarea maxlength="400" name="review"></textarea>
+          </label>
+          <div class="buttonsContainer">
+            <button type="button" class="cancel text text--white text--semi-bold">Отмена</button>
+            <button type="submit" class="text text--white text--semi-bold">Отправить отзыв</button>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <div class="wrapper">
       <div class="container__left">
         <div class="header__logo">
-  <a class="header__logo__img" data-link="internal" href="/">
-    <img src="./img/logo/logo.png" alt="Company logo" data-link="internal" href="/" />
-  </a>
-  <a class="header__logo__title text__logo" data-link="internal" href="/">ROMSEM</a>
-</div>
+          <a class="header__logo__img" data-link="internal" href="/">
+            <img src="./img/logo/logo.png" alt="Company logo" data-link="internal" href="/" />
+          </a>
+          <a class="header__logo__title text__logo" data-link="internal" href="/">ROMSEM</a>
+        </div>
 
         <div id="menuRootLeft" class="container__left__menu text"></div>
       </div>
       <div class="container__central">
         <header class="header text text--s">
-  <div class="header__left">
-    <div class="logo--mobile">
-      <a data-link="internal" href="/">
-        <img src="./img/logo/logo.png" alt="Company logo" data-link="internal" href="/" />
-      </a>
-    </div>
-    <div class="header__left__left text--semi-bold">
-      <div class="contacts"></div>
-      <div class="schedule">
-        <i class="fa-regular fa-clock text--orange"></i>
-        <span class="text--xs text--grey">работаем с 10:00 до 00:00</span>
-      </div>
-    </div>
-    <div class="header__left__right location text--light text--xs text--grey">
-      <div class="location__city">
-        <p>Город:</p>
-      </div>
-      <div class="location__address">
-        <p>Адрес:</p>
-      </div>
-    </div>
-  </div>
-  <div class="header__right">
-    <ul>
-      <li><a href="/reviews" data-link="internal">Отзывы</a></li>
-      <li>Доставка и оплата</li>
-      <li><div class="search">
-  <form class="search__form text--grey">
-    <input type="text" placeholder="Хочу найти..." />
-    <i class="fa-solid fa-magnifying-glass search__img"></i>
-    <button type="submit">
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </button>
-  </form>
-</div>
-</li>
-    </ul>
-  </div>
-</header>
+          <div class="header__left">
+            <div class="logo--mobile">
+              <a data-link="internal" href="/">
+                <img src="./img/logo/logo.png" alt="Company logo" data-link="internal" href="/" />
+              </a>
+            </div>
+            <div class="header__left__left text--semi-bold">
+              <div class="contacts"></div>
+              <div class="schedule">
+                <i class="fa-regular fa-clock text--orange"></i>
+                <span class="text--xs text--grey">работаем с 10:00 до 00:00</span>
+              </div>
+            </div>
+            <div class="header__left__right location text--light text--xs text--grey">
+              <div class="location__city">
+                <p>Город:</p>
+              </div>
+              <div class="location__address">
+                <p>Адрес:</p>
+              </div>
+            </div>
+          </div>
+          <div class="header__right">
+            <ul>
+              <li><a href="/reviews" data-link="internal">Отзывы</a></li>
+              <li>Доставка и оплата</li>
+              <li>
+                <div class="search">
+                  <form class="search__form text--grey">
+                    <input type="text" placeholder="Хочу найти..." />
+                    <i class="fa-solid fa-magnifying-glass search__img"></i>
+                    <button type="submit">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                  </form>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </header>
 
         <div id="rootCentral" class="container__central__generatedContent text text--semi-bold"></div>
         <section class="about">
-  <h4>Заказать суши в ROMSEM</h4>
-  <div class="about__description text text--s text--grey">
-    Ресторан “Romsem” предлагаем своим клиентам самые вкусные суши с доставкой на дом, приготовленные по классическим и адаптированным к европейской аудитории рецептам, а также собственным наработкам наших поваров. Мы ценим время наших клиентов, поэтому вы можете заказать суши в Харькове с доставкой на дом или в офис.<br />
-    <br />
-    В нашем меню более 20 видов суши:<br />
-    <br />
-    &bull; Классические с сырым лососем, тунцом, окунем.<br />
-    &bull; Экзотические с тигровой креветкой, морским <br />
-    гребешком. <br />
-    &bull;Пикантные с копченым лососем, угрем.<br />
-    <br />
-    В меню также представлены гунканы: с начинкой из красной икры и тобико, а также феликсы, где японский майонез сочетается с рыбой, морепродуктами, угрем. Любители острых блюд могут купить суши с соусом спайси. Популярные начинки — копченая курица, снежный краб, креветки, гребешки, тунец, лосось и окунь.<br />
-    <br />
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo minus fugiat quasi. Enim sequi porro illo sapiente! Laudantium debitis, praesentium architecto assumenda perspiciatis fuga totam accusamus fugit, modi, corporis pariatur?<br />
-    <br />
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis facilis debitis sunt dolor praesentium laboriosam voluptate nostrum. Laboriosam, ad consequatur vitae, at aliquid, laborum eum commodi sapiente corrupti culpa omnis.
-  </div>
-  <div class="about__button text text--grey">
-    <button type="button" class="read--more text text--grey">
-      Подробнее
-      <i class="fa-solid fa-angle-down"></i>
-    </button>
-    <button type="button" class="read--less text text--grey">
-      Свернуть
-      <i class="fa-solid fa-angle-up"></i>
-    </button>
-  </div>
-</section>
- <footer class="footer">
-  <div class="footer__container text text--s">
-    <div class="footer__container__left">
-      <ul class="footer__container__left__linkList">
-        <li><a href="#" title="Перейти к информации">О компании</a></li>
-        <li><a href="#" title="Перейти к информации">Доставка и оплата</a></li>
-        <li><a href="#" title="Перейти к информации">Лента материалов</a></li>
-        <li><a href="#" title="Перейти к информации">Политика возврата</a></li>
-        <li><a href="/reviews" title="Перейти к информации" data-link="internal">Отзывы</a></li>
-      </ul>
-    </div>
-    <div class="footer__container__central">
-      <form class="footer__container__central__form">
-        <label class="text--semi-bold">
-          Введите номер <br />
-          <input class="text text--s text--semi-bold" type="tel" placeholder="+375(__) ___ __ __" />
-        </label>
-        <p class="text--grey">Выберите удобный мессенджер для общения</p>
-        <button type="submit" name="whatsup" title="Связаться с нами">
-          <img src="./img/socialIcons/whatsApp_icon.png" alt="whatsup" />
-        </button>
-        <button type="submit" name="telegram" title="Связаться с нами">
-          <img src="./img/socialIcons/telegram_icon.png" alt="telegram" />
-        </button>
-        <button type="submit" name="instagram" title="Связаться с нами">
-          <img src="./img/socialIcons/instagram_icon.png" alt="instagram" />
-        </button>
-      </form>
-    </div>
-    <div class="footer__container__right">
-      <p class="text text--s text--semi-bold">Наши контакты:</p>
-    </div>
-  </div>
-</footer>
-
+          <h4>Заказать суши в ROMSEM</h4>
+          <div class="about__description text text--s text--grey">
+            Ресторан “Romsem” предлагаем своим клиентам самые вкусные суши с доставкой на дом, приготовленные по классическим и адаптированным к европейской аудитории рецептам, а также собственным наработкам наших поваров. Мы ценим время наших клиентов, поэтому вы можете заказать суши в Харькове с доставкой на дом или в офис.<br />
+            <br />
+            В нашем меню более 20 видов суши:<br />
+            <br />
+            &bull; Классические с сырым лососем, тунцом, окунем.<br />
+            &bull; Экзотические с тигровой креветкой, морским <br />
+            гребешком. <br />
+            &bull;Пикантные с копченым лососем, угрем.<br />
+            <br />
+            В меню также представлены гунканы: с начинкой из красной икры и тобико, а также феликсы, где японский майонез сочетается с рыбой, морепродуктами, угрем. Любители острых блюд могут купить суши с соусом спайси. Популярные начинки — копченая курица, снежный краб, креветки, гребешки, тунец, лосось и окунь.<br />
+            <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo minus fugiat quasi. Enim sequi porro illo sapiente! Laudantium debitis, praesentium architecto assumenda perspiciatis fuga totam accusamus fugit, modi, corporis pariatur?<br />
+            <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis facilis debitis sunt dolor praesentium laboriosam voluptate nostrum. Laboriosam, ad consequatur vitae, at aliquid, laborum eum commodi sapiente corrupti culpa omnis.
+          </div>
+          <div class="about__button text text--grey">
+            <button type="button" class="read--more text text--grey">
+              Подробнее
+              <i class="fa-solid fa-angle-down"></i>
+            </button>
+            <button type="button" class="read--less text text--grey">
+              Свернуть
+              <i class="fa-solid fa-angle-up"></i>
+            </button>
+          </div>
+        </section>
+        <footer class="footer">
+          <div class="footer__container text text--s">
+            <div class="footer__container__left">
+              <ul class="footer__container__left__linkList">
+                <li><a href="#" title="Перейти к информации">О компании</a></li>
+                <li><a href="#" title="Перейти к информации">Доставка и оплата</a></li>
+                <li><a href="#" title="Перейти к информации">Лента материалов</a></li>
+                <li><a href="#" title="Перейти к информации">Политика возврата</a></li>
+                <li><a href="/reviews" title="Перейти к информации" data-link="internal">Отзывы</a></li>
+              </ul>
+            </div>
+            <div class="footer__container__central">
+              <form class="footer__container__central__form">
+                <label class="text--semi-bold">
+                  Введите номер <br />
+                  <input class="text text--s text--semi-bold" type="tel" placeholder="+375(__) ___ __ __" />
+                </label>
+                <p class="text--grey">Выберите удобный мессенджер для общения</p>
+                <button type="submit" name="whatsup" title="Связаться с нами">
+                  <img src="./img/socialIcons/whatsApp_icon.png" alt="whatsup" />
+                </button>
+                <button type="submit" name="telegram" title="Связаться с нами">
+                  <img src="./img/socialIcons/telegram_icon.png" alt="telegram" />
+                </button>
+                <button type="submit" name="instagram" title="Связаться с нами">
+                  <img src="./img/socialIcons/instagram_icon.png" alt="instagram" />
+                </button>
+              </form>
+            </div>
+            <div class="footer__container__right">
+              <p class="text text--s text--semi-bold">Наши контакты:</p>
+            </div>
+          </div>
+        </footer>
       </div>
-      <div class="container__right"><div class="backet__closer text">
-  <div id="closeMobileBacket">X</div>
-</div>
-<div class="container__right--backet backet text">
-  <div class="backet__user text--white text--semi-bold">
-    <div class="backet__user--userName"></div>
-    <button id="logoutBtn" class="backet__user--logout text text--grey text--semi-bold">
-      <i class="fa-solid fa-arrow-right-from-bracket"></i>
-    </button>
-  </div>
+      <div class="container__right">
+        <div class="backet__closer text">
+          <div id="closeMobileBacket">X</div>
+        </div>
+        <div class="container__right--backet backet text">
+          <div class="backet__user text--white text--semi-bold">
+            <div class="backet__user--userName"></div>
+            <button id="logoutBtn" class="backet__user--logout text text--grey text--semi-bold">
+              <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </button>
+          </div>
 
-  <div class="backet__message--empty active">
-    <h5>Ваша корзина пуста</h5>
-    <p class="text--grey text--s">Добавьте же скорее что-нибудь!</p>
-  </div>
-  <div class="backet__message--full">
-    <h5>Корзина</h5>
-  </div>
+          <div class="backet__message--empty active">
+            <h5>Ваша корзина пуста</h5>
+            <p class="text--grey text--s">Добавьте же скорее что-нибудь!</p>
+          </div>
+          <div class="backet__message--full">
+            <h5>Корзина</h5>
+          </div>
 
-  <div class="backet__deliveryPrice active text--white text--xs">
-    <p>Бесплатная доставка от 30 BYN</p>
-  </div>
-  <div class="backet__products text">
-    <div id="backetRoot" class="backet__products--productsSection productsSection"></div>
-    <div class="backet__products--orderSection orderSection">
-      <div class="orderSection--mobileTitle text--semi-bold text--orange text--l">Итого</div>
-      <div class="orderSection--mobileFirstLine">
-        <div id="goodsAmount"></div>
-        <div id="totalPrice" class="orderSection__totalPrice text--bold"></div>
+          <div class="backet__deliveryPrice active text--white text--xs">
+            <p>Бесплатная доставка от 30 BYN</p>
+          </div>
+          <div class="backet__products text">
+            <div id="backetRoot" class="backet__products--productsSection productsSection"></div>
+            <div class="backet__products--orderSection orderSection">
+              <div class="orderSection--mobileTitle text--semi-bold text--orange text--l">Итого</div>
+              <div class="orderSection--mobileFirstLine">
+                <div id="goodsAmount"></div>
+                <div id="totalPrice" class="orderSection__totalPrice text--bold"></div>
+              </div>
+              <div class="orderSection--mobileSecondLine">
+                <div>Доставка</div>
+                <div id="deliveryPrice" class="text--bold"></div>
+              </div>
+              <button id="submitOrder" class="orderSection__submitOrder text text--semi-bold text--white text--s" type="button">Оформить заказ</button>
+            </div>
+          </div>
+        </div>
+        <div class="container__right--loginLogout loginLogout active">
+          <div class="loginLogout__message">
+            <h5>Вы не вошли в свой аккаунт</h5>
+            <p class="text--grey text--s">Пожалуйста, войдите в свой аккаунт или зарегистрируйтесь, чтобы иметь возможность добавить товары в корзину и оформить заказ</p>
+          </div>
+          <div class="loginLogout__button">
+            <button type="button" id="loginBtnToOpenModal" class="loginLogout__button--login text--white text--xs">Войти в аккаунт</button>
+            <button type="button" id="createAccountBtnToOpenModal" class="loginLogout__button--createAccount text--white text--xs">Зарегистрироваться</button>
+          </div>
+        </div>
       </div>
-      <div class="orderSection--mobileSecondLine">
-        <div>Доставка</div>
-        <div id="deliveryPrice" class="text--bold"></div>
+      <div class="container__mobileMenu">
+        <div class="container__mobileMenu--buttons">
+          <button id="openMenuButton" type="button" class="text text--semi-bold text-s">
+            <img src="./img/mobileMenu/menu.png" alt="Open menu button" /><br />
+            Меню
+          </button>
+          <button id="openBacketButton" type="button" class="text text--semi-bold text-s">
+            <img src="./img/mobileMenu/backet.png" alt="Open backet button" />
+            <span class="text--xs text--bold"></span><br />
+            Корзина
+          </button>
+          <button id="logButtonMobileMenu" type="button" class="text text--semi-bold text-s">
+            <div id="loginButtonMobileMenu">
+              <i class="fa-solid fa-arrow-right-to-bracket text text--orange text--icon"></i><br />
+              Войти <br />
+              в аккаунт
+            </div>
+            <div id="logoutButtonMobileMenu">
+              <i class="fa-solid fa-arrow-right-from-bracket text text--orange text--icon"></i><br />
+              Выйти <br />
+              из аккаунта
+            </div>
+          </button>
+        </div>
       </div>
-      <button id="submitOrder" class="orderSection__submitOrder text text--semi-bold text--white text--s" type="button">Оформить заказ</button>
-    </div>
-  </div>
-</div>
- <div class="container__right--loginLogout loginLogout active">
-  <div class="loginLogout__message">
-    <h5>Вы не вошли в свой аккаунт</h5>
-    <p class="text--grey text--s">Пожалуйста, войдите в свой аккаунт или зарегистрируйтесь, чтобы иметь возможность добавить товары в корзину и оформить заказ</p>
-  </div>
-  <div class="loginLogout__button">
-    <button type="button" id="loginBtnToOpenModal" class="loginLogout__button--login text--white text--xs">Войти в аккаунт</button>
-    <button type="button" id="createAccountBtnToOpenModal" class="loginLogout__button--createAccount text--white text--xs">Зарегистрироваться</button>
-  </div>
-</div>
-</div>
-      <div class="container__mobileMenu"><div class="container__mobileMenu--buttons">
-  <button id="openMenuButton" type="button" class="text text--semi-bold text-s">
-    <img src="./img/mobileMenu/menu.png" alt="Open menu button" /><br />
-    Меню
-  </button>
-  <button id="openBacketButton" type="button" class="text text--semi-bold text-s">
-    <img src="./img/mobileMenu/backet.png" alt="Open backet button" />
-    <span class="text--xs text--bold"></span><br />
-    Корзина
-  </button>
-  <button id="logButtonMobileMenu" type="button" class="text text--semi-bold text-s">
-    <div id="loginButtonMobileMenu">
-      <i class="fa-solid fa-arrow-right-to-bracket text text--orange text--icon"></i><br />
-      Войти <br />
-      в аккаунт
-    </div>
-    <div id="logoutButtonMobileMenu">
-      <i class="fa-solid fa-arrow-right-from-bracket text text--orange text--icon"></i><br />
-      Выйти <br />
-      из аккаунта
-    </div>
-  </button>
-</div>
-</div>
     </div>
   </body>
 </html>
