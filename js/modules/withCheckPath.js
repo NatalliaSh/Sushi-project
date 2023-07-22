@@ -16,14 +16,14 @@ function isProductInSelectedLocation(dataForSelectedLocation, path, routes) {
   const arrOfAllCategories = dataForSelectedLocation.menuList;
 
   if (routes[path] === 'category') {
-    is = arrOfAllCategories.includes(decodeURIComponent(path.slice(1)));
+    is = arrOfAllCategories.includes(decodeURIComponent(path.slice(15)));
   } else if (routes[path] === 'selfProductPage') {
     let arrOfAllProducts = [];
     arrOfAllCategories.forEach((element) => {
       arrOfAllProducts = arrOfAllProducts.concat(dataForSelectedLocation.products[element]);
     });
 
-    is = arrOfAllProducts.includes(decodeURIComponent(path.slice(1)));
+    is = arrOfAllProducts.includes(decodeURIComponent(path.slice(15)));
   }
 
   return is;
@@ -44,12 +44,12 @@ async function withCheckPath(path, root, dataForSelectedLocation, productSpecifi
       if (path.includes(encodeURIComponent('Акции'))) {
         parametr = 'sale';
       } else {
-        category = decodeURIComponent(path.slice(1));
+        category = decodeURIComponent(path.slice(15));
       }
       page = getProductsPage(dataForSelectedLocation, productSpecificationData, './img/menuImg/productsImg/', category, parametr);
       renderReplace(root, page);
     } else {
-      page = getSelfProductPage(productSpecificationData[path.slice(1)], './img/menuImg/productsImg/', path.match(/[^\/](\D)*[^\d]/i)[0], dataForSelectedLocation, productSpecificationData);
+      page = getSelfProductPage(productSpecificationData[path.slice(15)], './img/menuImg/productsImg/', path.match(/[^\/](\D)*[^\d]/i)[0].slice(14), dataForSelectedLocation, productSpecificationData);
       renderReplace(root, page);
       selfProductPageSlider();
     }
