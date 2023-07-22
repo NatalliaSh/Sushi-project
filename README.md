@@ -1,4 +1,4 @@
-## Responsive SPA website based on HTML/CSS/JS
+## Responsive SPA website based on JS/HTML/CSS
 
 ## Requirements
 
@@ -23,8 +23,6 @@
 - History API
 - Modules and partials
 
-...
-
 ## Description
 
 - This website is made as a SPA with dynamic loading of products cards and contact information depanding on chosen city/address and URL.\
@@ -42,15 +40,15 @@
 
 - If you submit an order, your basket on website and in localStorage will be cleared and your order will be saved in localStorage.
 
-- Feedbacks are stored in MockAPI database and dynamic load on the review page whith fetch request.\
+- Feedbacks are stored in MockAPI database and dynamic load on the review page using fetch request.\
   You can also leave your feedback. It will be stored in MockAPI database and when this webpage will be load again, your feedback will be displayed too.
 
 - All forms on website have a little validation.
 
 - Product cards on sliders are filtered by one of the following parameters: on sales, new or popular.
 
-- Routing has realised using History API.
+- Routing has been realised using History API.
 
 - Link with address in the footer contact information leads to the google map with this address.
 
-#### Thank you for your attention. Have a good day
+#### Thank you for your attention.\ Have a good day
