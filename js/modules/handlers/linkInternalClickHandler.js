@@ -19,7 +19,7 @@ export const linkInternalClickHandler = (e) => {
     e.preventDefault();
     const path = e.target.getAttribute('href') ? `/Sushi-project${e.target.getAttribute('href')}` : `/Sushi-project${e.target.parentNode.getAttribute('href')}`;
 
-    if (path === 'back') {
+    if (path === '/Sushi-project/back') {
       history.back();
     } else {
       const queryParams = window.location.search;

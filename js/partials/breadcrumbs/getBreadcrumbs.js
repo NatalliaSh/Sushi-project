@@ -5,7 +5,7 @@ function getBreadcrumbs(isOnlyOnMainPage) {
 
   const breadcrumbsMainPage = getDOMElement('a', { href: '/', className: 'breadcrumbs__toMainPage', innerText: `На главную` });
   breadcrumbsMainPage.setAttribute('data-link', 'internal');
-  const breadcrumbsBack = getDOMElement('a', { href: 'back', className: 'breadcrumbs__goBack', innerText: `Назад` });
+  const breadcrumbsBack = getDOMElement('a', { href: '/back', className: 'breadcrumbs__goBack', innerText: `Назад` });
   breadcrumbsBack.setAttribute('data-link', 'internal');
 
   breadcrumbs.appendChild(breadcrumbsMainPage);
