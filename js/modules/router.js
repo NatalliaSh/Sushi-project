@@ -9,7 +9,7 @@ function getRoutes(productSpecificationData, dataForSelectedLocation) {
   listOfSelfProductPath.forEach((element) => (routes[element] = 'selfProductPage'));
   listOfCategoriesPath.forEach((element) => (routes[element] = 'category'));
 
-  return routes;
+  return routes; ////
 }
 
 export { getRoutes };
