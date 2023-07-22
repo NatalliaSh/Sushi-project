@@ -54,7 +54,7 @@ async function withCheckPath(path, root, dataForSelectedLocation, productSpecifi
       selfProductPageSlider();
     }
     eventBus.dispatch(ACTIONS.newPage, '');
-  } else if (path === '/reviews') {
+  } else if (path === 'Sushi-project/reviews') {
     page = await getReviewPage();
     renderReplace(root, page);
   } else {

@@ -17,12 +17,12 @@ export const linkInternalClickHandler = (e) => {
 
   if (link === 'internal') {
     e.preventDefault();
-    const path = e.target.getAttribute('href') || e.target.parentNode.getAttribute('href');
+    const path = e.target.getAttribute('href') ? `Sushi-project${e.target.getAttribute('href')}` : `Sushi-project${e.target.parentNode.getAttribute('href')}`;
     if (path === 'back') {
       history.back();
     } else {
       const queryParams = window.location.search;
-      history.pushState({}, '', 'Sushi-project/' + path + queryParams);
+      history.pushState({}, '', path + queryParams);
       eventBus.dispatch(ACTIONS.changeRoute, path);
     }
   }
