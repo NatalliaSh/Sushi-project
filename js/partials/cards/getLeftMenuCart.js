@@ -1,7 +1,7 @@
 import { logoMenuImgNames } from '../../modules/CONST.js';
 import { getDOMElement } from '../../modules/getDOMElement.js';
 
-function getLeftMenuCart(dataForSelectedLocation) {
+function getLeftMenuCart(dataForSelectedLocation, imgPath) {
   const list = document.createElement('ul');
   list.classList.add('menuList');
 
@@ -25,7 +25,7 @@ function getLeftMenuCart(dataForSelectedLocation) {
     a.setAttribute('data-link', 'internal');
 
     const img = document.createElement('img');
-    img.setAttribute('src', `./img/menuImg/menuLogo' + ${logoMenuImgNames[element]}`);
+    img.setAttribute('src', imgPath + logoMenuImgNames[element]);
     img.setAttribute('alt', 'Product logotype');
     a.appendChild(img);
     img.setAttribute('data-link', 'internal');
