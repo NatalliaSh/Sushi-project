@@ -22,8 +22,10 @@
       // https://username.github.io/repo-name/one/two?a=b&c=d#qwe becomes
       // https://username.github.io/repo-name/?p=/one/two&q=a=b~and~c=d#qwe
       // Otherwise, leave segmentCount as 0.
-      var segmentCount = 1;
-      var l = window.location;
+      const segmentCount = 1;
+      let l = window.location;
+      const path = window.location.pathname;
+      const queryParams = window.location.search;
       l.replace(
         l.protocol +
           '//' +
@@ -38,6 +40,9 @@
           (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
           l.hash,
       );
+      document.addEventListener('DOMContentLoaded', () => {
+        history.pushState({}, '', path + queryParams);
+      });
     </script>
   </head>
   <body></body>
