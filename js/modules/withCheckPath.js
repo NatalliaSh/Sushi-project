@@ -35,7 +35,7 @@ async function withCheckPath(path, root, dataForSelectedLocation, productSpecifi
   let parametr = '';
   const routes = getRoutes(productSpecificationData, dataForSelectedLocation);
   if (path === '/' || path === '' || path === '/Sushi-project/') {
-    page = getMainPage(dataForSelectedLocation, productSpecificationData, '/img/menuImg/productsImg/');
+    page = getMainPage(dataForSelectedLocation, productSpecificationData, 'img/menuImg/productsImg/');
     renderReplace(root, page);
     setStatusBtnAddToBacket();
     mainPageSlider();
@@ -46,10 +46,10 @@ async function withCheckPath(path, root, dataForSelectedLocation, productSpecifi
       } else {
         category = decodeURIComponent(path.slice(1));
       }
-      page = getProductsPage(dataForSelectedLocation, productSpecificationData, '/img/menuImg/productsImg/', category, parametr);
+      page = getProductsPage(dataForSelectedLocation, productSpecificationData, 'img/menuImg/productsImg/', category, parametr);
       renderReplace(root, page);
     } else {
-      page = getSelfProductPage(productSpecificationData[path.slice(1)], '/img/menuImg/productsImg/', path.match(/[^\/](\D)*[^\d]/i)[0], dataForSelectedLocation, productSpecificationData);
+      page = getSelfProductPage(productSpecificationData[path.slice(1)], 'img/menuImg/productsImg/', path.match(/[^\/](\D)*[^\d]/i)[0], dataForSelectedLocation, productSpecificationData);
       renderReplace(root, page);
       selfProductPageSlider();
     }
