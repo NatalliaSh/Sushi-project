@@ -1,5 +1,9 @@
 .idea
 node_modules/
-dist/
+src/
 package-lock.json
 .vscode/
+package.json
+gulpfile.js
+.hintrc
+README.md
