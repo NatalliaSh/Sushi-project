@@ -98,7 +98,7 @@ function addProductToBacket(data, productSpecificationData, root) {
     fillBacketTotalFields();
   } else {
     const rootNode = document.querySelector(root);
-    rootNode.appendChild(getCardForBacket(key, productData, data[key], '../../img/menuImg/productsImg/'));
+    rootNode.appendChild(getCardForBacket(key, productData, data[key], './img/menuImg/productsImg/'));
     fillBacketTotalFields();
     changeActiveClassesInBacket(false);
   }
