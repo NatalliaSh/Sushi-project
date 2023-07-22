@@ -22,7 +22,7 @@ export const linkInternalClickHandler = (e) => {
       history.back();
     } else {
       const queryParams = window.location.search;
-      history.pushState({}, '', path + queryParams);
+      history.pushState({}, '', 'Sushi-project/' + path + queryParams);
       eventBus.dispatch(ACTIONS.changeRoute, path);
     }
   }
