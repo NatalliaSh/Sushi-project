@@ -2,7 +2,7 @@ export const productSpecificationData = {
   wok1: {
     id: 'wok1',
     name: 'Ясай Яки Сомен (грибы)',
-    imgName: 'WOK1.jpg',
+    imgName: 'wok1.jpg',
     description: '410 грамм',
     ingridients: 'Фасоль стручковая, лук красный, морковь, перец болгарский, шампиньоны, грибы шиитаки, цукини, масло чесночное, лапша  яичная, бульон вок, соус вок, томат черри, кунжут белый, ростки соевые, микрозелень.',
     amountOfbits: '',
@@ -18,7 +18,7 @@ export const productSpecificationData = {
   wok2: {
     id: 'wok2',
     name: 'Тори Яки Тяхан (курица)',
-    imgName: 'WOK2.jpg',
+    imgName: 'wok2.jpg',
     description: '431 грамм',
     ingridients: 'Мякоть бедра цыплёнка, цукини, лук красный, морковь, перец болгарский, масло чесночное, горошек зелёный, рис, бульон вок, соус вок, томат черри, соевые ростки, микрозелень.',
     amountOfbits: '',
@@ -34,7 +34,7 @@ export const productSpecificationData = {
   wok3: {
     id: 'wok3',
     name: 'Тори Яки Удон (курица)',
-    imgName: 'WOK3.jpg',
+    imgName: 'wok3.jpg',
     description: '414 грамм',
     ingridients: 'Мякоть бедра цыплёнка, цукини, лук красный, морковь, перец болгарский, фасоль стручковая, масло чесночное, лапша пшеничная, бульон вок, соус карри, томат черри, кунжут белый, ростки соевые, микрозелень',
     amountOfbits: '',
@@ -50,7 +50,7 @@ export const productSpecificationData = {
   wok4: {
     id: 'wok4',
     name: 'Батакон Яки Тяхан',
-    imgName: 'WOK4.jpg',
+    imgName: 'wok4.jpg',
     description: '445 грамм',
     ingridients: 'Бекон, цукини, лук красный, морковь, перец свежий, масло чесночное, горошек зелёный, рис, бульон вок, соус соевый, кунжутное масло, яйцо куриное, ростки соевые, томат черри, микрозелень.',
     amountOfbits: '',
@@ -66,7 +66,7 @@ export const productSpecificationData = {
   wok5: {
     id: 'wok5',
     name: 'Сифудо Яки Тяхан',
-    imgName: 'WOK5.jpg',
+    imgName: 'wok5.jpg',
     description: '415 грамм',
     ingridients: 'Фасоль стручковая, лук красный, морковь, перец болгарский, шампиньоны, грибы шиитаки, цукини, масло чесночное, лапша  яичная, бульон вок, соус вок, томат черри, кунжут белый, ростки соевые, микрозелень.',
     amountOfbits: '',
@@ -82,7 +82,7 @@ export const productSpecificationData = {
   wok6: {
     id: 'wok6',
     name: 'Эби тори Яки Удон',
-    imgName: 'WOK6.jpg',
+    imgName: 'wok6.jpg',
     description: '419 грамм',
     ingridients: 'Бекон, цукини, лук красный, морковь, перец свежий, масло чесночное, горошек зелёный, рис, бульон вок, соус соевый, кунжутное масло, яйцо куриное, ростки соевые, томат черри, микрозелень.',
     amountOfbits: '',
@@ -98,7 +98,7 @@ export const productSpecificationData = {
   wok7: {
     id: 'wok7',
     name: 'Бифу Яки',
-    imgName: 'WOK7.jpg',
+    imgName: 'wok7.jpg',
     description: '410 грамм',
     ingridients: 'Вырезка говяжья, цукини, лук красный, морковь, перец болгарский, фасоль стручковая, масло чесночное, лапша гречневая, бульон вок, соус вок, томат черри, кунжут белый, ростки соевые, микрозелень.',
     amountOfbits: '',
@@ -114,7 +114,7 @@ export const productSpecificationData = {
   wok8: {
     id: 'wok8',
     name: 'Ясай Сомен (говядина)',
-    imgName: 'WOK8.jpg',
+    imgName: 'wok8.jpg',
     description: '423 грамм',
     ingridients: 'Вырезка говяжья, цукини, лук красный, морковь, перец болгарский, фасоль стручковая, масло чесночное, лапша гречневая, бульон вок, соус вок, томат черри, кунжут белый, ростки соевые, микрозелень.',
     amountOfbits: '',
@@ -130,7 +130,7 @@ export const productSpecificationData = {
   wok9: {
     id: 'wok9',
     name: 'Сифудо Яки Шахэфэнь',
-    imgName: 'WOK9.jpg',
+    imgName: 'wok9.jpg',
     description: '445 грамм',
     ingridients: 'Креветка, кальмар, мидии, осьминог, вино белое, цукини, лук красный, морковь, масло чесночное, перец болгарский, фасоль стручковая, лапша рисовая, бульон вок, соус терияки, томат черри, ростки соевые, кунжут белый, микрозелень.',
     amountOfbits: '',
