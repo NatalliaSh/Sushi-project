@@ -8,9 +8,9 @@ import { changeAddressSelectForm } from '../partials/header/changeAddressSelectF
 function withCheckURL(dataBase, productSpecificationData) {
   const initialQuery = window.location.search;
 
-  const queryParam = initialQuery.includes('?p=') ? initialQuery.replace(/.*q=/, '?') : initialQuery;
+  const queryParam = initialQuery.includes('?p=') ? initialQuery.replace(/.*q=0&/, '?') : initialQuery;
   const b = 'test0';
-  const path = initialQuery.includes('?p=') ? initialQuery.match(/(?:\?p=)(.*)(?=&q=)/)[1] : window.location.pathname;
+  const path = initialQuery.includes('?p=') ? initialQuery.match(/(?:\?p=)(.*)(?:&q=)/)[1] : window.location.pathname;
   const root = '#rootCentral';
 
   if (!queryParam) {
