@@ -28,7 +28,7 @@
 ## Description
 
 - SPA with dynamic change DOM based on the DOM API.\
-  (dynamic loading of page content, products cards and contact information depending on chosen city/address and URL)
+  (dynamic loading of the page content, products cards and contact information in dependance of chosen city/address and URL)
 
 - Implemented custom client routing based on the History API.
 
@@ -40,8 +40,8 @@
 
 - Used Fetch API and async/await functions for getting and changing data.
 
-- Feedbacks are stored in MockAPI database.\
-  You can also leave your feedback. It will be stored in MockAPI database and when this webpage will be loaded again, your feedback will be displayed too.
+- Feedbacks are stored in the MockAPI database.\
+  You can also leave your feedback. It will be stored in the MockAPI database and when this webpage will be loaded again, your feedback will be displayed too.
 
 - All forms on website have a little validation.
 
