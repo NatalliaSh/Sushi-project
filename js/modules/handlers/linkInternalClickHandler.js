@@ -17,8 +17,8 @@ export const linkInternalClickHandler = (e) => {
 
   if (link === 'internal') {
     e.preventDefault();
-    const path = e.target.getAttribute('href') ? `Sushi-project${e.target.getAttribute('href')}` : `Sushi-project${e.target.parentNode.getAttribute('href')}`;
-    //////////
+    const path = e.target.getAttribute('href') ? `/Sushi-project${e.target.getAttribute('href')}` : `/Sushi-project${e.target.parentNode.getAttribute('href')}`;
+
     if (path === 'back') {
       history.back();
     } else {
