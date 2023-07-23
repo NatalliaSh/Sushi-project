@@ -7,16 +7,21 @@ import { changeAddressSelectForm } from '../partials/header/changeAddressSelectF
 
 function withCheckURL(dataBase, productSpecificationData) {
   const initialQuery = window.location.search;
-
-  const queryParam = initialQuery.includes('?p=') ? initialQuery.replace(/.*q=0&/, '?') : initialQuery;
-  const b = 'test0';
+  /*const queryParam = initialQuery.includes('?p=') ? initialQuery.replace(/.*q=0&/, '?') : initialQuery;
   const path = initialQuery.includes('?p=') ? '/Sushi-project' + initialQuery.match(/(?:\?p=)(.*)(?:&q=)/)[1] : window.location.pathname;
   const root = '#rootCentral';
 
   if (initialQuery.includes('?p=')) {
     history.pushState({}, '', path + queryParam);
-    console.log('from whithCheckURL');
+  }*/
+
+  if (initialQuery.includes('?p=')) {
+    history.pushState({}, '', `/Sushi-project${initialQuery.match(/(?:\?p=)(.*)(?:&q=)/)[1]}${initialQuery.replace(/.*q=0&/, '?')}`);
   }
+
+  const queryParam = window.location.search;
+  const path = window.location.pathname;
+  const root = '#rootCentral';
 
   if (!queryParam) {
     setQueryParam();
