@@ -13,6 +13,11 @@ function withCheckURL(dataBase, productSpecificationData) {
   const path = initialQuery.includes('?p=') ? '/Sushi-project' + initialQuery.match(/(?:\?p=)(.*)(?:&q=)/)[1] : window.location.pathname;
   const root = '#rootCentral';
 
+  if (initialQuery.includes('?p=')) {
+    history.pushState({}, '', path + queryParam);
+    console.log('from whithCheckURL');
+  }
+
   if (!queryParam) {
     setQueryParam();
   } else {
