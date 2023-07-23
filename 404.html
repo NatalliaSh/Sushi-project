@@ -41,10 +41,6 @@
           (l.search ? '&q=0&' + l.search.slice(1) : '') +
           l.hash,
       );
-      document.addEventListener('DOMContentLoaded', () => {
-        history.pushState({}, '', path + queryParams);
-        console.log('DOM is loaded');
-      });
     </script>
   </head>
   <body></body>
