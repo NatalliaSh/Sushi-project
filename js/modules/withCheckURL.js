@@ -10,7 +10,7 @@ function withCheckURL(dataBase, productSpecificationData) {
 
   const queryParam = initialQuery.includes('?p=') ? initialQuery.replace(/.*q=0&/, '?') : initialQuery;
   const b = 'test0';
-  const path = initialQuery.includes('?p=') ? initialQuery.match(/(?:\?p=)(.*)(?:&q=)/)[1] : window.location.pathname;
+  const path = initialQuery.includes('?p=') ? '/Sushi-project' + initialQuery.match(/(?:\?p=)(.*)(?:&q=)/)[1] : window.location.pathname;
   const root = '#rootCentral';
 
   if (!queryParam) {
