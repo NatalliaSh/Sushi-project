@@ -1759,7 +1759,8 @@ h5 {
   line-height: 1.5;
   cursor: pointer;
 }
-.container__mobileMenu--buttons button:hover {
+.container__mobileMenu--buttons button:hover,
+.container__mobileMenu--buttons a:hover {
   color: #ff9846;
 }
 .container__mobileMenu--buttons button#openBacketButton {
