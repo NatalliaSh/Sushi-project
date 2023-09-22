@@ -33,10 +33,10 @@
 - Implemented custom client routing based on the History API.
 
 - Implemented authentication with Google Firebase.\
-  (You can't add product into the basket or leave your feedback while you're not signed into your account)
+  (You can't add product into the cart or leave your feedback while you're not signed into your account)
 - Used Web Storage API (localStorage) for storage data.\
-  (Basket contents and your orders stores in localStorage.\
-  So, when you logout and then login again, your basket will contain products that have been saved in localStorage under your account)
+  (Cart contents and your orders stores in localStorage.\
+  So, when you logout and then login again, your cart will contain products that have been saved in localStorage under your account)
 
 - Used Fetch API and async/await functions for getting and changing data.
 
@@ -47,9 +47,9 @@
 
 - Product cards on sliders are filtered by one of the following parameters: on sales, new or popular.
 
-- If you have some products in your basket, the information about it is duplicated on product cards.
+- If you have some products in your cart, the information about it is duplicated on product cards.
 
-- If you submit an order, your basket on website and in localStorage will be cleared and your order will be saved in localStorage.
+- If you submit an order, your cart on the website and in localStorage will be cleared and your order will be saved in localStorage.
 
 - Link with address in the footer contact information leads to the google map with this address.
 
